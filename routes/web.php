@@ -14,7 +14,19 @@ use Illuminate\Support\Facades\Route;
 */
 
 Route::get('/', function () {
-    return view('welcome');
+    return view('public.index');
+});
+
+Route::get('/about', function () {
+    return view('public.about');
+});
+
+Route::get('/career', function () {
+    return view('public.career');
+});
+
+Route::get('/security', function () {
+    return view('public.security');
 });
 
 Route::middleware([

@@ -1,0 +1,23 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36">
+  <g id="Group_1311" data-name="Group 1311" transform="translate(-611 -291)">
+    <g id="Group_1272" data-name="Group 1272" transform="translate(-1 41)">
+      <g id="Group_1078" data-name="Group 1078">
+        <rect id="Rectangle" width="36" height="36" rx="18" transform="translate(612 250)" fill="#f2faf6"/>
+      </g>
+      <g id="Group_1096" data-name="Group 1096" transform="translate(617.156 256.368)">
+        <path id="Path_857" data-name="Path 857" d="M14.42,14a3.881,3.881,0,1,1-1.239,2.843" transform="translate(-3.826 -5.433)" fill="none" stroke="#27d17f" stroke-width="1"/>
+        <line id="Line_255" data-name="Line 255" y1="2.487" x2="2.632" transform="translate(15.68 6.577)" fill="none" stroke="#27d17f" stroke-width="1"/>
+        <line id="Line_256" data-name="Line 256" x2="1.592" y2="4.121" transform="translate(10.185 4.057)" fill="none" stroke="#27d17f" stroke-width="1"/>
+        <line id="Line_257" data-name="Line 257" x1="0.957" y2="3.337" transform="translate(11.243 14.703)" fill="none" stroke="#27d17f" stroke-width="1"/>
+        <line id="Line_258" data-name="Line 258" x1="2.668" y1="2.418" transform="translate(15.808 13.87)" fill="none" stroke="#27d17f" stroke-width="1"/>
+        <line id="Line_259" data-name="Line 259" x1="2.159" y2="0.595" transform="translate(7.788 12.409)" fill="none" stroke="#27d17f" stroke-width="1"/>
+        <circle id="Ellipse_44" data-name="Ellipse 44" cx="1.057" cy="1.057" r="1.057" transform="translate(18.076 4.639)" fill="none" stroke="#27d17f" stroke-width="1"/>
+        <circle id="Ellipse_45" data-name="Ellipse 45" cx="1.057" cy="1.057" r="1.057" transform="translate(18.231 16.161)" fill="none" stroke="#27d17f" stroke-width="1"/>
+        <circle id="Ellipse_46" data-name="Ellipse 46" cx="1.057" cy="1.057" r="1.057" transform="translate(9.808 18.314)" fill="none" stroke="#27d17f" stroke-width="1"/>
+        <circle id="Ellipse_47" data-name="Ellipse 47" cx="1.057" cy="1.057" r="1.057" transform="translate(5.344 12.409)" fill="none" stroke="#27d17f" stroke-width="1"/>
+        <circle id="Ellipse_48" data-name="Ellipse 48" cx="1.057" cy="1.057" r="1.057" transform="translate(8.777 1.838)" fill="none" stroke="#27d17f" stroke-width="1"/>
+      </g>
+    </g>
+  </g>
+</svg>

@@ -1,0 +1,15 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<svg xmlns="http://www.w3.org/2000/svg" width="36" height="36" viewBox="0 0 36 36">
+  <g id="Group_1306" data-name="Group 1306" transform="translate(-203 -199)">
+    <rect id="Rectangle" width="36" height="36" rx="18" transform="translate(203 199)" fill="#f2faf6"/>
+    <g id="Group_1089" data-name="Group 1089" transform="translate(208.463 202.732)">
+      <path id="Path_848" data-name="Path 848" d="M4.537,13.845v5.577a.986.986,0,0,0,.986.986H19.551a.986.986,0,0,0,.986-.986V9.254a.986.986,0,0,0-.986-.986H5.523a.986.986,0,0,0-.986.986v2.074h16" transform="translate(0)" fill="none" stroke="#27d17f" stroke-width="1"/>
+      <line id="Line_213" data-name="Line 213" x2="1.96" transform="translate(7.344 14.337)" fill="none" stroke="#27d17f" stroke-width="1"/>
+      <line id="Line_214" data-name="Line 214" x2="1.96" transform="translate(11.557 14.337)" fill="none" stroke="#27d17f" stroke-width="1"/>
+      <line id="Line_215" data-name="Line 215" x2="1.96" transform="translate(15.77 14.337)" fill="none" stroke="#27d17f" stroke-width="1"/>
+      <line id="Line_216" data-name="Line 216" x2="1.96" transform="translate(7.344 17.45)" fill="none" stroke="#27d17f" stroke-width="1"/>
+      <line id="Line_217" data-name="Line 217" x2="1.96" transform="translate(11.557 17.45)" fill="none" stroke="#27d17f" stroke-width="1"/>
+      <line id="Line_218" data-name="Line 218" x2="1.96" transform="translate(15.77 17.45)" fill="none" stroke="#27d17f" stroke-width="1"/>
+    </g>
+  </g>
+</svg>
