@@ -253,7 +253,7 @@
                                     <span class=bp3-vs__slide__number>01</span>
                                     <h3><strong>Register</strong></h3>
                                     <p>Sign up to create your free 247-cointrading account.
-                                    <p><a class="bp-button bp-button--primary" href="app/register73a6.html?origin=web">Get started</a>
+                                    <p><a class="bp-button bp-button--primary" href="register">Get started</a>
                                 </div>
                             </div>
                         <li class=bp3-vs__slide>
@@ -353,10 +353,10 @@
                 </script>
             </div>
         </section>
-        <section class="default uk-padding-small-top uk-section">
+        {{-- <section class="default uk-padding-small-top uk-section">
             <div class="default uk-container"></div>
-        </section>
-        <section class="uk-padding-remove-bottom uk-section">
+        </section> --}}
+        {{-- <section class="uk-padding-remove-bottom uk-section">
             <div class="uk-container uk-padding-large-bottom uk-text-center">
                 <span class="bp-preheader uk-text-center@m uk-text-left"> PRICES </span>
                 <h2 class="uk-margin-auto uk-text-center@m uk-text-left uk-width-4-5@m"> Keep tabs on your favourite assets </h2>
@@ -384,8 +384,8 @@
                 </script>
             </div>
             <script src="resources/cdn.bitpanda.com/app/v2/js/dist/prices-carousel/prices-carousel.min9866.js?id=3240e18a15e1d86c42cf"></script>
-        </section>
-        <section class="uk-padding-remove-top uk-padding-small-bottom uk-section">
+        </section> --}}
+        {{-- <section class="uk-padding-remove-top uk-padding-small-bottom uk-section">
             <div class="default uk-container">
                 <section class="module-text uk-padding-small-top uk-section uk-text-center@m uk-text-left">
                     <div class=module-text__content>
@@ -393,7 +393,7 @@
                     </div>
                 </section>
             </div>
-        </section>
+        </section> --}}
         <div class="default uk-section">
             <div class=uk-container>
                 <div class=bp3-grid style="--bp3-grid-template-columns:1fr 1fr;--bp3-grid-template-columns-tablet:1fr 1fr">

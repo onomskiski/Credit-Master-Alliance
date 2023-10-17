@@ -567,126 +567,22 @@
 										</div>
 									</div>
 								<li>
-									<div class=bp-nav__item>
-										<div class=bp-nav__item__text>Learn</div>
-										<div class=bp-dropdown>
-											<ul class=bp-dropdown__grid>
-												<li class=bp-dropdown__grid-list>
-													<div class=bp-dropdown__title>Our Education Platform</div>
-													<ul>
-														<li>
-															<a class=bp-dropdown__item href="#">
-																<img alt="Bitpanda Academy &lt;small&gt;Learn how to invest, all about personal finance, Bitcoin and cryptocurrencies&lt;/small&gt;" height=36 src="resources/cdn.bitpanda.com/media/New%20navigation_Rebrand%203.0/Group%2043-2.svg" width=36>
-																<div> 247-Cointrading Academy <small>Learn how to invest, all about personal finance, Bitcoin and cryptocurrencies</small> </div>
-															</a>
-														<li>
-															<a class=bp-dropdown__article href="#">
-																<img alt="&lt;small&gt;SECURITY&lt;/small&gt; Can a cryptocurrency like Bitcoin get hacked or shut down?&lt;br&gt;&lt;br&gt;" height=50 src="resources/cdn.bitpanda.com/media/New%20navigation_Rebrand%203.0/Screenshot%202022-11-17%20at%2011.14.47.png" width=70>
-																<div><small>SECURITY</small> Can a cryptocurrency like Bitcoin get hacked or shut down?<br><br> </div>
-															</a>
-														<li>
-															<a class=bp-dropdown__article href="#">
-																<img alt="&lt;small&gt;SECURITY&lt;/small&gt; How can I keep my cryptocurrencies safe?" height=50 src="resources/cdn.bitpanda.com/media/New%20navigation_Rebrand%203.0/Screenshot%202022-11-17%20at%2011.15.02.png" width=70>
-																<div><small>SECURITY</small> How can I keep my cryptocurrencies safe? </div>
-															</a>
-													</ul>
-												<li class=bp-dropdown__grid-list>
-													<div class=bp-dropdown__title>News, Updates &amp; Stories</div>
-													<ul>
-														<li>
-															<a class=bp-dropdown__item href="#">
-																<img alt="Bitpanda Blog &lt;small&gt;Be the first to learn the latest news, announcements, and stories from the world of investing, cryptocurrencies, stocks and precious metals&lt;/small&gt;" height=36 src="resources/cdn.bitpanda.com/media/New%20navigation_Rebrand%203.0/Group%20302%20new.svg" width=36>
-																<div> 247-Cointrading Blog <small>Be the first to learn the latest news, announcements, and stories from the world of investing, cryptocurrencies, stocks and precious metals</small> </div>
-															</a>
-														<li>
-															<a class=bp-dropdown__article href="#">
-																<img alt="&lt;small&gt;BITCOIN&lt;/small&gt; What to know when you are just starting to invest" height=50 src="resources/cdn.bitpanda.com/media/New%20navigation_Rebrand%203.0/Blog-nav-thumb3-280x200.jpg" width=70>
-																<div><small>BITCOIN</small> What to know when you are just starting to invest </div>
-															</a>
-														<li>
-															<a class=bp-dropdown__article href="#">
-																<img alt="&lt;small&gt;ASSET MANAGEMENT&lt;/small&gt; Your investment, your assets: Why your money is safe with Bitpanda" height=50 src="resources/cdn.bitpanda.com/media/your-investment-your-assets-why-your-money-is-safe-with-bitpanda-bitpanda-blog-en.png" width=70>
-																<div><small>ASSET MANAGEMENT</small> Your investment, your assets: Why your money is safe with 247-Cointrading </div>
-															</a>
-													</ul>
-											</ul>
-										</div>
-									</div>
+									<a href="/about" class="bp-nav__item text-black hover:text-slate-600 hover:decoration-none">
+										<div class=bp-nav__item__text>About Us</div>
+									</a>
+								</li>
 								<li>
-									<div class=bp-nav__item>
-										<div class=bp-nav__item__text>Business</div>
-										<div class=bp-dropdown>
-											<ul class=bp-dropdown__grid>
-												<li class=bp-dropdown__grid-list>
-												<li class=bp-dropdown__grid-list>
-													<div class=bp-dropdown__title>For institutionals</div>
-													<ul>
-														<li>
-															<a class=bp-dropdown__item href="login">
-																<img alt="Bitpanda Pro &lt;small&gt;A fully regulated crypto exchange for both retail and institutional customers&lt;/small&gt;" height=36 src="resources/cdn.bitpanda.com/media/New%20navigation_Rebrand%203.0/Group%2032%20new.svg" width=36>
-																<div> 247-Cointrading Pro <small>A fully regulated crypto exchange for both retail and institutional customers</small> </div>
-															</a>
-														<li>
-															<a class=bp-dropdown__item href="dashboard">
-																<img alt="Bitpanda Custody &lt;small&gt;Insured, user-friendly custodial wallet platform for institutional-grade security, automation and management of cryptoassets.&lt;/small&gt;" height=36 src="resources/cdn.bitpanda.com/media/New%20navigation_Rebrand%203.0/bpc%20b%20logo%20rounded%20square.png" width=36>
-																<div> 247-Cointrading Custody <small>Insured, user-friendly custodial wallet platform for institutional-grade security, automation and management of cryptoassets.</small> </div>
-															</a>
-													</ul>
-											</ul>
-										</div>
-									</div>
-								<li class=bp-dropdown__align-anchor>
-									<div class=bp-nav__item>
-										<div class=bp-nav__item__text>Company</div>
-										<div class="bp-dropdown bp-dropdown--padding-sm">
-											<ul class=bp-dropdown__grid>
-												<li class=bp-dropdown__grid-list>
-													<ul>
-														<li>
-															<a class=bp-dropdown__item href="about">
-																<div> About </div>
-															</a>
-                                                        </li>
-														<li>
-															<a class=bp-dropdown__item href="security">
-																<div> Security </div>
-															</a>
-                                                        </li>
-                                                        <li>
-															<a class=bp-dropdown__item href="career">
-																<div> Careers </div>
-															</a>
-                                                        </li>
-													</ul>
-											</ul>
-										</div>
-									</div>
-								<li class=bp-dropdown__align-anchor>
-									<div class=bp-nav__item>
-										<div class=bp-nav__item__text>Help</div>
-										<div class="bp-dropdown bp-dropdown--padding-sm">
-											<ul class=bp-dropdown__grid>
-												<li class=bp-dropdown__grid-list>
-													<ul>
-														<li>
-															<a class=bp-dropdown__item href="register">
-																<div> Sign up </div>
-															</a>
-                                                        </li>
-														<li>
-															<a class=bp-dropdown__item href="#">
-																<div> Deposit </div>
-															</a>
-                                                        </li>
-														<li>
-															<a class=bp-dropdown__item href="#">
-																<div> Plans </div>
-															</a>
-                                                        </li>
-													</ul>
-											</ul>
-										</div>
-									</div>
+									<a href="/career" class="bp-nav__item text-black hover:text-slate-600 hover:decoration-none">
+										<div class=bp-nav__item__text>Career</div>
+									</a>
+								</li>
+
+								<li>
+									<a href="/security" class="bp-nav__item text-black hover:text-slate-600 hover:decoration-none">
+										<div class=bp-nav__item__text>Security</div>
+									</a>
+								</li>
+							
 							</ul>
 						</div>
 						<div class=util-visible-desktop>

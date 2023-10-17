@@ -33,8 +33,81 @@
             @endif
 
             <!-- Page Content -->
-            <main>
-                {{ $slot }}
+            <main class="flex flex-col md:flex-row m-4">
+
+                <div class="w-full md:w-[200pt] shadow-lg h-full min-h-screen bg-white rounded-2xl px-5">
+                    <div class="px-3 py-2 rounded-lg shadow-md my-3 bg-white">
+                        Full Name
+                    </div>
+                    <div class="nav-link text-gray-500">
+                        <div class="px-3 py-2 rounded-lg cursor-pointer hover:bg-blue-100 transition-all my-3 bg-blue-500">
+                            <div class="flex justify-center items-center">
+                                <i class="bi bi-house-down"></i>
+                            </div>
+                            <div class="flex items-center">
+                                Profit Record
+                            </div>
+                        </div>
+                        
+                        <div class="px-3 py-2 rounded-lg cursor-pointer hover:bg-blue-100 transition-all my-3 hover:text-gray-800">
+                            <div class="flex justify-center items-center">
+                                <i class="bi bi-house-down"></i>
+                            </div>
+                            <div class="flex items-center">
+                                Profit Record
+                            </div>
+                        </div>
+
+                        <div class="px-3 py-2 rounded-lg cursor-pointer hover:bg-blue-100 transition-all my-3 hover:text-gray-800">
+                            <div class="flex justify-center items-center">
+                                <i class="bi bi-house-down"></i>
+                            </div>
+                            <div class="flex items-center">
+                                Transaction History
+                            </div>
+                        </div>
+
+                        <div class="px-3 py-2 rounded-lg cursor-pointer hover:bg-blue-100 transition-all my-3 hover:text-gray-800">
+                            <div class="flex justify-center items-center">
+                                <i class="bi bi-house-down"></i>
+                            </div>
+                            <div class="flex items-center">
+                                Crypto Exchange
+                            </div>
+                        </div>
+
+                        <div class="px-3 py-2 rounded-lg cursor-pointer hover:bg-blue-100 transition-all my-3 hover:text-gray-800">
+                            <div class="flex justify-center items-center">
+                                <i class="bi bi-house-down"></i>
+                            </div>
+                            <div class="flex items-center">
+                                Invest
+                            </div>
+                        </div>
+
+                        <div class="px-3 py-2 rounded-lg cursor-pointer hover:bg-blue-100 transition-all my-3 hover:text-gray-800">
+                            <div class="flex justify-center items-center">
+                                <i class="bi bi-house-down"></i>
+                            </div>
+                            <div class="flex items-center">
+                                Refer user
+                            </div>
+                        </div>
+
+                        <div class="px-3 py-2 rounded-lg cursor-pointer hover:bg-blue-100 transition-all my-3 hover:text-gray-800">
+                            <div class="flex justify-center items-center">
+                                <i class="bi bi-house-down"></i>
+                            </div>
+                            <div class="flex items-center">
+                                Help/Support
+                            </div>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="w-full md:w-auto">
+                    {{ $slot }}
+                </div>
             </main>
         </div>
 

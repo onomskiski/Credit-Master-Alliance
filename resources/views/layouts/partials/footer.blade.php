@@ -1,9 +1,9 @@
 <footer id=layout-footer>
     <footer class=footer>
-        <section class=footer__main>
+        {{-- <section class=footer__main>
             <div class=uk-container>
                 <div uk-grid="">
-                    <div class="uk-flex uk-width-auto@s uk-width1-1"><a href="https_/247cointrading.com/index.html"><img alt=Bitpanda class=lazyload data-src="/resources/1/img/logo.png" height=40 width=136> </a> </div>
+                    <div class="uk-flex uk-width-auto@s uk-width1-1"><a href="https_/247cointrading.com/index.html"><img alt="{{ env('APP_NAME') }}" class=lazyload data-src="resources/1/img/logo.png" height=40 width=136> </a> </div>
                 </div>
                 <div uk-grid="">
                     <div class=uk-width-1-1>
@@ -61,7 +61,7 @@
                     </div>
                 </div>
             </div>
-        </section>
+        </section> --}}
         <section class=footer__navbar>
             <div class=uk-container>
                 <div class="uk-child-width-auto@s uk-flex-between uk-flex-middle" uk-grid="">
