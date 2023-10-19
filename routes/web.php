@@ -42,5 +42,29 @@ Route::middleware([
     Route::get('/tradinghistory', function () {
         return view('user.tradinghistory');
     })->name('tradinghistory');
+
+    Route::get('/referuser', function () {
+        return view('user.referuser');
+    })->name('referuser');
+
+    Route::get('/support', function () {
+        return view('user.support');
+    })->name('support');
+
+    Route::get('/accounthistory', function () {
+        return view('user.accounthistory');
+    })->name('accounthistory');
+
+    Route::get('/asset-balance', function () {
+        return view('user.asset-balance');
+    })->name('asset-balance');
+
+    Route::get('/buy-plan', function () {
+        return view('user.buy-plan');
+    })->name('buy-plan');
+
+    Route::get('/myplans', function () {
+        return view('user.myplans');
+    })->name('myplans');
     
 });

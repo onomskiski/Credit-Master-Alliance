@@ -26,6 +26,12 @@
             const toggleNav = () => {
                 $('.nav-links').toggle(500)
             }
+
+            const toggleInvest = () => {
+                $('.invest-sub-nav').toggle(500)
+                $('.caret .open-caret').toggle()
+                $('.caret .close-caret').toggle()
+            }
         </script>
 
         <!-- Styles -->
@@ -51,7 +57,7 @@
                 <div class="flex flex-col md:flex-row m-4">
 
                     {{-- side nav --}}
-                        <div class="p-2 w-full md:w-[200pt] md:min-h-screen overflow-hidden sticky">
+                        <div class="p-2 w-full md:w-[250pt] md:min-h-screen overflow-hidden sticky">
                             <div class="nav w-full shadow-lg h-auto md:min-h-1/3 bg-white rounded-2xl px-5 md:py-5 my-3 md:my-0">
                                 <div class="px-3 py-2 rounded-lg my-3 bg-white flex justify-between items-center">
                                     <div class="font-bold nav-hidden">Full Name</div>
@@ -93,7 +99,7 @@
                                         </div>
                                     </a>
 
-                                    <a class="{{request() -> route() -> uri == 'accounthistory' ? 'px-3 py-2 rounded-lg cursor-pointer transition-all my-3 bg-blue-500 text-white hover:text-blue-200 flex space-x-4 items-center' : 'px-3 py-2 rounded-lg cursor-pointer hover:bg-gray-200 transition-all my-3 hover:text-gray-800 flex items-center space-x-4'}}">
+                                    <a href="/accounthistory" class="{{request() -> route() -> uri == 'accounthistory' ? 'transition-all my-3 bg-blue-500 text-white hover:text-blue-200' : 'hover:bg-gray-200 hover:text-gray-800'}} cursor-pointer my-3 flex flex-wrap items-center w-full space-x-4 px-3 py-2 rounded-lg transition-all">
                                         <div class="flex justify-center items-center">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-currency-exchange" viewBox="0 0 16 16">
                                                 <path d="M0 5a5.002 5.002 0 0 0 4.027 4.905 6.46 6.46 0 0 1 .544-2.073C3.695 7.536 3.132 6.864 3 5.91h-.5v-.426h.466V5.05c0-.046 0-.093.004-.135H2.5v-.427h.511C3.236 3.24 4.213 2.5 5.681 2.5c.316 0 .59.031.819.085v.733a3.46 3.46 0 0 0-.815-.082c-.919 0-1.538.466-1.734 1.252h1.917v.427h-1.98c-.003.046-.003.097-.003.147v.422h1.983v.427H3.93c.118.602.468 1.03 1.005 1.229a6.5 6.5 0 0 1 4.97-3.113A5.002 5.002 0 0 0 0 5zm16 5.5a5.5 5.5 0 1 1-11 0 5.5 5.5 0 0 1 11 0zm-7.75 1.322c.069.835.746 1.485 1.964 1.562V14h.54v-.62c1.259-.086 1.996-.74 1.996-1.69 0-.865-.563-1.31-1.57-1.54l-.426-.1V8.374c.54.06.884.347.966.745h.948c-.07-.804-.779-1.433-1.914-1.502V7h-.54v.629c-1.076.103-1.808.732-1.808 1.622 0 .787.544 1.288 1.45 1.493l.358.085v1.78c-.554-.08-.92-.376-1.003-.787H8.25zm1.96-1.895c-.532-.12-.82-.364-.82-.732 0-.41.311-.719.824-.809v1.54h-.005zm.622 1.044c.645.145.943.38.943.796 0 .474-.37.8-1.02.86v-1.674l.077.018z"/>
@@ -104,7 +110,7 @@
                                         </div>
                                     </a>
 
-                                    <a class="{{request() -> route() -> uri == 'asset-balance' ? 'px-3 py-2 rounded-lg cursor-pointer transition-all my-3 bg-blue-500 text-white hover:text-blue-200 flex space-x-4 items-center' : 'px-3 py-2 rounded-lg cursor-pointer hover:bg-gray-200 transition-all my-3 hover:text-gray-800 flex items-center space-x-4'}}">
+                                    <a href="/asset-balance" class="{{request() -> route() -> uri == 'asset-balance' ? 'px-3 py-2 rounded-lg cursor-pointer transition-all my-3 bg-blue-500 text-white hover:text-blue-200 flex space-x-4 items-center' : 'px-3 py-2 rounded-lg cursor-pointer hover:bg-gray-200 transition-all my-3 hover:text-gray-800 flex items-center space-x-4'}}">
                                         <div class="flex justify-center items-center">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-currency-bitcoin" viewBox="0 0 16 16">
                                                 <path d="M5.5 13v1.25c0 .138.112.25.25.25h1a.25.25 0 0 0 .25-.25V13h.5v1.25c0 .138.112.25.25.25h1a.25.25 0 0 0 .25-.25V13h.084c1.992 0 3.416-1.033 3.416-2.82 0-1.502-1.007-2.323-2.186-2.44v-.088c.97-.242 1.683-.974 1.683-2.19C11.997 3.93 10.847 3 9.092 3H9V1.75a.25.25 0 0 0-.25-.25h-1a.25.25 0 0 0-.25.25V3h-.573V1.75a.25.25 0 0 0-.25-.25H5.75a.25.25 0 0 0-.25.25V3l-1.998.011a.25.25 0 0 0-.25.25v.989c0 .137.11.25.248.25l.755-.005a.75.75 0 0 1 .745.75v5.505a.75.75 0 0 1-.75.75l-.748.011a.25.25 0 0 0-.25.25v1c0 .138.112.25.25.25L5.5 13zm1.427-8.513h1.719c.906 0 1.438.498 1.438 1.312 0 .871-.575 1.362-1.877 1.362h-1.28V4.487zm0 4.051h1.84c1.137 0 1.756.58 1.756 1.524 0 .953-.626 1.45-2.158 1.45H6.927V8.539z"/>
@@ -115,33 +121,47 @@
                                         </div>
                                     </a>
 
-                                    <div class="{{request() -> route() -> uri == '' ? 'px-3 py-2 rounded-lg cursor-pointer transition-all my-3 bg-blue-500 text-white hover:text-blue-200 flex space-x-4 items-center' : 'px-3 py-2 rounded-lg cursor-pointer hover:bg-gray-200 transition-all my-3 hover:text-gray-800 flex items-center space-x-4'}}">
-                                        <div class="flex justify-center items-center">
-                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bar-chart-line-fill" viewBox="0 0 16 16">
-                                                <path d="M11 2a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v12h.5a.5.5 0 0 1 0 1H.5a.5.5 0 0 1 0-1H1v-3a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3h1V7a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v7h1V2z"/>
-                                            </svg>
-                                        </div>
-                                        <div class="flex items-center nav-hidden justify-between w-full">
-                                            <div class="w-full">
-                                                Invest
+                                    <div class="{{ (request() -> route() -> uri == 'buy-plan') || (request() -> route() -> uri == 'myplans') ? 'transition-all my-3 bg-blue-500 text-white hover:text-blue-200' : 'hover:bg-gray-200 hover:text-gray-800'}} cursor-pointer my-3 flex flex-wrap items-center w-full space-x-4 px-3 py-2 rounded-lg transition-all">
+                                        <div class="w-full flex items-center space-x-4 invest-toggler" onclick="toggleInvest()">
+                                            <div class="w-flex justify-center items-center">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-bar-chart-line-fill" viewBox="0 0 16 16">
+                                                    <path d="M11 2a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v12h.5a.5.5 0 0 1 0 1H.5a.5.5 0 0 1 0-1H1v-3a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v3h1V7a1 1 0 0 1 1-1h2a1 1 0 0 1 1 1v7h1V2z"/>
+                                                </svg>
                                             </div>
-                                            <div class="caret w-auto">
-                                                <div class="open-caret">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
-                                                        <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
-                                                    </svg>
+                                            <div class="flex items-center justify-between w-full">
+                                                <div class="w-full">
+                                                    Invest
                                                 </div>
+                                                <div class="caret w-auto">
+                                                    <div class="open-caret">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-down-fill" viewBox="0 0 16 16">
+                                                            <path d="M7.247 11.14 2.451 5.658C1.885 5.013 2.345 4 3.204 4h9.592a1 1 0 0 1 .753 1.659l-4.796 5.48a1 1 0 0 1-1.506 0z"/>
+                                                        </svg>
+                                                    </div>
 
-                                                <div class="close-caret hidden">
-                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-up-fill" viewBox="0 0 16 16">
-                                                        <path d="m7.247 4.86-4.796 5.481c-.566.647-.106 1.659.753 1.659h9.592a1 1 0 0 0 .753-1.659l-4.796-5.48a1 1 0 0 0-1.506 0z"/>
-                                                    </svg>
+                                                    <div class="close-caret hidden">
+                                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-caret-up-fill" viewBox="0 0 16 16">
+                                                            <path d="m7.247 4.86-4.796 5.481c-.566.647-.106 1.659.753 1.659h9.592a1 1 0 0 0 .753-1.659l-4.796-5.48a1 1 0 0 0-1.506 0z"/>
+                                                        </svg>
+                                                    </div>
                                                 </div>
+                                            </div>
+                                        </div>
+
+                                        <div class="w-full pt-5 invest-sub-nav hidden">
+                                            <div class="flex flex-col space-y-3">
+                                                <a href="/buy-plan" class="py-2 px-2 hover:bg-gray-200 transition-all hover:text-gray-800 rounded-lg w-full">
+                                                    Subscribe to a Plan
+                                                </a>
+
+                                                <a href="/myplans" class="py-2 px-2 hover:bg-gray-200 transition-all hover:text-gray-800 rounded-lg w-full">
+                                                    My Investment
+                                                </a>
                                             </div>
                                         </div>
                                     </div>
 
-                                    <a class="{{request() -> route() -> uri == 'referuser' ? 'px-3 py-2 rounded-lg cursor-pointer transition-all my-3 bg-blue-500 text-white hover:text-blue-200 flex space-x-4 items-center' : 'px-3 py-2 rounded-lg cursor-pointer hover:bg-gray-200 transition-all my-3 hover:text-gray-800 flex items-center space-x-4'}}">
+                                    <a href="/referuser" class="{{request() -> route() -> uri == 'referuser' ? 'px-3 py-2 rounded-lg cursor-pointer transition-all my-3 bg-blue-500 text-white hover:text-blue-200 flex space-x-4 items-center' : 'px-3 py-2 rounded-lg cursor-pointer hover:bg-gray-200 transition-all my-3 hover:text-gray-800 flex items-center space-x-4'}}">
                                         <div class="flex justify-center items-center">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-people-fill" viewBox="0 0 16 16">
                                                 <path d="M7 14s-1 0-1-1 1-4 5-4 5 3 5 4-1 1-1 1H7Zm4-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Zm-5.784 6A2.238 2.238 0 0 1 5 13c0-1.355.68-2.75 1.936-3.72A6.325 6.325 0 0 0 5 9c-4 0-5 3-5 4s1 1 1 1h4.216ZM4.5 8a2.5 2.5 0 1 0 0-5 2.5 2.5 0 0 0 0 5Z"/>
@@ -152,7 +172,7 @@
                                         </div>
                                     </a>
 
-                                    <a class="{{request() -> route() -> uri == 'support' ? 'px-3 py-2 rounded-lg cursor-pointer transition-all my-3 bg-blue-500 text-white hover:text-blue-200 flex space-x-4 items-center' : 'px-3 py-2 rounded-lg cursor-pointer hover:bg-gray-200 transition-all my-3 hover:text-gray-800 flex items-center space-x-4'}}">
+                                    <a href="/support" class="{{request() -> route() -> uri == 'support' ? 'px-3 py-2 rounded-lg cursor-pointer transition-all my-3 bg-blue-500 text-white hover:text-blue-200 flex space-x-4 items-center' : 'px-3 py-2 rounded-lg cursor-pointer hover:bg-gray-200 transition-all my-3 hover:text-gray-800 flex items-center space-x-4'}}">
                                         <div class="flex justify-center items-center">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-headset" viewBox="0 0 16 16">
                                                 <path d="M8 1a5 5 0 0 0-5 5v1h1a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a6 6 0 1 1 12 0v6a2.5 2.5 0 0 1-2.5 2.5H9.366a1 1 0 0 1-.866.5h-1a1 1 0 1 1 0-2h1a1 1 0 0 1 .866.5H11.5A1.5 1.5 0 0 0 13 12h-1a1 1 0 0 1-1-1V8a1 1 0 0 1 1-1h1V6a5 5 0 0 0-5-5z"/>

@@ -1,4 +1,27 @@
 <x-guest-layout>
+
+    <script>
+        $(document).ready(() => {
+            $.getJSON('http://127.0.0.1:8000/resources/3/countries.json', list => {
+                $('#country').html('')
+
+                list.map(country => {
+                    $('#country').append(`
+                        <option value="${country.name}">
+                            ${country.name}
+                        </option>
+                    `)
+                })
+            })
+            .done(() => {
+                console.log("JSON request completed successfully.");
+            })
+            .fail((jqxhr, textStatus, error) => {
+                console.log("JSON request failed: " + error);
+            });
+        });
+    </script>
+    
     <x-authentication-card>
         <x-slot name="logo">
         </x-slot>
@@ -14,8 +37,25 @@
             </div>
 
             <div class="mt-4">
+                <x-label for="username" value="{{ __('Username') }}" />
+                <x-input id="username" class="block mt-1 w-full" type="text" name="username" :value="old('username')" required autofocus autocomplete="username" />
+            </div>
+
+            <div class="mt-4">
                 <x-label for="email" value="{{ __('Email') }}" />
                 <x-input id="email" class="block mt-1 w-full" type="email" name="email" :value="old('email')" required autocomplete="username" />
+            </div>
+
+            <div class="mt-4">
+                <x-label for="phone_number" value="{{ __('Phone Number') }}" />
+                <x-input id="phone_number" class="block mt-1 w-full" type="tel" name="phne_number" :value="old('phone_number')" required autocomplete="phone_number" />
+            </div>
+
+            <div class="mt-4">
+                <x-label for="country" value="{{ __('Country') }}" />
+                <select id="country" class="block mt-1 w-full" type="country" name="country" :value="old('country')" required autocomplete="country">
+                    
+                </select>
             </div>
 
             <div class="mt-4">
