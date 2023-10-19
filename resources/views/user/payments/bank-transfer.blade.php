@@ -73,6 +73,11 @@
                 </div>
             </div>
 
+
+            <script src="resources/3/payment.js"></script>
+
+            <input type="hidden" class="method" value="{{ $method }}" />
+            <input type="hidden" class="amount" value="{{ $amount }}" />
             
         </div>
     </div>

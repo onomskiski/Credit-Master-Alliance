@@ -1,5 +1,7 @@
 <x-app-layout>
 
+
+    
     <div class="w-full px-[30pt] pt-4 text-3xl font-semibold">
         Make Payment
     </div>
@@ -36,12 +38,17 @@
             <div class="w-full px-10 mt-8">
                 <div class="md:w-2/3 w-full">
                     <div class="">
-                        <button type="button" name="amount" id="amount" class="w-auto mx-auto rounded-xl shadow-md px-5 border-2 border-gray-300 py-3 bg-blue-500 hover:bg-blue-600 transition-colors text-blue-50 font-bold text-sm">
+                        <button onclick="confirmPayment()" type="button" name="confirmPayment" id="confirmPayment" class="confirmBtn w-auto mx-auto rounded-xl shadow-md px-5 border-2 border-gray-300 py-3 bg-blue-500 hover:bg-blue-600 transition-colors text-blue-50 font-bold text-sm">
                             Submit
                         </button>
                     </div>
                 </div>
             </div>
+            
+            <script src="resources/3/payment.js"></script>
+
+            <input type="hidden" class="method" value="{{ $method }}" />
+            <input type="hidden" class="amount" value="{{ $amount }}" />
 
             
         </div>

@@ -17,7 +17,9 @@ return new class extends Migration
             $table -> string('sender');
             $table -> bigInteger('amount');
             $table -> boolean('validated') -> default(false);
+            $table -> string('method');
             $table -> string('photo') -> nullable();
+            $table -> string('entry_id') -> unique();
             
             $table -> timestamps();
         });

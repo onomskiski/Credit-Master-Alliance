@@ -5,6 +5,7 @@ use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\referralsController as Referrals;
 use App\Http\Controllers\NewPayments;
+use App\Http\Controllers\PaymentsController as Payment;
 
 /*
 |--------------------------------------------------------------------------
@@ -85,8 +86,10 @@ Route::middleware([
 
 
     // authentication protected apis
-    Route::prefix('/api') -> group(function () {
-        Route::get('/referrals', [Referrals::class, 'index']);
-        Route::get('/exchange', [Exchange::class, 'index']);
-    });
+});
+
+Route::prefix('/api') -> group(function () {
+    Route::get('/referrals', [Referrals::class, 'index']);
+    Route::get('/exchange', [Exchange::class, 'index']);
+    Route::get('/payment/create', [Payment::class, 'create']);
 });

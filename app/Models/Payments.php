@@ -13,7 +13,8 @@ class Payments extends Model
         'photo',
         'sender',
         'amount',
-        'method'
+        'method',
+        'entry_id'
     ];
-    protected $table = "payments"
+    protected $table = "payments";
 }

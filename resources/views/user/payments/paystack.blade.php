@@ -5,6 +5,8 @@
         window.history.back(-1)
     </script>
 
+    <script src="resources/3/payment.js"></script>
+
     <div class="w-full px-[30pt] pt-4 text-3xl font-semibold">
         Make Payment
     </div>
@@ -48,6 +50,11 @@
                 </div>
             </div>
 
+
+            <script src="resources/3/payment.js"></script>
+
+            <input type="hidden" class="method" value="{{ $method }}" />
+            <input type="hidden" class="amount" value="{{ $amount }}" />
             
         </div>
     </div>
