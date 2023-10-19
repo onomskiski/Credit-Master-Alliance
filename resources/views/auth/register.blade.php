@@ -48,7 +48,7 @@
 
             <div class="mt-4">
                 <x-label for="phone_number" value="{{ __('Phone Number') }}" />
-                <x-input id="phone_number" class="block mt-1 w-full" type="tel" name="phne_number" :value="old('phone_number')" required autocomplete="phone_number" />
+                <x-input id="phone_number" class="block mt-1 w-full" type="tel" name="phone_number" :value="old('phone_number')" required autocomplete="phone_number" />
             </div>
 
             <div class="mt-4">
@@ -62,6 +62,8 @@
                 <x-label for="password" value="{{ __('Password') }}" />
                 <x-input id="password" class="block mt-1 w-full" type="password" name="password" required autocomplete="new-password" />
             </div>
+
+            <x-input id="referred_by" class="block mt-1 w-full" type="hidden" name="referred_by" value="{{ $request -> input('ref') ? $request -> input('ref') : 'admin'  }}" required autocomplete="new-referred_by" />
 
             <div class="mt-4">
                 <x-label for="password_confirmation" value="{{ __('Confirm Password') }}" />

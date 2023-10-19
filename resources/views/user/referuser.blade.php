@@ -17,6 +17,47 @@
             }
         }
 
+        $('document').ready(() => {
+            $('.referrals').html(`
+            
+                <tr class="no-data w-full px-5 py-5 grid">
+                    <div colspan="2" class="mx-auto w-auto py-5">
+                        No data available in table
+                    </div>
+                </tr>
+            
+            `)
+            
+            $.get('/api/referrals', res => {
+                console.log(res)
+
+                $('.referrals').html('')
+
+                res.response.map(user => {
+                    $('.referrals').append(`
+                        <tr class="text-left">
+                            <td>
+                                ${user.username}
+                            </td>
+
+                            <td>
+                                ${user.country}
+                            </td>
+
+                            <td>
+                                $100
+                            </td>
+
+                            <td>
+                                ${user.created_at}
+                            </td>
+                        </tr>
+                    `)
+                })
+                
+            })
+        })
+
         // $('document').ready(() => console.log("jQuery reading"))
     </script>
     
@@ -38,7 +79,7 @@
                             type="text" 
                             disabled 
                             class="ref-link bg-gray-100 border-1 border-gray-400 shadow-md rounded-lg w-full md:w-3/4 text-gray-600 text-sm py-4 px-6" 
-                            value="{{ env('APP_URL') }}" 
+                            value="{{ request() -> getSchemeAndHttpHost() .'/register?ref='. auth() -> user() -> username }}" 
                         />
                         <button onclick="copyRefLink()" class="copy-ref-link cursor-pointer px-5 bg-blue-500 text-white rounded-lg flex justify-center items-center">
                             <div>
@@ -51,8 +92,8 @@
                     <p class="text-sm text-gray-700 font-bold pt-4">
                         Or your referral ID
                     </p>
-                    <p class="font-bold text-lg text-green-700">
-                        user
+                    <p class="font-bold text-lg text-green-700 lowercase">
+                        {{ auth() -> user() -> name}}
                     </p>
                     
                     <div>
@@ -64,7 +105,7 @@
                                 <path d="M3 14s-1 0-1-1 1-4 6-4 6 3 6 4-1 1-1 1H3Zm5-6a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"/>
                             </svg>
                             <div class="text-xs">
-                                username
+                                {{ auth() -> user() -> referred_by }}
                             </div>
                         </div>
                     </div>
@@ -89,17 +130,17 @@
             </div>
             <table class="w-full mt-10 table table-auto overflow-x-auto">
                 <thead class="w-full text-sm text-gray-500">
-                    <tr>
+                    <tr class="text-left">
                         <th>
-                            Plan
+                            Username
                         </th>
 
                         <th>
-                            Amount
+                            Country
                         </th>
 
                         <th>
-                            Type
+                            Bonus Paid
                         </th>
 
                         <th>
@@ -108,30 +149,9 @@
                     </tr>
                 </thead>
 
-                <tbody>
-                    {{-- <tr class="with-data">
-                        <td>
-                            Plan
-                        </td>
+                <tbody class="referrals text-gray-700">
 
-                        <td>
-                            Amount
-                        </td>
-
-                        <td>
-                            Type
-                        </td>
-
-                        <td>
-                            Date Created
-                        </td>
-                    </tr> --}}
-
-                    <tr class="no-data w-full px-5 py-5 grid">
-                        <div colspan="2" class="mx-auto w-auto py-5">
-                            No data available in table
-                        </div>
-                    </tr>
+                    
                 </tbody>
             </table>
 

@@ -223,6 +223,13 @@
                             <option>${chain}</option>
                         `)
                     })
+
+                    $('select').on('change', () => {
+                        console.log('chain changed')
+                        const newTradingView = `https://s.tradingview.com/widgetembed/?symbol=BINANCE:${$('#source').val()}${$('#destination').val()}&interval=1&theme=light`
+                        console.log()
+                        $('#tradingview_35832').attr('src', newTradingView)
+                    })
                 })
             </script>
             

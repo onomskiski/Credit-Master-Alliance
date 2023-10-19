@@ -8,7 +8,7 @@
             </div>
         </div>
         <div class="w-full p-5 text-xl font-semibold">
-            <h3>Welcome, Name!</h3>
+            <h3>Welcome, {{ auth() -> user() -> name }}!</h3>
         </div>
         <div class="flex justify-between flex-wrap space-y-5 md:space-y-0">
             <div class="w-full md:w-1/4 md:py-5 md:px-3">

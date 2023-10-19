@@ -1,6 +1,10 @@
 <?php
 
+use App\Http\Controllers\Exchange;
 use Illuminate\Support\Facades\Route;
+
+use App\Http\Controllers\referralsController as Referrals;
+use App\Http\Controllers\NewPayments;
 
 /*
 |--------------------------------------------------------------------------
@@ -66,5 +70,23 @@ Route::middleware([
     Route::get('/myplans', function () {
         return view('user.myplans');
     })->name('myplans');
+
+    Route::get('/fund', function () {
+        return view('user.fund');
+    })->name('fund');
+
+    Route::get('/withdraw', function () {
+        return view('user.withdraw');
+    })->name('withdraw');
+
+    Route::get('/payment', [NewPayments::class, 'index'])->name('payment');
     
+
+
+
+    // authentication protected apis
+    Route::prefix('/api') -> group(function () {
+        Route::get('/referrals', [Referrals::class, 'index']);
+        Route::get('/exchange', [Exchange::class, 'index']);
+    });
 });
