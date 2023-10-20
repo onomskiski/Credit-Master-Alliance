@@ -4,7 +4,7 @@
         plans = [
             {
                 id: 'strt',
-                name: 'Starter',
+                name: 'starter',
                 deposit: {
                     max: 0,
                     min: 0,
@@ -20,7 +20,7 @@
 
             {
                 id: 'prem',
-                name: 'Premium',
+                name: 'premium',
                 deposit: {
                     max: 0,
                     min: 0,
@@ -36,7 +36,7 @@
 
             {
                 id: 'prof',
-                name: 'Professional',
+                name: 'professional',
                 deposit: {
                     max: 0,
                     min: 0,
@@ -66,7 +66,7 @@
                             <div class="h-[100pt] w-full flex justify-center items-center">
                                 <div class="w-full flex justify-center items-baseline text-gray-800">
                                     <span class="text-[16pt]">$</span>
-                                    <span class="text-7xl">${plan.amount}</span>
+                                    <span class="text-7xl capitalize">${plan.amount}</span>
                                 </div>
                             </div> 
 
@@ -126,11 +126,11 @@
                             </div>
                             <form>
                                 <div class="w-full py-2">
-                                    <input type="number" name="amount" id="amount" class="w-full rounded border-1 border-gray-900 py-2 px-3 shadow bg-gray-100 placeholder:text-gray-600 text-sm" placeholder="$0" />
+                                    <input type="number" name="amount" class="${plan.name}-amount w-full rounded border-1 border-gray-900 py-2 px-3 shadow bg-gray-100 placeholder:text-gray-600 text-sm" placeholder="$0" required />
                                 </div>
             
                                 <div class="w-full py-2">
-                                    <input type="submit" class="w-full rounded border-1 bg-blue-600 hover:bg-blue-500 transition-colors border-none text-white py-3 px-3 shadow text-sm cursor-pointer" value="Join Plan" />
+                                    <input type="button" onClick="subscribe('${plan.name}')" class="w-full rounded border-1 bg-blue-600 hover:bg-blue-500 transition-colors border-none text-white py-3 px-3 shadow text-sm cursor-pointer" value="Join Plan" />
                                 </div>
                             </form>
                         </div>
@@ -138,6 +138,20 @@
                 `)
             })
         })
+
+        function subscribe(name){
+            const plan = `${name}`
+            const amount = Number($(`.${name}-amount`).val())
+
+            data = {plan, amount}
+
+            $.get('/api/investments/subscribe', data, res => {
+                console.log(res)
+                alert(res.message)
+            })
+            
+            console.log(data)
+        }
         
     </script>
     

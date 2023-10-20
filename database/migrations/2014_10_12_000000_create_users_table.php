@@ -12,21 +12,21 @@ return new class extends Migration
     public function up(): void
     {
         Schema::create('users', function (Blueprint $table) {
-            $table->id();
-            $table->string('name');
-            $table -> string('username') -> unique();
-            $table->string('email')->unique();
-            $table -> string('phone_number');
-            $table -> string('country');
-            $table -> string('referred_by') -> default('admin');
-            $table -> string('balances') -> nullable();
-            $table -> bigInteger('total_bonus') -> default(5);
-            $table->timestamp('email_verified_at')->nullable();
-            $table->string('password');
-            $table->rememberToken();
-            $table->foreignId('current_team_id')->nullable();
-            $table->string('profile_photo_path', 2048)->nullable();
-            $table->timestamps();
+                $table->id();
+                $table->string('name');
+                $table -> string('username') -> unique();
+                $table->string('email')->unique();
+                $table -> string('phone_number');
+                $table -> string('country');
+                $table -> string('referred_by') -> default('admin');
+                $table -> json('balances') -> nullable();
+                $table -> bigInteger('total_bonus') -> default(5);
+                $table->timestamp('email_verified_at')->nullable();
+                $table->string('password');
+                $table->rememberToken();
+                $table->foreignId('current_team_id')->nullable();
+                $table->string('profile_photo_path', 2048)->nullable();
+                $table->timestamps();
         });
     }
 
