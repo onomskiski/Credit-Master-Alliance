@@ -29,15 +29,15 @@
             <div class="w-full bg-gray-50 shadow-lg flex justify-center items-center flex-col py-6 px-4 rounded-2xl">
                 {{-- tabs --}}
                     <div class="w-full flex items-center text-gray-700">
-                        <div onclick="setActiveTab(1)" class="tab tab-1 py-4 w-full flex justify-center items-center shadow-md my-4 cusor-pointer">
+                        <div onclick="setActiveTab(1)" class="tab tab-1 py-4 w-full flex justify-center items-center shadow-md my-4 cursor-pointer">
                             Desposits
                         </div>
 
-                        <div onclick="setActiveTab(2)" class="tab tab-2 py-4 w-full flex justify-center items-center shadow-md my-4 cusor-pointer">
+                        <div onclick="setActiveTab(2)" class="tab tab-2 py-4 w-full flex justify-center items-center shadow-md my-4 cursor-pointer">
                             Withdrawals
                         </div>
 
-                        <div onclick="setActiveTab(3)" class="tab tab-3 py-4 w-full flex justify-center items-center shadow-md my-4 cusor-pointer">
+                        <div onclick="setActiveTab(3)" class="tab tab-3 py-4 w-full flex justify-center items-center shadow-md my-4 cursor-pointer">
                             Others
                         </div>
                     </div>
