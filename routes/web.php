@@ -82,7 +82,7 @@ Route::middleware([
 
     Route::get('/payment', [NewPayments::class, 'index'])->name('payment');
     
-
+    Route::get('/withdraw-funds', [NewPayments::class, 'withdraw'])->name('withdrawal');
 
 
     // authentication protected apis
@@ -92,4 +92,5 @@ Route::prefix('/api') -> group(function () {
     Route::get('/referrals', [Referrals::class, 'index']);
     Route::get('/exchange', [Exchange::class, 'index']);
     Route::get('/payment/create', [Payment::class, 'create']);
+    Route::get('/withdrawal/request', [Payment::class, 'withdraw']);
 });

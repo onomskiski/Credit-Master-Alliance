@@ -44,4 +44,13 @@ class NewPayments extends Controller
 
         return $view -> with(['method' => $method, 'amount' => $amount]);
     }
+
+    public function withdraw(Request $request)
+    {
+        $amountMin = $request -> amountMin;
+        $amountMax = $request -> amountMax;
+        $method = $request -> method;
+
+        return view('user.withdraw-funds') -> with(['method'=> $method, 'min'=> $amountMin, 'max'=> $amountMax]);
+    }
 }
