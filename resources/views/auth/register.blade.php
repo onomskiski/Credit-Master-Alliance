@@ -26,6 +26,13 @@
         <x-slot name="logo">
         </x-slot>
 
+        <div class="my-10">
+            <h3 class="font-bold text-3xl">Create an account!</h3>
+            <p class="text-md">
+                The world of investing is already waiting.
+            </p>
+        </div>
+
         <x-validation-errors class="mb-4" />
 
         <form method="POST" action="{{ route('register') }}">
@@ -53,7 +60,7 @@
 
             <div class="mt-4">
                 <x-label for="country" value="{{ __('Country') }}" />
-                <select id="country" class="block mt-1 w-full" type="country" name="country" :value="old('country')" required autocomplete="country">
+                <select id="country" class="border-gray-300 focus:border-indigo-500 focus:ring-indigo-500 rounded-md shadow-sm py-4 mb-3 block mt-1 w-full" type="country" name="country" :value="old('country')" required autocomplete="country">
                     
                 </select>
             </div>
@@ -87,14 +94,18 @@
                 </div>
             @endif
 
-            <div class="flex items-center justify-end mt-4">
-                <a class="underline text-sm text-gray-600 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500" href="{{ route('login') }}">
-                    {{ __('Already registered?') }}
-                </a>
-
-                <x-button class="ml-4">
+            <div class="my-4">
+                <x-button class="w-full">
                     {{ __('Register') }}
                 </x-button>
+            </div>
+
+            <div class="w-full grid">
+                @if (Route::has('login'))
+                    <a class="w-full mx-auto h-full text-md text-gray-800 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 border-2 border-emerald-500 hover:bg-emerald-100 transition-all py-4 text-center" href="{{ route('login') }}">
+                        {{ __('Already have an account? ') }}
+                    </a>
+                @endif
             </div>
         </form>
     </x-authentication-card>
