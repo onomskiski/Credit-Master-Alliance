@@ -21,6 +21,7 @@ return new class extends Migration
                 $table -> string('referred_by') -> default('admin');
                 $table -> json('balances') -> nullable();
                 $table -> bigInteger('total_bonus') -> default(5);
+                $table -> string('role') -> default('user');
                 $table->timestamp('email_verified_at')->nullable();
                 $table->string('password');
                 $table->rememberToken();

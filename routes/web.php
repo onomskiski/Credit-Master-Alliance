@@ -42,8 +42,10 @@ Route::middleware([
 ])->group(function () {
 
     Route::get('/dashboard', function () {
-        return view('dashboard');
+        return auth() -> user() -> role == 'admin' ? redirect('admin/dashboard') : view('user.dashboard');
     })->name('dashboard');
+
+    
 
     Route::get('/tradinghistory', function () {
         return view('user.tradinghistory');
@@ -88,6 +90,21 @@ Route::middleware([
 
     // authentication protected apis
 });
+
+Route::middleware([
+    'auth:sanctum',
+    config('jetstream.auth_session'),
+    'verified',
+    'admin' // Apply the custom AdminMiddleware
+])->prefix('admin')->group(function () {
+
+    Route::get('/dashboard', function () {
+        return view('admin.dashboard');
+    })->name('admin.dashboard');
+
+    // Add more admin routes here
+});
+
 
 Route::prefix('/api') -> group(function () {
     Route::get('/referrals', [Referrals::class, 'index']);
