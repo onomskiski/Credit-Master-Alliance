@@ -9,7 +9,7 @@
             $('.withdrawal-form').submit((e) => {
                 e.preventDefault();
                 
-                $.get('/api/withdrawal/request', $('.withdrawal-form').serializeArray(), (res) => {
+                $.get('/api/withdrawal/create', $('.withdrawal-form').serializeArray(), (res) => {
                     console.log(res)
 
                     alert(res.response)

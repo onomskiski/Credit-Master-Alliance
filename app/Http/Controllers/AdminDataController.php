@@ -6,6 +6,8 @@ use App\Models\User;
 // use Illuminate\Http\Request;
 use App\Models\Investments;
 use App\Models\Payments;
+use App\Models\Withdrawals;
+
 use Carbon\Carbon;
 use Illuminate\Http\Request;
 
@@ -69,13 +71,21 @@ class AdminDataController extends Controller
     public function page(){
         $payments = new Payments();
         $pendingPayments = Payments::where('validated', '==', false) -> get();
-        $pendingPaymentsCount = $payments -> count();
+        
+        // withdrawals data
+        $withdrawals = new Withdrawals();
+        $pendingWithdrawals = $withdrawals -> where(['confirmed' => 0]) -> get();
         
         return view('admin.dashboard', [
             'payments' => $pendingPayments,
             'paymentsCount' => [
                 'all' => $payments -> where(['validated' => true]) -> count(),
                 'pending' => $payments -> where(['validated' => false]) -> count()
+            ],
+            'withdrawals' => $pendingWithdrawals,
+            'withdrawalCount' => [
+                'all'=> $withdrawals -> where(['confirmed'=> true]) -> count(),
+                'pending'=> $withdrawals -> where(['confirmed'=> false]) -> count()
             ]
         ]);
     }

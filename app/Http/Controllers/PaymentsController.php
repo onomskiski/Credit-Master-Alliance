@@ -35,32 +35,6 @@ class PaymentsController extends Controller
         
     }
 
-    public function withdraw(Request $request){
-        $amount = $request -> amount;
-        $method = $request -> method;
-        $address = $request -> address;
-
-        $withdrawals = new Withdrawals();
-
-        $withdrawals -> user = auth() -> user() -> username;
-        $withdrawals -> amount = $amount;
-        $withdrawals -> address = $address;
-        $withdrawals -> method = $method;
-
-        if($withdrawals -> save()){
-            return response()->json([
-                'status' => 201,
-                'response' => 'Withdrawal Request Processing'
-            ], 201);
-        }
-        else{
-            return response()->json([
-                'status' => 400,
-                'response' => 'An error occurred while processing your request'
-            ], 200);
-        }
-    }
-
 
     // admi api controlled methods
     public function confirm(Request $request){

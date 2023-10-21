@@ -3,6 +3,7 @@
 use App\Http\Controllers\AdminDataController;
 use App\Http\Controllers\Exchange;
 use App\Http\Controllers\Investments;
+use App\Http\Controllers\Withdrawals;
 use Illuminate\Support\Facades\Route;
 
 use App\Http\Controllers\referralsController as Referrals;
@@ -113,7 +114,7 @@ Route::prefix('/api') -> group(function () {
     Route::get('/referrals', [Referrals::class, 'index']);
     Route::get('/exchange', [Exchange::class, 'index']);
     Route::get('/payment/create', [Payment::class, 'create']);
-    Route::get('/withdrawal/request', [Payment::class, 'withdraw']);
+    Route::resource('/withdrawal', Withdrawals::class);
     Route::get('/investments/subscribe', [Investments::class, 'subscribe']);
 });
 

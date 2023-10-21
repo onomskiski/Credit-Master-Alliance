@@ -16,6 +16,7 @@ return new class extends Migration
             $table -> string('user');
             $table -> bigInteger('amount');
             $table -> string('method');
+            $table -> boolean('confirmed') -> default(0);
             $table -> string('address');
             $table->timestamps();
         });
