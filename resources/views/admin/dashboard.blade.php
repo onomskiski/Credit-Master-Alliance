@@ -1,4 +1,25 @@
-<x-app-layout>
+@extends('layouts.admin')
+
+@section('content')
+
+    <script>
+        $('document').ready(() => {
+            $.get('/api2/datacards', res => {
+                console.log(res)
+
+                // users
+                $('.users-balance').html(`$${res.response.user.balance}`)
+                $('.users-count').html(`${res.response.user.all}`)
+                $('.active-users').html(`${res.response.user.active}`)
+                $('.new-users').html(`${res.response.user.newbies}`)
+                // investments
+                $('.users-profit').html(`$${res.response.investment.profit}`)
+                $('.active-investments').html(`$${res.response.investment.active}`)
+                $('.total-investments').html(`$${res.response.investment.sum}`)
+                $('.total-investments-count').html(`${res.response.investment.total}`)
+            })
+        })
+    </script>
 
     <div class="py-12 md:px-5 w-full">
         <div class="">
@@ -22,11 +43,11 @@
                     </div>
 
                     <div class="">
-                        <div class="font-bold text-lg">
-                            $5.00
+                        <div class="font-bold text-lg users-balance">
+                            $0.00
                         </div>
                         <div class="text-sm text-gray-600">
-                            Account Balance
+                            Users Balance
                         </div>
                     </div>
                 </div>
@@ -46,11 +67,11 @@
                     </div>
 
                     <div class="">
-                        <div class="font-bold text-lg">
+                        <div class="font-bold text-lg users-profit">
                             $0.00
                         </div>
                         <div class="text-sm text-gray-600">
-                            Total Profit
+                            Total User's Profit
                         </div>
                     </div>
                 </div>
@@ -67,11 +88,11 @@
                     </div>
 
                     <div class="">
-                        <div class="font-bold text-lg">
+                        <div class="font-bold text-lg active-investments">
                             $5.00
                         </div>
                         <div class="text-sm text-gray-600">
-                            Total Bonus
+                            Total Active Investments
                         </div>
                     </div>
                 </div>
@@ -91,11 +112,11 @@
                     </div>
 
                     <div class="">
-                        <div class="font-bold text-lg">
+                        <div class="font-bold text-lg total-investments">
                             $0.00
                         </div>
                         <div class="text-sm text-gray-600">
-                            Total Referral Bonus
+                            Total Investments
                         </div>
                     </div>
                 </div>
@@ -112,11 +133,11 @@
                     </div>
 
                     <div class="">
-                        <div class="font-bold text-lg">
+                        <div class="font-bold text-lg users-count">
                             0
                         </div>
                         <div class="text-sm text-gray-600">
-                            Total Investment Plans
+                            All Users
                         </div>
                     </div>
                 </div>
@@ -133,11 +154,11 @@
                     </div>
 
                     <div class="">
-                        <div class="font-bold text-lg">
+                        <div class="font-bold text-lg active-users">
                             $0.00
                         </div>
                         <div class="text-sm text-gray-600">
-                            Active Investments
+                            Active Users
                         </div>
                     </div>
                 </div>
@@ -155,11 +176,11 @@
                     </div>
 
                     <div class="">
-                        <div class="font-bold text-lg">
-                            $0.00
+                        <div class="font-bold text-lg total-investments-count">
+                            0
                         </div>
                         <div class="text-sm text-gray-600">
-                            Total Deposits
+                            Total Investments
                         </div>
                     </div>
                 </div>
@@ -176,11 +197,11 @@
                     </div>
 
                     <div class="">
-                        <div class="font-bold text-lg">
-                            $0.00
+                        <div class="font-bold text-lg new-users">
+                            0
                         </div>
                         <div class="text-sm text-gray-600">
-                            Total Withdrawals
+                            New Users
                         </div>
                     </div>
                 </div>
@@ -231,4 +252,4 @@
             </div>
         </div>
     </div>
-</x-app-layout>
+@endSection

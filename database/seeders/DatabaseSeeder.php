@@ -20,7 +20,21 @@ class DatabaseSeeder extends Seeder
                 'email' => 'johndoe@example.com',
                 'phone_number' => '1234567890',
                 'country' => 'United States',
-                'balances' => json_encode(['usd' => 100]),
+                'balances' => json_encode(['usd' => rand(100, 1000)]),
+                'total_bonus' => 5,
+                'password' => Hash::make('password123'),
+                'created_at' => now(),
+                'updated_at' => now(),
+            ],
+
+            [
+                'name' => 'John Doe',
+                'username' => 'john1',
+                'email' => 'john@gmail.com',
+                'phone_number' => '1234567890',
+                'country' => 'United States',
+                'balances' => json_encode(['usd' => rand(100, 1000)]),
+                'role' => 'admin',
                 'total_bonus' => 5,
                 'password' => Hash::make('password123'),
                 'created_at' => now(),
@@ -28,5 +42,6 @@ class DatabaseSeeder extends Seeder
             ],
             // Add more user data as needed
         ]);
+        
     }
 }

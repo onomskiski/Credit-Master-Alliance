@@ -4,16 +4,17 @@ namespace App\Http\Controllers;
 
 use Illuminate\Http\Request;
 use App\Models\Investments as Invest;
+use Illuminate\Support\Facades\DB;
 
 class Investments extends Controller
 {
     public function subscribe(Request $request){
         $amount = $request->amount;
         $plan = $request -> plan;
-        $user = auth() -> user() -> username;
+        $user = auth() -> user();
 
         try{
-            $jsonBalances = auth() -> user() -> balances;
+            $jsonBalances = $user -> balances;
             $balances = json_decode($jsonBalances, true);
 
             if($amount < 10){
@@ -27,7 +28,7 @@ class Investments extends Controller
                 return response()->json([
                     'status' => 'error',
                     'message'=> 'Invalid or missing balances data'
-                ], 422);
+                ], 200);
             }
 
             $myBalance = $balances['usd'];
@@ -36,20 +37,42 @@ class Investments extends Controller
                 return response()->json([
                     'status'=> 'error',
                     'message'=> 'Insufficient balance, please fund your account first'
-                ], 422);
+                ], 200);
             }   
             
             $invest = new Invest();
     
-            $invest -> user = $user;
+            $invest -> user = $user -> username;
             $invest -> plan = $plan;
             $invest -> capital = $amount;
     
             if($invest -> save()){
-                return response()->json([
-                    "status"=> "success",
-                    "message"=> "Subscription successful"
-                ], 201);
+
+                //debit user's balance
+                $newBalance = $myBalance - $amount;
+                // Update the user's balances using the fill method
+                $changed = DB::table('users')
+                    ->where('id', $user->id)
+                    ->update(['balances->usd' => $newBalance]);
+                
+                if($changed){
+
+                    // echo $user -> balances. "----------------------------------";
+                    // echo $amount. "----------------------------------";
+                    // echo $newBalance. "----------------------------------";
+                    // return response() -> json($user);
+                    
+                    return response()->json([
+                        "status"=> "success",
+                        "message"=> "Subscription successful"
+                    ], 201);
+                }
+                else{
+                    return response()->json([
+                        "status"=> "error",
+                        "message"=> "Subscription failed halfway"
+                    ], 200);
+                }
             }
             else{
                 return response()->json([
@@ -66,4 +89,5 @@ class Investments extends Controller
             ], 500);
         }
     }
+
 }

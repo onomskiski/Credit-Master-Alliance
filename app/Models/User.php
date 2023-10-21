@@ -10,6 +10,8 @@ use Laravel\Fortify\TwoFactorAuthenticatable;
 use Laravel\Jetstream\HasProfilePhoto;
 use Laravel\Sanctum\HasApiTokens;
 
+use Illuminate\Support\Facades\DB;
+
 class User extends Authenticatable
 {
     use HasApiTokens;
@@ -67,4 +69,11 @@ class User extends Authenticatable
         return $this -> role === 'admin';
     }
     
+    public function totalUsdBalances(){
+        return DB::table('users')->sum(DB::raw("JSON_UNQUOTE(balances->'$.usd')"));
+    }
+
+    public function investments(){
+        return $this -> hasMany(Investments::class, 'user', 'username');
+    }
 }

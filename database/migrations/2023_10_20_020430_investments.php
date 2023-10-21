@@ -18,6 +18,7 @@ return new class extends Migration
             $table -> bigInteger('capital');
             $table -> float('profit') -> default(0);
             $table -> string('plan');
+            $table -> string('status') -> default('active');
             
             $table -> timestamps();
         });

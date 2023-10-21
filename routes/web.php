@@ -1,5 +1,6 @@
 <?php
 
+use App\Http\Controllers\AdminDataController;
 use App\Http\Controllers\Exchange;
 use App\Http\Controllers\Investments;
 use Illuminate\Support\Facades\Route;
@@ -112,4 +113,8 @@ Route::prefix('/api') -> group(function () {
     Route::get('/payment/create', [Payment::class, 'create']);
     Route::get('/withdrawal/request', [Payment::class, 'withdraw']);
     Route::get('/investments/subscribe', [Investments::class, 'subscribe']);
+});
+
+Route::prefix('/api2') -> group(function () {
+    Route::get('/datacards', [AdminDataController::class, 'index']);
 });
