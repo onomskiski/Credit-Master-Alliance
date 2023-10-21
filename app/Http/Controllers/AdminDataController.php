@@ -5,7 +5,9 @@ namespace App\Http\Controllers;
 use App\Models\User;
 // use Illuminate\Http\Request;
 use App\Models\Investments;
+use App\Models\Payments;
 use Carbon\Carbon;
+use Illuminate\Http\Request;
 
 class AdminDataController extends Controller
 {
@@ -62,5 +64,28 @@ class AdminDataController extends Controller
             ]
         ], 200);
         
+    }
+
+    public function page(){
+        $payments = new Payments();
+        $pendingPayments = Payments::where('validated', '==', false) -> get();
+        $pendingPaymentsCount = $payments -> count();
+        
+        return view('admin.dashboard', [
+            'payments' => $pendingPayments,
+            'paymentsCount' => [
+                'all' => $payments -> where(['validated' => true]) -> count(),
+                'pending' => $payments -> where(['validated' => false]) -> count()
+            ]
+        ]);
+    }
+
+    public function PendingPayments(Request $request){
+        $pendingPayments = Payments::where('validated', '==', false) -> get();
+        return response()->json(
+            [
+                'status'=> 'success',
+                'message' => $pendingPayments
+            ], 200);
     }
 }

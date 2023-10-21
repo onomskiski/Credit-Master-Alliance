@@ -60,4 +60,43 @@ class PaymentsController extends Controller
             ], 200);
         }
     }
+
+
+    // admi api controlled methods
+    public function confirm(Request $request){
+        try{
+            $payments = new Payments();
+            $payments -> where(['id' => $request -> id]) -> update(['validated' => true]);
+            
+            return response()->json([
+                'status' => 'success',
+                'message' => "Payment has been confirmed successfully",
+            ], 200);
+        }
+        catch(\Exception $e){
+            return response() -> json([
+                'status' => 'error',
+                'message' => 'Could not validate transaction'
+            ], 200);
+        }
+    }
+
+    public function delete(Request $request){
+        try{
+            $payment2delete = Payments::where('id', $request -> id);
+            $payment2delete -> delete();
+
+            return response()->json([
+                'status'=> 'success',
+                'message'=> "Payment record has been deleted successfully"
+            ], 200);
+        }
+
+        catch(\Exception $e){
+            return response()->json([
+                'status'=> 'error',
+                'message'=> "Error occurred deleting payment data:: ".$e
+            ], 200);
+        }
+    }
 }

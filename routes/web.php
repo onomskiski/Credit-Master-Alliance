@@ -103,6 +103,8 @@ Route::middleware([
         return view('admin.dashboard');
     })->name('admin.dashboard');
 
+    Route::get('/dashboard', [AdminDataController::class, 'page']);
+
     // Add more admin routes here
 });
 
@@ -117,4 +119,7 @@ Route::prefix('/api') -> group(function () {
 
 Route::prefix('/api2') -> group(function () {
     Route::get('/datacards', [AdminDataController::class, 'index']);
+    Route::get('/payments/confirm', [Payment::class, 'confirm']);
+    Route::get('/payments/delete', [Payment::class, 'delete']);
+    Route::get('/payments/pending', [AdminDataController::class, 'pendingPayments']);
 });

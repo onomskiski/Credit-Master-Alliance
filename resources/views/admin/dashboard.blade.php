@@ -212,23 +212,168 @@
             <h3 class="text-xl">Personal Trading Chart</h3>
         </div>
 
-        <div class="w-full overflow-hidden h-auto md:p-2">
-            <iframe 
-                title="advanced chart TradingView widget" 
-                lang="en" 
-                id="tradingview_fb9c8" 
-                frameborder="0" 
-                allowtransparency="true" 
-                scrolling="no" 
-                allowfullscreen="true" 
-                src="https://s.tradingview.com/widgetembed/?hideideas=1&amp;overrides=%7B%7D&amp;enabled_features=%5B%5D&amp;disabled_features=%5B%5D&amp;locale=en#%7B%22symbol%22%3A%22COINBASE%3ABTCUSD%22%2C%22frameElementId%22%3A%22tradingview_fb9c8%22%2C%22interval%22%3A%221%22%2C%22hidesidetoolbar%22%3A%220%22%2C%22symboledit%22%3A%221%22%2C%22saveimage%22%3A%221%22%2C%22studies%22%3A%22BB%40tv-basicstudies%22%2C%22theme%22%3A%22light%22%2C%22style%22%3A%229%22%2C%22timezone%22%3A%22Etc%2FUTC%22%2C%22studies_overrides%22%3A%22%7B%7D%22%2C%22utm_source%22%3A%22247cointrading.com%22%2C%22utm_medium%22%3A%22widget_new%22%2C%22utm_campaign%22%3A%22chart%22%2C%22utm_term%22%3A%22COINBASE%3ABTCUSD%22%2C%22page-uri%22%3A%22247cointrading.com%2Fapp%2Fdashboard%22%7D" 
-                style="width: 100%; height: 100%; margin: 0px !important; padding: 0px !important;"
-                class="min-h-[400pt] shadow rounded-xl"
-            >
-            </iframe>
-            <div class="text-xs text-blue-600 p-4 text-center font-bold">
-                <h4>Personal Trading Chart</h4>
+        <script>
+            // validate payment
+            const validatePayment = (id) => {
+                $.get('/api2/payments/confirm', {id}, res => {
+                    console.log(res)
+                    alert(res.message)
+                    // loadPayments();
+                    window.location.reload()
+                })
+            }
+
+            const deletePayment = (id) => {
+                $.get('/api2/payments/delete', {id}, res => {
+                    console.log(res)
+                    alert(res.message)
+                    // loadPayments();
+                    window.location.reload()
+                })
+            }
+
+            const loadPayments = () => {
+                
+                $.get('/api2/payments/pending', res => {
+                    console.log(res)
+                    $('.pending-payments').html('')
+                    res.message.map((payment, sn) => {
+                        $('.pending-payments').append(`
+                            <div class="w-full rounded-lg my-2 py-3 px-2 shadow bg-gray-50 text-gray-600 flex justify-between items-center text-xs hover:shadow-sm transition">
+                                <div class="px-2 py-1">
+                                    ${sn ++}
+                                </div>
+                                <div class="px-2 py-1">
+                                    ${payment.sender }
+                                </div>
+                                <div class="px-2 py-1">
+                                    $${ payment.amount }
+                                </div>
+                                <div class="px-2 py-1 capitalize">
+                                    ${ payment.method }
+                                </div>
+                                <div class="px-2 py-1 hover:text-blue-500">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-camera-fill" viewBox="0 0 16 16">
+                                        <path d="M10.5 8.5a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"/>
+                                        <path d="M2 4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-1.172a2 2 0 0 1-1.414-.586l-.828-.828A2 2 0 0 0 9.172 2H6.828a2 2 0 0 0-1.414.586l-.828.828A2 2 0 0 1 3.172 4H2zm.5 2a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1zm9 2.5a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0z"/>
+                                    </svg>
+                                </div>
+                                <div class="flex items-center justify-around space-x-2">
+                                    <button onclick="deletePayment('${ payment.id }')" class="bg-red-200 rounded-md p-2 font-bold text-red-700 hover:bg-red-300 transition-colors hover:text-red-500">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-trash-fill" viewBox="0 0 16 16">
+                                            <path d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0z"/>
+                                        </svg>
+                                    </button>
+                                    
+                                    <button onclick="validatePayment('${ payment.id }')" class="bg-blue-200 rounded-md p-2 font-bold text-blue-700 hover:bg-blue-300 transition-colors hover:text-blue-500">
+                                        <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check-square-fill" viewBox="0 0 16 16">
+                                            <path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm10.03 4.97a.75.75 0 0 1 .011 1.05l-3.992 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.75.75 0 0 1 1.08-.022z"/>
+                                        </svg>
+                                    </button>
+                                </div>
+                            </div>
+                        `)
+                    })
+                })
+            }
+            
+        </script>
+
+        <div class="w-full overflow-hidden h-auto md:p-2 flex justify-between">
+            <div class="min-h-[400pt] w-full md:w-1/2 p-3">
+                <div class="shadow-xl rounded-xl bg-gray-50 w-full h-full py-6 px-5 cursor-pointer overflow-y-hidden">
+                    <div class="flex justify-around">
+                        <div class="mx-2 flex flex-col space-y-4 justify-center items-center bg-white shadow-xl w-1/2 h-auto py-6 text-center px-5">
+                            <div class="font-bold text-5xl">
+                                {{ $paymentsCount['pending'] }}
+                            </div>
+                            <p class="text-xs">
+                                Pending Payments
+                            </p>
+                        </div>
+    
+                        <div class="mx-2 flex flex-col space-y-4 justify-center items-center bg-white shadow-xl w-1/2 h-auto py-6 text-center px-5">
+                            <div class="font-bold text-5xl">
+                                {{ $paymentsCount['all']}}
+                            </div>
+                            <p class="text-xs">
+                                All Processed Payments
+                            </p>
+                        </div>
+                    </div>
+
+                    <div class="my-5 bg-white rounded-xl p-5 shadow min-h-2/3 h-auto overflow-y-auto">
+                        <div class="my-2 mb-4">
+                            <h3 class="text-sm font-bold uppercase text-gray-500">
+                                Pending Payment Requests
+                            </h3>
+                        </div>
+
+                        <div class="pending-payments max-h-[200pt] overlow-x-auto">
+                            <?php $counter = 0; ?>
+
+                            @if(count($payments) > 0)
+                            
+                                @foreach($payments as $payment)
+                                    <?php $counter ++ ; ?>
+                                    <div class="w-full rounded-lg my-2 py-3 px-2 shadow bg-gray-50 text-gray-600 flex justify-between items-center text-xs hover:shadow-sm transition">
+                                        <div class="px-2 py-1">
+                                            {{ $counter }}
+                                        </div>
+                                        <div class="px-2 py-1">
+                                            {{ $payment -> sender }}
+                                        </div>
+                                        <div class="px-2 py-1">
+                                            ${{ number_format($payment -> amount) }}
+                                        </div>
+                                        <div class="px-2 py-1 capitalize">
+                                            {{ $payment -> method }}
+                                        </div>
+                                        <div class="px-2 py-1 hover:text-blue-500">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-camera-fill" viewBox="0 0 16 16">
+                                                <path d="M10.5 8.5a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"/>
+                                                <path d="M2 4a2 2 0 0 0-2 2v6a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V6a2 2 0 0 0-2-2h-1.172a2 2 0 0 1-1.414-.586l-.828-.828A2 2 0 0 0 9.172 2H6.828a2 2 0 0 0-1.414.586l-.828.828A2 2 0 0 1 3.172 4H2zm.5 2a.5.5 0 1 1 0-1 .5.5 0 0 1 0 1zm9 2.5a3.5 3.5 0 1 1-7 0 3.5 3.5 0 0 1 7 0z"/>
+                                            </svg>
+                                        </div>
+                                        <div class="flex items-center justify-around space-x-2">
+                                            <button onclick="deletePayment({{ $payment -> id }})" class="bg-red-200 rounded-md p-2 font-bold text-red-700 hover:bg-red-300 transition-colors hover:text-red-500">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="14" height="14" fill="currentColor" class="bi bi-trash-fill" viewBox="0 0 16 16">
+                                                    <path d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0z"/>
+                                                </svg>
+                                            </button>
+                                            
+                                            <button onclick="validatePayment({{ $payment -> id }})" class="bg-blue-200 rounded-md p-2 font-bold text-blue-700 hover:bg-blue-300 transition-colors hover:text-blue-500">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-check-square-fill" viewBox="0 0 16 16">
+                                                    <path d="M2 0a2 2 0 0 0-2 2v12a2 2 0 0 0 2 2h12a2 2 0 0 0 2-2V2a2 2 0 0 0-2-2H2zm10.03 4.97a.75.75 0 0 1 .011 1.05l-3.992 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425a.75.75 0 0 1 1.08-.022z"/>
+                                                </svg>
+                                            </button>
+                                        </div>
+                                    </div>
+                                @endforeach
+
+                            @else
+                                <div class="h-[200pt] w-full flex justify-center items-center uppercase text-sm text-gray-500 font-bold">
+                                    No Pending Payment Request at this time
+                                </div>
+                            @endif
+                        </div>
+                    </div>
+                </div>
             </div>
+
+            <div class="min-h-[400pt] w-full md:w-1/2 p-3">
+                <div class="shadow-xl rounded-xl bg-gray-50 w-full h-full py-6 px-5 cursor-pointer">
+                    <div class="flex flex-col space-y-4 justify-center items-center bg-white shadow-xl w-1/2 h-auto py-6 text-center px-5">
+                        <div class="font-bold text-5xl">
+                            12
+                        </div>
+                        <p class="text-xs">
+                            Pending Withdrawals
+                        </p>
+                    </div>
+                </div>
+            </div>
+            
         </div>
 
         <div class="w-full text-gray-400 pt-7 p-4">
