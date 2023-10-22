@@ -13,7 +13,7 @@ class Withdrawals extends Controller
      * Display a listing of the resource.
      */
     public function index(){
-
+        return "Index sent";
     }
 
     /**
@@ -74,7 +74,20 @@ class Withdrawals extends Controller
      */
     public function edit(string $id)
     {
-        //
+        try{
+            $update = Withdrawal::where('id', $id)->update(['confirmed' => true]);
+
+            return response()->json([
+                'status' => 'success',
+                'message' => 'Withdrawal request have been successfully confirmed'
+            ]);
+        }
+        catch(\Exception $e){
+            return response()->json([
+                'status'=> 'error',
+                'message' => "An error occurred while processing the request"
+            ], 200);
+        }
     }
 
     /**
@@ -90,6 +103,19 @@ class Withdrawals extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        try{
+            $delete = \App\Models\Withdrawals::where(["id"=> $id])->delete();
+
+            return response()->json([
+                'status' => 'success',
+                'message'=> 'Deleted Withdrawal Request'
+            ]);
+        }
+        catch(\Exception $e){
+            return response()->json([
+                'status' => 'error',
+                'message'=> 'Error deleting withdrawal request'
+            ]);
+        }
     }
 }

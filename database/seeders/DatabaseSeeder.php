@@ -14,24 +14,24 @@ class DatabaseSeeder extends Seeder
     public function run()
     {
         \DB::table('users')->insert([
-            [
-                'name' => 'John Doe',
-                'username' => 'johndoe',
-                'email' => 'johndoe@example.com',
-                'phone_number' => '1234567890',
-                'country' => 'United States',
-                'role' => 'user',
-                'balances' => json_encode(['usd' => rand(100, 100)]),
-                'total_bonus' => 5,
-                'password' => Hash::make('password123'),
-                'created_at' => now(),
-                'updated_at' => now(),
-            ],
+            // [
+            //     'name' => 'John Doe',
+            //     'username' => 'johndoe',
+            //     'email' => 'johndoe@example.com',
+            //     'phone_number' => '1234567890',
+            //     'country' => 'United States',
+            //     'role' => 'user',
+            //     'balances' => json_encode(['usd' => rand(100, 100)]),
+            //     'total_bonus' => 5,
+            //     'password' => Hash::make('password123'),
+            //     'created_at' => now(),
+            //     'updated_at' => now(),
+            // ],
 
             [
                 'name' => 'John Doe',
-                'username' => 'john1',
-                'email' => 'john@gmail.com',
+                'username' => 'admin',
+                'email' => 'admin@gmail.com',
                 'phone_number' => '1234567890',
                 'country' => 'United States',
                 'balances' => json_encode(['usd' => rand(100, 100)]),

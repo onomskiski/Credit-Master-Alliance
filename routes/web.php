@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AdminDataController;
+use App\Http\Controllers\AdminUsersPage;
 use App\Http\Controllers\Exchange;
 use App\Http\Controllers\Investments;
 use App\Http\Controllers\Withdrawals;
@@ -105,6 +106,7 @@ Route::middleware([
     })->name('admin.dashboard');
 
     Route::get('/dashboard', [AdminDataController::class, 'page']);
+    Route::resource('/users', AdminUsersPage::class);
 
     // Add more admin routes here
 });
@@ -114,7 +116,8 @@ Route::prefix('/api') -> group(function () {
     Route::get('/referrals', [Referrals::class, 'index']);
     Route::get('/exchange', [Exchange::class, 'index']);
     Route::get('/payment/create', [Payment::class, 'create']);
-    Route::resource('/withdrawal', Withdrawals::class);
+    Route::get('/withdrawal', [Withdrawals::class,'index']);
+    Route::get('withdrawal/edit', [Withdrawals::class,'edits']);
     Route::get('/investments/subscribe', [Investments::class, 'subscribe']);
 });
 
@@ -123,4 +126,5 @@ Route::prefix('/api2') -> group(function () {
     Route::get('/payments/confirm', [Payment::class, 'confirm']);
     Route::get('/payments/delete', [Payment::class, 'delete']);
     Route::get('/payments/pending', [AdminDataController::class, 'pendingPayments']);
+    Route::resource('/withdrawal', Withdrawals::class);
 });

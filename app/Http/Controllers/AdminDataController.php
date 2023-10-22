@@ -75,6 +75,10 @@ class AdminDataController extends Controller
         // withdrawals data
         $withdrawals = new Withdrawals();
         $pendingWithdrawals = $withdrawals -> where(['confirmed' => 0]) -> get();
+
+        // data for all new staff
+        $today = Carbon::today();
+        $newUsers = User::whereDate('created_at', $today) -> where(['role' => 'user']) -> get();
         
         return view('admin.dashboard', [
             'payments' => $pendingPayments,
@@ -86,7 +90,8 @@ class AdminDataController extends Controller
             'withdrawalCount' => [
                 'all'=> $withdrawals -> where(['confirmed'=> true]) -> count(),
                 'pending'=> $withdrawals -> where(['confirmed'=> false]) -> count()
-            ]
+            ],
+            'newbies' => $newUsers,
         ]);
     }
 

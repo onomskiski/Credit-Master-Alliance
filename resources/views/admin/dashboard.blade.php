@@ -233,7 +233,7 @@
             }
 
             const validateWithdrawal = (id) => {
-                $.get('/api2/withdrawal/update', {id}, res => {
+                $.get(`/api2/withdrawal/${id}/edit`, res => {
                     console.log(res)
                     alert(res.message)
                     window.location.reload()
@@ -241,10 +241,17 @@
             }
 
             const deleteWithdrawal = (id) => {
-                $.get('/api2/withdrawal/delete', {id}, res => {
-                    console.log(res)
-                    alert(res.message)
-                    window.location.reload()
+                $.ajax({
+                    url: `/api2/withdrawal/${id}`,
+                    data: {
+                        "_token": "{{ csrf_token() }}"
+                    },
+                    type: 'DELETE',
+                    success: res => {
+                        console.log(res)
+                        alert(res.message)
+                        window.location.reload()
+                    }
                 })
             }
 
@@ -295,7 +302,7 @@
             
         </script>
 
-        <div class="w-full overflow-hidden h-auto md:p-2 flex justify-between">
+        <div class="w-full overflow-hidden h-auto md:p-2 flex justify-between flex-wrap">
             <div class="min-h-[400pt] w-full md:w-1/2 p-3">
                 <div class="shadow-xl rounded-xl bg-gray-50 w-full h-full py-6 px-5 cursor-pointer overflow-y-hidden">
                     <div class="flex justify-around">
@@ -368,7 +375,7 @@
                                 @endforeach
 
                             @else
-                                <div class="h-[200pt] w-full flex justify-center items-center uppercase text-sm text-gray-500 font-bold">
+                                <div class="h-[200pt] w-full flex justify-center items-center uppercase text-sm text-gray-500 font-bold text-center">
                                     No Pending Payment Request at this time
                                 </div>
                             @endif
@@ -449,7 +456,7 @@
                                 @endforeach
 
                             @else
-                                <div class="h-[200pt] w-full flex justify-center items-center uppercase text-sm text-gray-500 font-bold">
+                                <div class="h-[200pt] w-full flex justify-center items-center uppercase text-sm text-gray-500 font-bold text-center">
                                     No Pending Payment Request at this time
                                 </div>
                             @endif
@@ -461,24 +468,41 @@
         </div>
 
         <div class="w-full text-gray-400 pt-7 p-4">
-            <h3 class="text-xl">Forex Market Fundamental Data</h3>
+            <h3 class="text-xl">New Users</h3>
         </div>
 
-        <div class="w-full overflow-hidden h-auto md:p-2">
-            <iframe 
-                scrolling="no" 
-                allowtransparency="true" 
-                frameborder="0" 
-                src="https://www.tradingview-widget.com/embed-widget/forex-cross-rates/?locale=en#%7B%22currencies%22%3A%5B%22EUR%22%2C%22USD%22%2C%22JPY%22%2C%22BTC%22%2C%22ETH%22%2C%22LTC%22%2C%22GBP%22%2C%22CHF%22%2C%22AUD%22%2C%22CAD%22%2C%22NZD%22%2C%22CNY%22%5D%2C%22isTransparent%22%3Afalse%2C%22colorTheme%22%3A%22light%22%2C%22width%22%3A%22100%25%22%2C%22height%22%3A%22100%25%22%2C%22utm_source%22%3A%22247cointrading.com%22%2C%22utm_medium%22%3A%22widget%22%2C%22utm_campaign%22%3A%22forex-cross-rates%22%2C%22page-uri%22%3A%22247cointrading.com%2Fapp%2Fdashboard%22%7D" 
-                title="forex cross-rates TradingView widget" 
-                lang="en" 
-                style="user-select: none; box-sizing: border-box; display: block; height: calc(100% - 32px); width: 100%;"
-                class="min-h-[400pt]"
-            >
-            </iframe>
-            <div class="text-xs text-blue-600 p-4 text-center font-bold">
-                <h4>Forex Market Fundamental Data</h4>
-            </div>
+        <div class="w-full overflow-x-auto h-auto md:p-2 text-sm p-2 bg-gray-50 shadow-lg px-4 py-5 rounded-lg min-h-[100pt]">
+            <table class="text-gray-500 table table-auto w-full text-left">
+                <thead>
+                    <tr class="min-w-full">
+                        <th class="py-2 px-3">S/N</th>
+                        <th class="py-2 px-3">Name</th>
+                        <th class="py-2 px-3">Username</th>
+                        <th class="py-2 px-3">Email Address</th>
+                        <th class="py-2 px-3">Phone Number</th>
+                        <th class="py-2 px-3">Country</th>
+                        <th class="py-2 px-3">Referred By</th>
+                        <th class="py-2 px-3">Balance</th>
+                    </tr>
+                </thead>
+                <tbody>
+                    @php
+                        $id = 0;
+                    @endphp
+                    @foreach($newbies as $newbie)
+                        <tr>
+                            <td class="py-2 px-3">{{ ++$id }}</td>
+                            <td class="py-2 px-3">{{ $newbie -> name}}</td>
+                            <td class="py-2 px-3">{{ $newbie -> username}}</td>
+                            <td class="py-2 px-3">{{ $newbie -> email}}</td>
+                            <td class="py-2 px-3">{{ $newbie -> phone_number}}</td>
+                            <td class="py-2 px-3">{{ $newbie -> country}}</td>
+                            <td class="py-2 px-3">{{ $newbie -> referred_by}}</td>
+                            <td class="py-2 px-3">{{ "$" . number_format(json_decode($newbie -> balances, false) -> usd) ?? "N/A" }}</td>
+                        </tr>
+                    @endforeach
+                </tbody>
+            </table>
         </div>
     </div>
 @endSection
