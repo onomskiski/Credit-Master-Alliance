@@ -44,19 +44,10 @@
         @livewireStyles
     </head>
     <body class="font-sans antialiased">
-        <x-banner />
+        {{-- <x-banner /> --}}
 
         <div class="min-h-screen bg-gray-100">
-            @livewire('navigation-menu')
-
-            <!-- Page Heading -->
-            @if (isset($header))
-                <header class="bg-white shadow">
-                    <div class="max-w-7xl mx-auto py-6 px-4 sm:px-6 lg:px-8">
-                        {{ $header }}
-                    </div>
-                </header>
-            @endif
+            @include('layouts.partials.adminnav')
 
             <!-- Page Content -->
             <main class="w-full">
@@ -103,6 +94,18 @@
                                         </div>
                                         <div class="flex items-center nav-hidden">
                                             Users
+                                        </div>
+                                    </a>
+
+                                    <a href="/admin/investments" class="{{request() -> route() -> uri == 'admin/investments' ? 'px-3 py-2 rounded-lg cursor-pointer transition-all my-3 bg-blue-500 text-white hover:text-blue-200 flex space-x-4 items-center' : 'px-3 py-2 rounded-lg cursor-pointer hover:bg-gray-200 transition-all my-3 hover:text-gray-800 flex items-center space-x-4'}}">
+                                        <div class="flex justify-center items-center">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-speedometer" viewBox="0 0 16 16">
+                                                <path d="M8 2a.5.5 0 0 1 .5.5V4a.5.5 0 0 1-1 0V2.5A.5.5 0 0 1 8 2zM3.732 3.732a.5.5 0 0 1 .707 0l.915.914a.5.5 0 1 1-.708.708l-.914-.915a.5.5 0 0 1 0-.707zM2 8a.5.5 0 0 1 .5-.5h1.586a.5.5 0 0 1 0 1H2.5A.5.5 0 0 1 2 8zm9.5 0a.5.5 0 0 1 .5-.5h1.5a.5.5 0 0 1 0 1H12a.5.5 0 0 1-.5-.5zm.754-4.246a.389.389 0 0 0-.527-.02L7.547 7.31A.91.91 0 1 0 8.85 8.569l3.434-4.297a.389.389 0 0 0-.029-.518z"/>
+                                                <path fill-rule="evenodd" d="M6.664 15.889A8 8 0 1 1 9.336.11a8 8 0 0 1-2.672 15.78zm-4.665-4.283A11.945 11.945 0 0 1 8 10c2.186 0 4.236.585 6.001 1.606a7 7 0 1 0-12.002 0z"/>
+                                            </svg>
+                                        </div>
+                                        <div class="flex items-center nav-hidden">
+                                            Investments
                                         </div>
                                     </a>
                                     

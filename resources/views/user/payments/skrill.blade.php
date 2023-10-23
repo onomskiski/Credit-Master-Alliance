@@ -17,7 +17,7 @@
                     <label for="amount" class="w-full text-sm">Wallet Address</label>
                     <div class="flex space-x-2">
                         <input type="text" name="amount" id="amount" class="w-full mx-auto rounded-md shadow-md border-gray-400 bg-gray-200 text-gray-700" disabled value="{{ env('SKRILL_ADDRESS')}}" />
-                        <button type="button" name="amount" id="amount" class="w-auto mx-auto rounded-md shadow-md px-5 bg-gray-200 border-2 border-gray-300">
+                        <button type="button" name="amount" id="amount" class="w-auto mx-auto rounded-md shadow-md px-5 bg-gray-200 border-2 border-gray-300 text-sm">
                             Copy
                         </button>
                     </div>
@@ -36,7 +36,7 @@
             <div class="w-full px-10 mt-8">
                 <div class="md:w-2/3 w-full">
                     <div class="">
-                        <button type="button" name="amount" id="amount" class="w-auto mx-auto rounded-xl shadow-md px-5 border-2 border-gray-300 py-3 bg-blue-500 hover:bg-blue-600 transition-colors text-blue-50 font-bold text-sm">
+                        <button onclick="confirmPayment()" type="button" name="confirmPayment" id="confirmPayment" class="confirmBtn w-auto mx-auto rounded-xl shadow-md px-5 border-2 border-gray-300 py-3 bg-blue-500 hover:bg-blue-600 transition-colors text-blue-50 font-bold text-sm">
                             Submit
                         </button>
                     </div>
@@ -44,10 +44,33 @@
             </div>
 
 
-            <script src="resources/3/payment.js"></script>
+            <script>
+                const confirmPayment = () => {
+                    // const method = $('.method').val()
+                    // const amount = $('.amount').val()
+
+                    // const id = Math.floor(Math.random() * 99999999999)
+
+                    // const data = {
+                    //     method, amount, entry_id: id
+                    // }
+
+                    // console.log(data)
+                    
+                    // $.get('/api/payment/create', data, (res) => {
+                    //     console.log(res)
+
+                    //     alert(res.response)
+                    // })
+
+                    alert('works')
+                }
+            </script>
 
             <input type="hidden" class="method" value="{{ $method }}" />
             <input type="hidden" class="amount" value="{{ $amount }}" />
+
+            
             
         </div>
     </div>

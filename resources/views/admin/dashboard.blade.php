@@ -486,21 +486,31 @@
                     </tr>
                 </thead>
                 <tbody>
-                    @php
-                        $id = 0;
-                    @endphp
-                    @foreach($newbies as $newbie)
-                        <tr>
-                            <td class="py-2 px-3">{{ ++$id }}</td>
-                            <td class="py-2 px-3">{{ $newbie -> name}}</td>
-                            <td class="py-2 px-3">{{ $newbie -> username}}</td>
-                            <td class="py-2 px-3">{{ $newbie -> email}}</td>
-                            <td class="py-2 px-3">{{ $newbie -> phone_number}}</td>
-                            <td class="py-2 px-3">{{ $newbie -> country}}</td>
-                            <td class="py-2 px-3">{{ $newbie -> referred_by}}</td>
-                            <td class="py-2 px-3">{{ "$" . number_format(json_decode($newbie -> balances, false) -> usd) ?? "N/A" }}</td>
-                        </tr>
-                    @endforeach
+                    @if(isset($newbie))
+                        @php
+                            $id = 0;
+                        @endphp
+                        @foreach($newbies as $newbie)
+                            <tr>
+                                <td class="py-2 px-3">{{ ++$id }}</td>
+                                <td class="py-2 px-3">{{ $newbie -> name}}</td>
+                                <td class="py-2 px-3">{{ $newbie -> username}}</td>
+                                <td class="py-2 px-3">{{ $newbie -> email}}</td>
+                                <td class="py-2 px-3">{{ $newbie -> phone_number}}</td>
+                                <td class="py-2 px-3">{{ $newbie -> country}}</td>
+                                <td class="py-2 px-3">{{ $newbie -> referred_by}}</td>
+                                <td class="py-2 px-3">{{ "$" . number_format(json_decode($newbie -> balances, false) -> usd) ?? "N/A" }}</td>
+                            </tr>
+                        @endforeach
+
+                        @else
+                            <tr>
+                                <td class="table-column w-full colspan-8">
+                                    No new user joined {{ env('APP_NAME')}} today!
+                                </td>
+                            </tr>
+
+                    @endif
                 </tbody>
             </table>
         </div>

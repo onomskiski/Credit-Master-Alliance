@@ -2,7 +2,7 @@
 
     <script>
         $(document).ready(() => {
-            $.getJSON('http://127.0.0.1:8000/resources/3/countries.json', list => {
+            $.getJSON('/resources/3/countries.json', list => {
                 $('#country').html('')
 
                 list.map(country => {

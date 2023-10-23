@@ -19,6 +19,7 @@
                         <th class="py-3 px-3">Country</th>
                         <th class="py-3 px-3">Referred By</th>
                         <th class="py-3 px-3">Balance</th>
+                        <th class="py-3 px-3">View</th>
                     </tr>
                 </thead>
                 <tbody>
@@ -35,6 +36,14 @@
                             <td class="py-3 px-3">{{ $user -> country}}</td>
                             <td class="py-3 px-3">{{ $user -> referred_by}}</td>
                             <td class="py-3 px-3">{{ "$" . number_format(json_decode($user -> balances, false) -> usd) ?? "N/A" }}</td>
+                            <td class="py-3 px-3">
+                                <button class="text-blue-500 hover:text-blue-700 h-[30pt] w-[30pt] rounded-md flex justify-center items-center text-sm">
+                                    <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-eye-fill" viewBox="0 0 16 16">
+                                        <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"/>
+                                        <path d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z"/>
+                                    </svg>
+                                </button>
+                            </td>
                         </tr>
                     @endforeach
                 </tbody>
