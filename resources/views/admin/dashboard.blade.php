@@ -505,12 +505,9 @@
                         @endforeach
 
                         @else
-                            <tr>
-                                <td class="table-column w-full colspan-8">
-                                    No new user joined {{ env('APP_NAME')}} today!
-                                </td>
-                            </tr>
-
+                            <div class="w-full py-3 text-center text-gray-500 font-bold">
+                                No new user joined {{ env('APP_NAME')}} today!
+                            </div>
                     @endif
                 </tbody>
             </table>

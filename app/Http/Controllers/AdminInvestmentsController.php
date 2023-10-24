@@ -77,6 +77,19 @@ class AdminInvestmentsController extends Controller
      */
     public function destroy(string $id)
     {
-        //
+        try{
+            Investments::where("id", $id)->delete();
+
+            return response()->json([
+                'status' => 'success',
+                'message'=> 'Successfully deleted the record from the server'
+            ], 201);
+        }
+        catch (\Exception $e){
+            return response()->json([
+                'status'=> 'error',
+                'message'=> "An error occurred! ".$e->getMessage()
+            ], 200);
+        }
     }
 }

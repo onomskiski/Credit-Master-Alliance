@@ -11,6 +11,8 @@ use Illuminate\Support\Facades\Route;
 use App\Http\Controllers\referralsController as Referrals;
 use App\Http\Controllers\NewPayments;
 use App\Http\Controllers\PaymentsController as Payment;
+use App\Http\Controllers\AdminPaymentsController;
+use App\Http\Controllers\AdminWithdrawals;
 
 /*
 |--------------------------------------------------------------------------
@@ -109,6 +111,8 @@ Route::middleware([
     Route::get('/dashboard', [AdminDataController::class, 'page']);
     Route::resource('/users', AdminUsersPage::class);
     Route::resource('/investments', AdminInvestmentsController::class);
+    Route::resource('/payments', AdminPaymentsController::class);
+    Route::resource('/withdrawals', AdminWithdrawals::class);
 
     // Add more admin routes here
 });

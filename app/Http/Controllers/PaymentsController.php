@@ -5,6 +5,7 @@ namespace App\Http\Controllers;
 use App\Models\Withdrawals;
 use Illuminate\Http\Request;
 use App\Models\Payments;
+use App\Models\User;
 
 class PaymentsController extends Controller
 {
@@ -38,19 +39,42 @@ class PaymentsController extends Controller
 
     // admi api controlled methods
     public function confirm(Request $request){
-        try{
+        try {
             $payments = new Payments();
-            $payments -> where(['id' => $request -> id]) -> update(['validated' => true]);
+            $payment_req = $payments->where(['id' => $request->id])->first();
+            $sendername = $payment_req->sender;
+
+            $initial_user_data = User::where('username', $sendername)->first();
             
-            return response()->json([
-                'status' => 'success',
-                'message' => "Payment has been confirmed successfully",
-            ], 200);
+            if ($initial_user_data) {
+                $balances = json_decode($initial_user_data->balances, true);
+                $usd_balance = $balances['usd'];
+
+                // Update the USD balance
+                $balances['usd'] = $usd_balance + $payment_req->amount;
+
+                // update payments table
+                $payments -> where(['id' => $request -> id]) -> update(['validated' => true]);
+
+                // Update the user's balances
+                User::where('username', $sendername)->update(['balances' => json_encode($balances)]);
+
+                return response()->json([
+                    'status' => 'success',
+                    'message' => "Payment has been confirmed successfully",
+                ], 200);
+            } else {
+                return response()->json([
+                    'status' => 'error',
+                    'message' => "User not found",
+                ], 404);
+            }
         }
+
         catch(\Exception $e){
             return response() -> json([
                 'status' => 'error',
-                'message' => 'Could not validate transaction'
+                'message' => 'Could not validate transaction ::: '. $e -> getMessage()
             ], 200);
         }
     }
