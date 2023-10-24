@@ -23,7 +23,7 @@
 
                     <div class="">
                         <div class="font-bold text-lg">
-                            $5.00
+                            ${{ number_format(json_decode($data["balances"], false) -> usd) }}
                         </div>
                         <div class="text-sm text-gray-600">
                             Account Balance
@@ -47,7 +47,7 @@
 
                     <div class="">
                         <div class="font-bold text-lg">
-                            $0.00
+                            ${{ number_format($data['profit']) }}
                         </div>
                         <div class="text-sm text-gray-600">
                             Total Profit
@@ -68,7 +68,7 @@
 
                     <div class="">
                         <div class="font-bold text-lg">
-                            $5.00
+                            ${{ number_format($data['bonus']) }}
                         </div>
                         <div class="text-sm text-gray-600">
                             Total Bonus
@@ -92,7 +92,7 @@
 
                     <div class="">
                         <div class="font-bold text-lg">
-                            $0.00
+                            {{ number_format($data['referredUsers']) }}
                         </div>
                         <div class="text-sm text-gray-600">
                             Total Referral Bonus
@@ -113,7 +113,7 @@
 
                     <div class="">
                         <div class="font-bold text-lg">
-                            0
+                            {{ number_format($data['investments']['count']) }}
                         </div>
                         <div class="text-sm text-gray-600">
                             Total Investment Plans
@@ -134,7 +134,7 @@
 
                     <div class="">
                         <div class="font-bold text-lg">
-                            $0.00
+                            ${{ number_format($data['investments']['active']) }}
                         </div>
                         <div class="text-sm text-gray-600">
                             Active Investments
@@ -156,7 +156,7 @@
 
                     <div class="">
                         <div class="font-bold text-lg">
-                            $0.00
+                            ${{ number_format($data['deposits']) }}
                         </div>
                         <div class="text-sm text-gray-600">
                             Total Deposits
@@ -177,7 +177,7 @@
 
                     <div class="">
                         <div class="font-bold text-lg">
-                            $0.00
+                            ${{ number_format($data['withdrawals']) }}
                         </div>
                         <div class="text-sm text-gray-600">
                             Total Withdrawals

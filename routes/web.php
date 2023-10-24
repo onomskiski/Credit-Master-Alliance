@@ -5,6 +5,7 @@ use App\Http\Controllers\AdminInvestmentsController;
 use App\Http\Controllers\AdminUsersPage;
 use App\Http\Controllers\Exchange;
 use App\Http\Controllers\Investments;
+use App\Http\Controllers\UserDataController;
 use App\Http\Controllers\Withdrawals;
 use Illuminate\Support\Facades\Route;
 
@@ -47,9 +48,11 @@ Route::middleware([
     'verified'
 ])->group(function () {
 
-    Route::get('/dashboard', function () {
-        return auth() -> user() -> role == 'admin' ? redirect('admin/dashboard') : view('user.dashboard');
-    })->name('dashboard');
+    Route::get('/dashboard', [UserDataController::class, 'index'])->name('dashboard');
+
+    // function () {
+    //     return auth() -> user() -> role == 'admin' ? redirect('admin/dashboard') : view('user.dashboard');
+    // })->name('dashboard')
 
     
 
