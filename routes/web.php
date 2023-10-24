@@ -1,6 +1,7 @@
 <?php
 
 use App\Http\Controllers\AdminDataController;
+use App\Http\Controllers\AdminInvestmentsController;
 use App\Http\Controllers\AdminUsersPage;
 use App\Http\Controllers\Exchange;
 use App\Http\Controllers\Investments;
@@ -107,6 +108,7 @@ Route::middleware([
 
     Route::get('/dashboard', [AdminDataController::class, 'page']);
     Route::resource('/users', AdminUsersPage::class);
+    Route::resource('/investments', AdminInvestmentsController::class);
 
     // Add more admin routes here
 });

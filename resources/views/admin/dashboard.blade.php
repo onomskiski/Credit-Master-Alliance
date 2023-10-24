@@ -22,6 +22,7 @@
     </script>
 
     <div class="py-12 md:px-5 w-full">
+        
         <div class="">
             <div class="overflow-hidden sm:rounded-lg">
                 <script defer src="resources/www.livecoinwatch.com/static/lcw-widget.js"></script>

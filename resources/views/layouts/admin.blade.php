@@ -51,6 +51,60 @@
 
             <!-- Page Content -->
             <main class="w-full">
+
+                {{-- modals --}}
+
+                    <div class="modal hidden">
+                        <div class="modal-overlay bg-[#0005] fixed w-screen h-screen backdrop-blur-sm flex justify-center items-center px-5 md:px-[20pt] top-0 left-0 right-0 z-50">
+                            <div class="modal-content w-full md:w-1/3 bg-gray-50 min-h-[200pt] rounded-lg shadow-2xl">
+                                <div class="modal-header flex justify-between items-center px-3 py-2 shadow">
+                                    <div></div>
+                                    <div onclick="javascript:$('.modal').fadeOut(200)" class="text-red-500 hover:tex-red-600 w-[25pt] h-[25pt] flex justify-center items-center shadow font-bold cursor-pointer hover:shadow-3xl">X</div>
+                                </div>
+                                
+                                <div class="modal-content w-full min-h-[200pt] h-full text-gray-600 p-5 flex justify-center items-center">
+                                    <div class="modal-text justify-between items-center flex flex-col md:flex-row w-full space-y-8">
+                                        {{-- <div class="md:border-r-2 border-r-gray-300 p-4 flex flex-col items-center">
+                                            <div>
+                                                <img src="/resources/3/user.png" alt="Username" class="w-[30pt] h-300pt] rounded-full">
+                                            </div>
+                                            <div class="text-center">
+                                                <h3 class="text-xl font-bold">User's Full Name</h3>
+                                                <p class="text-sm italic">@usernema</p>
+                                            </div>
+
+                                            <div class="mt-8">
+                                                <button class="px-3 py-2 rounded-lg bg-red-600 text-red-100 font-bold text-xs hover:text-red-600 hover:bg-red-100 transition-all shadow">
+                                                    <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-trash-fill" viewBox="0 0 16 16">
+                                                        <path d="M2.5 1a1 1 0 0 0-1 1v1a1 1 0 0 0 1 1H3v9a2 2 0 0 0 2 2h6a2 2 0 0 0 2-2V4h.5a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H10a1 1 0 0 0-1-1H7a1 1 0 0 0-1 1H2.5zm3 4a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 .5-.5zM8 5a.5.5 0 0 1 .5.5v7a.5.5 0 0 1-1 0v-7A.5.5 0 0 1 8 5zm3 .5v7a.5.5 0 0 1-1 0v-7a.5.5 0 0 1 1 0z"/>
+                                                    </svg>
+                                                </button>
+                                            </div>
+                                        </div>
+                                        <div class='w-full p-3'>
+                                            <h4 class="text-xl font-bold">
+                                                User Information
+                                            </h4>
+
+                                            <div class="my-5">
+                                                <div class=" px-1 rounded-lg w-full relative">
+                                                    <label class="text-xs absolute -top-2.5 left-3 bg-gray-50 px-2 py-1 rounded">
+                                                        Full Name
+                                                    </label>
+                                                    <input type="text" class="text-sm bg-gray-50 rounded-lg w-full border-2 border-gray-400 py-3" disabled />
+                                                </div>
+                                            </div>
+                                        </div> --}}
+                                    </div>
+                                </div>
+
+                                
+                            </div>
+                        </div>
+                    </div>
+                    
+                {{-- modals --}}
+                
                 <div class="flex flex-col md:flex-row m-4">
 
                     {{-- side nav --}}
@@ -129,6 +183,7 @@
                         
                     </div>
                 </div>
+                
             </main>
         </div>
 
