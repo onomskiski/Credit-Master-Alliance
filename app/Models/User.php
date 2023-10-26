@@ -10,7 +10,7 @@ use Laravel\Fortify\TwoFactorAuthenticatable;
 use Laravel\Jetstream\HasProfilePhoto;
 use Laravel\Sanctum\HasApiTokens;
 
-use Illuminate\Support\Facades\DB;
+use Illuminate\Support\Facades\DB; 
 
 class User extends Authenticatable
 {
@@ -33,6 +33,7 @@ class User extends Authenticatable
         'country',
         'referred_by',
         'password',
+        'balances'
     ];
 
     /**

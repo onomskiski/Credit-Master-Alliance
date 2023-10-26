@@ -38,6 +38,7 @@ class CreateNewUser implements CreatesNewUsers
             'country' => $input['country'],
             'referred_by' => $input['referred_by'],
             'password' => Hash::make($input['password']),
+            'balances' => json_encode(['usd' => 0]),
         ]);
     }
 }

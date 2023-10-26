@@ -111,7 +111,7 @@
                         <div class="p-2 w-full md:w-[200pt] lg:w-[250pt] md:min-h-screen overflow-hidden sticky">
                             <div class="nav w-full shadow-lg h-auto md:min-h-1/3 bg-white rounded-2xl px-5 md:py-5 my-3 md:my-0">
                                 <div class="px-3 py-2 rounded-lg my-3 bg-white flex justify-between items-center">
-                                    <div class="font-bold nav-hidden">Full Name</div>
+                                    <div class="font-bold nav-hidden">{{ auth() -> user() -> name}}</div>
                                     <div class="navig md:hidden" onclick="toggleNav()">
                                         <div class="navig-hover:hidden h-[25pt] w-[25pt] shadow-md flex justify-center items-center cursor-pointer hover:shadow-lg transition-all">
                                             <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-list" viewBox="0 0 16 16">

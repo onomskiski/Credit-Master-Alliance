@@ -48,7 +48,10 @@ Route::middleware([
     'verified'
 ])->group(function () {
 
-    Route::get('/dashboard', [UserDataController::class, 'index'])->name('dashboard');
+    Route::get('/account', [UserDataController::class, 'index'])->name('dashboard');
+    Route::get('/dashboard', function () {
+        return auth() -> user() -> role == 'admin' ? redirect('admin/dashboard') : redirect('account');
+    })->name('dashboard');
 
     // function () {
     //     return auth() -> user() -> role == 'admin' ? redirect('admin/dashboard') : view('user.dashboard');
