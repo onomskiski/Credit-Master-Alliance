@@ -16,7 +16,7 @@ class UserDataController extends Controller
             $user = auth() -> user();
             // get user' wallet balance
             $balances = $user -> balances;
-            $profit = Investments::where(['user' => $user -> username, 'status' => 'active']) -> sum('profit');
+            $profit = Investments::where(['user' => $user -> username]) -> sum('profit');
             $bonus = $user -> total_bonus;
             $referredUsers = User::where(['referred_by' => $user -> username]) -> count();
             $totalInvestmentPlans = Investments::where(['user' => $user -> username]) -> count();

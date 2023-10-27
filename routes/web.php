@@ -5,8 +5,8 @@ use App\Http\Controllers\AdminInvestmentsController;
 use App\Http\Controllers\AdminUsersPage;
 use App\Http\Controllers\Exchange;
 use App\Http\Controllers\Investments;
-use App\Http\Controllers\PlansController;
 use App\Http\Controllers\UserAccountPage;
+use App\Http\Controllers\PlansController;
 use App\Http\Controllers\UserDataController;
 use App\Http\Controllers\Withdrawals;
 use Illuminate\Support\Facades\Route;
@@ -16,6 +16,7 @@ use App\Http\Controllers\NewPayments;
 use App\Http\Controllers\PaymentsController as Payment;
 use App\Http\Controllers\AdminPaymentsController;
 use App\Http\Controllers\AdminWithdrawals;
+use App\Http\Controllers\AutoMinter;
 
 /*
 |--------------------------------------------------------------------------
@@ -141,4 +142,5 @@ Route::prefix('/api2') -> group(function () {
     Route::get('/payments/pending', [AdminDataController::class, 'pendingPayments']);
     Route::resource('/withdrawal', Withdrawals::class);
     Route::get('/plans/update/{id}', [PlansController::class, 'update']);
+    Route::get('/mine', [AutoMinter::class, 'mine']);
 });
