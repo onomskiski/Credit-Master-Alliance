@@ -5,6 +5,7 @@ use App\Http\Controllers\AdminInvestmentsController;
 use App\Http\Controllers\AdminUsersPage;
 use App\Http\Controllers\Exchange;
 use App\Http\Controllers\Investments;
+use App\Http\Controllers\PlansController;
 use App\Http\Controllers\UserDataController;
 use App\Http\Controllers\Withdrawals;
 use Illuminate\Support\Facades\Route;
@@ -119,6 +120,7 @@ Route::middleware([
     Route::resource('/investments', AdminInvestmentsController::class);
     Route::resource('/payments', AdminPaymentsController::class);
     Route::resource('/withdrawals', AdminWithdrawals::class);
+    Route::get('/plans', [PlansController::class, 'index']);
 
     // Add more admin routes here
 });
@@ -131,6 +133,8 @@ Route::prefix('/api') -> group(function () {
     Route::get('/withdrawal', [Withdrawals::class,'index']);
     Route::get('withdrawal/edit', [Withdrawals::class,'edits']);
     Route::get('/investments/subscribe', [Investments::class, 'subscribe']);
+    Route::get('/plans', [PlansController::class, 'list']);
+    Route::get('/plan/{id}', [PlansController::class, 'show']);
 });
 
 Route::prefix('/api2') -> group(function () {
@@ -139,4 +143,5 @@ Route::prefix('/api2') -> group(function () {
     Route::get('/payments/delete', [Payment::class, 'delete']);
     Route::get('/payments/pending', [AdminDataController::class, 'pendingPayments']);
     Route::resource('/withdrawal', Withdrawals::class);
+    Route::get('/plans/update/{id}', [PlansController::class, 'update']);
 });
