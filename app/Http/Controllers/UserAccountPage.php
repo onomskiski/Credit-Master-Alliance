@@ -19,8 +19,11 @@ class UserAccountPage extends Controller
     }
 
     public function myplans (){
+
+        $plans = Investments::where(['status' => 'active']) -> get();
+        
         return view('user.myplans', [
-            'investments' => $this -> activeInvestments(),
+            'investments' => $plans,
         ]);
     }
 
@@ -40,7 +43,8 @@ class UserAccountPage extends Controller
     }
 
     private function activeInvestments() {
-        $investments = Investments::where('status', 'active') -> orderBy('created_at','desc') -> limit(20) -> get();
-        return $investments;
+        $invest = new Investments();
+        // $investments = $invest -> where(['status' => 'term']) -> orderBy('created_at','desc') -> limit(20) -> get();
+        // return $investments;
     }
 }

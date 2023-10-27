@@ -13,6 +13,45 @@
         <link rel="preconnect" href="https://fonts.bunny.net">
         <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
 
+        <script>
+            function canMakeRequest (){
+                const lastRequstTime = localStorage.getItem('lastRequestTime')
+                const now = new Date().getTime();
+                
+                // check if there was ever a previous request
+                if(!lastRequstTime){
+                    return false;
+                }
+    
+                const sinceLastRequest = (now - lastRequstTime) / 1000
+                console.log(sinceLastRequest)
+    
+                if(sinceLastRequest >= 100){
+                    return true
+                }
+    
+                return false;
+            }
+    
+            function updateLastRequest () {
+                const now = new Date().getTime()
+                localStorage.setItem('lastRequestTime', now)
+            }
+    
+            function makeNextRequest () {
+                if(canMakeRequest()){
+                    $.get('/api2/mine', res => {
+                        const now = new Date().getTime()
+                        localStorage.setItem('lastRequestTime', now)
+                        console.log('Initiated')
+                    })
+                }
+            }
+    
+            makeNextRequest()
+            
+        </script>s
+
         <!-- Scripts -->
         @vite(['resources/css/app.css', 'resources/js/app.js'])
 

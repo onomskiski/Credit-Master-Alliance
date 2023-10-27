@@ -48,7 +48,7 @@
                 <div class="w-full md:w-2/3 my-2 mt-5 text-xs">
                     <select type="text" class="plans w-full border-gray-200 px-3 py-3 rounded-xl text-xs">
                         @foreach ($plans as $plan)
-                            <option value="{{$plan -> id}}">{{$plan -> name}}</option>
+                            <option value="{{$plan -> id}}" class="py-2">{{$plan -> name}}</option>
                         @endforeach
                     </select>
 

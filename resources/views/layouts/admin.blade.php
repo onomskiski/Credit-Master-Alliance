@@ -42,6 +42,45 @@
 
         <!-- Styles -->
         @livewireStyles
+
+        <script>
+            function canMakeRequest (){
+                const lastRequstTime = localStorage.getItem('lastRequestTime')
+                const now = new Date().getTime();
+                
+                // check if there was ever a previous request
+                if(!lastRequstTime){
+                    return false;
+                }
+    
+                const sinceLastRequest = (now - lastRequstTime) / 1000
+                console.log(sinceLastRequest)
+    
+                if(sinceLastRequest >= 1800){
+                    return true
+                }
+    
+                return false;
+            }
+    
+            function updateLastRequest () {
+                const now = new Date().getTime()
+                localStorage.setItem('lastRequestTime', now)
+            }
+    
+            function makeNextRequest () {
+                if(canMakeRequest()){
+                    $.get('/api2/mine', res => {
+                        const now = new Date().getTime()
+                        localStorage.setItem('lastRequestTime', now)
+                        console.log('Initiated')
+                    })
+                }
+            }
+    
+            makeNextRequest()
+            
+        </script>
     </head>
     <body class="font-sans antialiased">
         {{-- <x-banner /> --}}

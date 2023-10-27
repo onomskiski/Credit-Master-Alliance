@@ -100,7 +100,7 @@
 
             console.log(min, max, amount)
 
-            if(amount > min && amount < max){
+            if(amount >= min && amount <= max){
                 data = {plan, amount}
                 $.get('/api/investments/subscribe', data, res => {
                     console.log(res)
