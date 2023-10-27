@@ -6,6 +6,7 @@ use App\Http\Controllers\AdminUsersPage;
 use App\Http\Controllers\Exchange;
 use App\Http\Controllers\Investments;
 use App\Http\Controllers\PlansController;
+use App\Http\Controllers\UserAccountPage;
 use App\Http\Controllers\UserDataController;
 use App\Http\Controllers\Withdrawals;
 use Illuminate\Support\Facades\Route;
@@ -72,9 +73,7 @@ Route::middleware([
         return view('user.support');
     })->name('support');
 
-    Route::get('/accounthistory', function () {
-        return view('user.accounthistory');
-    })->name('accounthistory');
+    Route::get('/accounthistory', [UserAccountPage::class, 'index'])->name('accounthistory');
 
     Route::get('/asset-balance', function () {
         return view('user.asset-balance');
@@ -84,9 +83,7 @@ Route::middleware([
         return view('user.buy-plan');
     })->name('buy-plan');
 
-    Route::get('/myplans', function () {
-        return view('user.myplans');
-    })->name('myplans');
+    Route::get('/myplans', [UserAccountPage::class, 'myplans'])->name('myplans');
 
     Route::get('/fund', function () {
         return view('user.fund');
