@@ -13,8 +13,8 @@ class Plans extends Model
         'name',
         'max_deposit',
         'min_deposit',
-        'min-return',
         'max_return',
+        'min_return',
         'gift_bonus',
         'duration'
     ];
