@@ -77,8 +77,8 @@
                             </div>
                             <form>
                                 <div class="w-full py-2">
-                                    <input type="hidden" value="${plan.max_deposit}" class="${plan.max_deposit}-depo" />
-                                    <input type="hidden" value="${plan.max_deposit}" class="${plan.max_deposit}-depo" />
+                                    <input type="hidden" value="${plan.min_deposit}" class="${plan.id}-min_deposit" />
+                                    <input type="hidden" value="${plan.max_deposit}" class="${plan.id}-max_deposit" />
                                     <input type="number" name="amount" min="${plan.min_deposit}" max="${plan.max_deposit}" class="${plan.id}-amount w-full rounded border-1 border-gray-900 py-2 px-3 shadow bg-gray-100 placeholder:text-gray-600 text-sm" placeholder="$0" required />
                                 </div>
             
@@ -95,13 +95,13 @@
         function subscribe(id){
             const plan = `${id}`
             const amount = Number($(`.${id}-amount`).val())
-            const min = $(`.min_deposit-depo`).val()
-            const max = $(`.max_deposit-depo`).val()
+            const min = Number($(`.${plan}-min_deposit`).val())
+            const max = Number($(`.${plan}-max_deposit`).val())
 
-            console.log(min, max)
+            console.log(min, max, amount)
 
-            data = {plan, amount}
-            if(amount > min || amount < max){
+            if(amount > min && amount < max){
+                data = {plan, amount}
                 $.get('/api/investments/subscribe', data, res => {
                     console.log(res)
                     alert(res.message)

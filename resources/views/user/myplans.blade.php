@@ -25,7 +25,7 @@
             </div>
 
             @else
-                <div class="w-full flex flex-wrap justify-{{ (count($investments) % 3 == 0) ? 'between' : 'start' }} py-5 md:px-5 text-gray-600">
+                <div class="w-full flex flex-wrap py-5 md:px-5 text-gray-600">
                     
                     @foreach($investments as $investment)
                     
