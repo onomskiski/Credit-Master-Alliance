@@ -56,6 +56,7 @@ class Investments extends Controller
             $invest -> capital = $amount;
             $invest -> profit = $profit;
             $invest -> status = 'active';
+            $invest -> due_at = $dueDate;
     
             if($invest -> save()){
 
@@ -66,13 +67,7 @@ class Investments extends Controller
                     ->where('id', $user->id)
                     ->update(['balances->usd' => $newBalance]);
                 
-                if($changed){
-
-                    // echo $user -> balances. "----------------------------------";
-                    // echo $amount. "----------------------------------";
-                    // echo $newBalance. "----------------------------------";
-                    // return response() -> json($user);
-                    
+                if($changed){                    
                     return response()->json([
                         "status"=> "success",
                         "message"=> "Subscription successful"

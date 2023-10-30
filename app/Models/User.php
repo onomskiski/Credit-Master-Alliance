@@ -70,9 +70,10 @@ class User extends Authenticatable
         return $this -> role === 'admin';
     }
     
-    public function totalUsdBalances(){
-        return DB::table('users')->sum(DB::raw("JSON_UNQUOTE(balances->'$.usd')"));
-    }
+    // public function totalUsdBalances(){
+    //     return DB::table('users')->sum(DB::raw("JSON_UNQUOTE(balances->'$.usd')"));
+    //     // return DB::table('users')->sum('balances -> usd');
+    // }
 
     public function investments(){
         return $this -> hasMany(Investments::class, 'user', 'username');
