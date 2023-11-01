@@ -46,7 +46,7 @@
 
                                 <div class="text-sm mb-3 italic">
                                     <div class="text-xs">
-                                        Expies:
+                                        Expires:
                                     </div>
                                     <div class="text-lg font-bold">
                                         {{ $investment -> due_at }}

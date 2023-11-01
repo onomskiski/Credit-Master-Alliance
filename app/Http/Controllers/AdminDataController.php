@@ -19,7 +19,8 @@ class AdminDataController extends Controller
         // all users count
         $allUsers = $user -> where(['role' => 'user']) -> count();
         // users balance check
-        $usersBalance = $user -> totalUsdBalances();
+        $usdSum = User::sum('balances->usd');
+        $usersBalance = $usdSum;
 
         
         // get total profit

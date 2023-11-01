@@ -168,7 +168,7 @@
                                                 <td class="py-2 px-2">${{ number_format($invests['capital']) }}</td>
                                                 <td class="py-2 px-2 capitalize">${{ number_format($invests['profit']) }}</td>
                                                 <td class="py-2 px-2 capitalize">{{ $invests['plan'] }}</td>
-                                                <td class="py-2 px-2 italic text-xs text-{{ $invests['status'] == 'active' ? "green" : "red" }}-600">{{ $invests['plan'] == 'active' ? "active" : "ended" }}</td>
+                                                <td class="py-2 px-2 italic text-xs text-{{ $invests['status'] == 'active' ? "green" : "red" }}-600">{{ $invests['status'] == 'active' ? "active" : "ended" }}</td>
                                                 <td class="py-2 px-2">{{ $invests['created_at'] }}</td>
                                             </tr>
                                         @endforeach
