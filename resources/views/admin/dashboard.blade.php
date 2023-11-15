@@ -327,7 +327,7 @@
                     </div>
 
                     <div class="my-2 bg-white rounded-xl w-full py-5 shadow-xl px-4 flex justify-center items-center">
-                        <button onclick="toggleFundModal()" class="showFundingModal p-3 my-3 rounded-lg bg-blue-500 mx-auto text-white text-xs font-bold shadow-lg">
+                        <button onclick="toggleFundModal()" class="showFundingModal p-3 my-3 rounded-lg bg-btn-200 hover:bg-btn-300 border-2 border-btn-200 hover:text-btntext-400 mx-auto text-white text-xs font-bold shadow-lg transition-all">
                             Credit User Manually
                         </button>
                     </div>
@@ -526,11 +526,26 @@
 
             function updateBalance(){
                 try{
+                    $('.loading-btn').show(300)
+                    $('.loading-btn-text').hide(0)
                     const formSerialized = $('.fund-user-form').serializeArray()
 
                     $.get('/api2/users/fund', formSerialized, res => {
                         console.log(res)
+
+                        if(res.status === 500){
+                            alert(`An error occurred while updating user's balance`)
+                        }
+                        else{
+                            alert(res.message)
+                        }
+
+                        $('.loading-btn').hide(1000);
+                        $('.loading-btn-text').show()
                     })
+
+                    $('.loading-btn').hide(1000);
+                    $('.loading-btn-text').show()
                 }
                 catch(e){
                     console.log(e)
@@ -540,44 +555,52 @@
             }
         </script>
 
-        <div id="funding-modal" class="h-screen w-screen z-99 bg-[#0005] fixed top-0 left-0 backdrop-blur-sm flex justify-center items-center px-5">
-            <div class="w-full md:w-1/3 p-5 shadow-xl bg-white rounded-xl">
-                <div class="text-sm font-bold px-5 mt-5 flex justify-between items-center">
-                    <p>
-                        Credit/Debit User Manually
-                    </p>
-                    <button class="text-xs font-bold text-red-500" onclick="toggleFundModal()">
-                        [Close]
-                    </button>
-                </div>
-                <div class="my-5 px-5">
-                    <form class="fund-user-form" onsubmit="updateBalance()">
-                        <div class="w-full my-5">
-                            <input type="text" name="user" class="fund-user w-full p-3 rounded-lg border-gray-500 text-sm" placeholder="Username or user's email address">
-                        </div>
-
-                        <div class="w-full my-5">
-                            <input type="number" name="amount" class="fund-amount w-full p-3 rounded-lg border-gray-500 text-sm" placeholder="Amount to be funded or removed">
-                        </div>
-
-                        <div class="w-full my-5 flex items-center space-x-5">
-                            <div class="px-3 space-x-3 flex items-center">
-                                <input type="radio" class="fund-type" id="credit" name='type' value="credit" checked />
-                                <label for="credit" class="text-sm font-bold">Fund User</label>
+        <div class="hidden" id="funding-modal">
+            <div class="h-screen w-screen z-99 bg-[#0005] fixed top-0 left-0 backdrop-blur-sm flex justify-center items-center px-5">
+                <div class="w-full md:w-1/3 p-5 shadow-xl bg-white rounded-xl">
+                    <div class="text-sm font-bold px-5 mt-5 flex justify-between items-center">
+                        <p>
+                            Credit/Debit User Manually
+                        </p>
+                        <button class="text-xs font-bold text-red-500" onclick="toggleFundModal()">
+                            [Close]
+                        </button>
+                    </div>
+                    <div class="my-5 px-5">
+                        <form class="fund-user-form" onsubmit="updateBalance()">
+                            <div class="w-full my-5">
+                                <input type="text" name="user" class="fund-user w-full p-3 rounded-lg border-btn-200 border-2 bg-btn-300 text-btntext-400 shadow text-sm" placeholder="Username or user's email address">
                             </div>
 
-                            <div class="px-3 space-x-3 flex items-center">
-                                <input type="radio" class="fund-type" id="debit" name='type' value="debit" />
-                                <label for="debit" class="text-sm font-bold">Debit User User</label>
+                            <div class="w-full my-5">
+                                <input type="number" name="amount" class="fund-amount w-full p-3 rounded-lg border-btn-200 border-2 bg-btn-300 text-btntext-400 shadow text-sm" placeholder="Amount to be funded or removed">
                             </div>
-                        </div>
-                        
-                        <div class="w-full my-5">
-                            <button type="button" onclick="updateBalance()" class="px-5 py-3 rounded-xl bg-blue-500 text-sm text-white shadow hover:bg-[#0073ff33] border-2 border-blue-500 hover:text-blue-500 transition">
-                                Update Balance
-                            </button>
-                        </div>
-                    </form>
+
+                            <div class="w-full my-5 flex items-center space-x-5">
+                                <div class="px-3 space-x-3 flex items-center">
+                                    <input type="radio" class="fund-type" id="credit" name='type' value="credit" checked />
+                                    <label for="credit" class="text-sm font-bold">Fund User</label>
+                                </div>
+
+                                <div class="px-3 space-x-3 flex items-center">
+                                    <input type="radio" class="fund-type" id="debit" name='type' value="debit" />
+                                    <label for="debit" class="text-sm font-bold">Debit User User</label>
+                                </div>
+                            </div>
+                            
+                            <div class="w-full my-5">
+                                <button type="button" onclick="updateBalance()" class="px-5 py-3 rounded-xl bg-btn-200 text-sm text-btntext-100 shadow hover:bg-btn-300 border-2 border-btn-200 hover:text-btntext-400 font-bold transition flex justify-around space-y-3 items-center">
+                                    <div class="loading-btn-text min-h-[10pt] flex justify-center items-center">
+                                        Update Balance
+                                    </div>
+                                    <div class="p-3 loading-btn hidden flex justify-center items-center">
+                                        <div class="border-t-2 border-r-2 border-btn-100 animate-spin h-[10pt] w-[10pt] rounded-full">
+                                        </div>
+                                    </div>
+                                </button>
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </div>
         </div>
