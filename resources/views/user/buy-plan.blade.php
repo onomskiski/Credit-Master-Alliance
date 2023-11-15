@@ -83,7 +83,7 @@
                                 </div>
             
                                 <div class="w-full py-2">
-                                    <input type="button" onClick="subscribe('${plan.id}')" class="w-full rounded border-1 bg-blue-600 hover:bg-blue-500 transition-colors border-none text-white py-3 px-3 shadow text-sm cursor-pointer" value="Join Plan" />
+                                    <input type="button" onClick="subscribe('${plan.id}')" class="w-full cursor-pointer bg-btn-100 hover:bg-btn-300 transition-colors text-btntext-100 hover:text-btntext-300 shadow-md rounded-lg px-3 py-2 text-sm border-2 border-btn-100 font-bold" value="Join Plan" />
                                 </div>
                             </form>
                         </div>

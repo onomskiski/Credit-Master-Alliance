@@ -205,7 +205,7 @@
                 class="min-h-[400pt] shadow rounded-xl"
             >
             </iframe>
-            <div class="text-xs text-blue-600 p-4 text-center font-bold">
+            <div class="text-xs text-btntext-300 p-4 text-center font-bold">
                 <h4>Personal Trading Chart</h4>
             </div>
         </div>
@@ -226,7 +226,7 @@
                 class="min-h-[400pt]"
             >
             </iframe>
-            <div class="text-xs text-blue-600 p-4 text-center font-bold">
+            <div class="text-xs text-btntext-300 p-4 text-center font-bold">
                 <h4>Forex Market Fundamental Data</h4>
             </div>
         </div>

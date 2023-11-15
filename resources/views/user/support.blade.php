@@ -26,7 +26,7 @@
                 </textarea>
 
                 <div class="w-full py-3">
-                    <input type="submit" class="w-full bg-blue-600 p-2 rounded text-white text-sm" value="Send" />
+                    <input type="submit" class="w-full bg-btn-100 hover:bg-btn-300 transition-colors text-btntext-100 hover:text-btntext-300 border-2 border-btn-100 font-bold cursor-pointer p-2 rounded text-sm" value="Send" />
                 </div>
             </div>
         </div>

@@ -1,4 +1,4 @@
-<nav x-data="{ open: false }" class="bg-blue-500 text-white border-b border-gray-100">
+<nav x-data="{ open: false }" class="bg-primary-400 text-white border-b border-gray-100">
     <!-- Primary Navigation Menu -->
     <div class="w-full mx-auto px-4 sm:px-6 lg:px-10">
         <div class="flex justify-between h-16">
@@ -11,11 +11,11 @@
                 </div>
 
                 <div class="hidden md:flex items-center space-x-5">
-                    <a href="/fund" class="text-sm rounded-lg bg-orange-400 text-white px-3 py-2">
+                    <a href="/fund" class="text-sm rounded-lg bg-accent-100 text-white px-3 py-2">
                         Fund your Account
                     </a>
 
-                    <a href="withdraw" class="text-sm rounded-lg bg-red-500 text-white px-3 py-2">
+                    <a href="withdraw" class="text-sm rounded-lg bg-accent-100 text-white px-3 py-2">
                         Withdraw Funds
                     </a>
                 </div>

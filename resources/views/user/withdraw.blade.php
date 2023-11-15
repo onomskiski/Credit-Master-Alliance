@@ -144,7 +144,7 @@
                                     <input type="hidden" name="method" value="${method.name}" />
                                     <input type="hidden" name="amountMin" value="${method.amount.min}" />
                                     <input type="hidden" name="amountMax" value="${method.amount.max}" />
-                                    <button type="submit" class="mx-auto text-sm font-semibold bg-blue-500 text-white px-6 py-2 rounded hover:bg-blue-600 transition-all shadow hover:shadow-md">
+                                    <button type="submit" class="mx-auto bg-btn-100 hover:bg-btn-300 transition-colors text-btntext-100 hover:text-btntext-300 shadow-md rounded-lg px-3 py-2 text-sm border-2 border-btn-100 font-bold">
                                         <span class="font-black text-lg">
                                             &plus;
                                         </span>

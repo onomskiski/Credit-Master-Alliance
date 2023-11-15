@@ -10,7 +10,7 @@
         <div class="w-full overflow-x-auto h-auto md:p-2 text-sm p-2 bg-gray-50 shadow-lg px-4 py-5 rounded-lg min-h-[100pt] mb-10 flex flex-col space-y-5">
             <table class="text-gray-600 table table-auto w-full text-left my-5">
                 <thead>
-                    <tr class="min-w-full py-3 px-3 bg-blue-500 text-blue-50">
+                    <tr class="min-w-full py-3 px-3 bg-primary-400 text-blue-50">
                         <th class="py-3 px-3">S/N</th>
                         <th class="py-3 px-3">Name</th>
                         <th class="py-3 px-3">Username</th>
@@ -37,7 +37,7 @@
                             <td class="py-3 px-3">{{ $user -> referred_by}}</td>
                             <td class="py-3 px-3">{{ "$" . number_format(json_decode($user -> balances, false) -> usd) ?? "N/A" }}</td>
                             <td class="py-3 px-3">
-                                <button class="text-blue-500 hover:text-blue-700 h-[30pt] w-[30pt] rounded-md flex justify-center items-center text-sm">
+                                <button class="text-primary-400 hover:text-primary-200 h-[30pt] w-[30pt] rounded-md flex justify-center items-center text-sm">
                                     <svg xmlns="http://www.w3.org/2000/svg" width="18" height="18" fill="currentColor" class="bi bi-eye-fill" viewBox="0 0 16 16">
                                         <path d="M10.5 8a2.5 2.5 0 1 1-5 0 2.5 2.5 0 0 1 5 0z"/>
                                         <path d="M0 8s3-5.5 8-5.5S16 8 16 8s-3 5.5-8 5.5S0 8 0 8zm8 3.5a3.5 3.5 0 1 0 0-7 3.5 3.5 0 0 0 0 7z"/>

@@ -78,10 +78,10 @@
                         <input 
                             type="text" 
                             disabled 
-                            class="ref-link bg-gray-100 border-1 border-gray-400 shadow-md rounded-lg w-full md:w-3/4 text-gray-600 text-sm py-4 px-6" 
+                            class="ref-link bg-btn-300 border-2 border-btn-100 shadow-md rounded-lg w-full md:w-3/4 text-btntext-300 text-sm py-4 px-6" 
                             value="{{ request() -> getSchemeAndHttpHost() .'/register?ref='. auth() -> user() -> username }}" 
                         />
-                        <button onclick="copyRefLink()" class="copy-ref-link cursor-pointer px-5 bg-blue-500 text-white rounded-lg flex justify-center items-center">
+                        <button onclick="copyRefLink()" class="copy-ref-link cursor-pointer px-5 bg-btn-100 hover:bg-btn-300 transition-colors text-btntext-100 hover:text-btntext-300 border-btn-100 border-2 rounded-lg flex justify-center items-center">
                             <div>
                                 <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-copy" viewBox="0 0 16 16">
                                     <path fill-rule="evenodd" d="M4 2a2 2 0 0 1 2-2h8a2 2 0 0 1 2 2v8a2 2 0 0 1-2 2H6a2 2 0 0 1-2-2V2Zm2-1a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1V2a1 1 0 0 0-1-1H6ZM2 5a1 1 0 0 0-1 1v8a1 1 0 0 0 1 1h8a1 1 0 0 0 1-1v-1h1v1a2 2 0 0 1-2 2H2a2 2 0 0 1-2-2V6a2 2 0 0 1 2-2h1v1H2Z"/>
@@ -92,7 +92,7 @@
                     <p class="text-sm text-gray-700 font-bold pt-4">
                         Or your referral ID
                     </p>
-                    <p class="font-bold text-lg text-green-700 lowercase">
+                    <p class="font-bold text-lg text-primary-200 lowercase">
                         {{ auth() -> user() -> name}}
                     </p>
                     

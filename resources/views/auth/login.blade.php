@@ -46,7 +46,7 @@
 
             <div class="w-full grid">
                 @if (Route::has('register'))
-                    <a class="w-full mx-auto h-full text-md text-gray-800 hover:text-gray-900 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 focus:ring-indigo-500 border-2 border-emerald-500 hover:bg-emerald-100 transition-all py-4 text-center" href="{{ route('register') }}">
+                    <a class="w-full mx-auto h-full text-md text-btntext-300 hover:text-btntext-400 rounded-md focus:outline-none focus:ring-2 focus:ring-offset-2 border-2 border-btn-100 hover:bg-btn-300 transition-all py-4 text-center" href="{{ route('register') }}">
                         {{ __('Don\'t have an account? ') }}
                     </a>
                 @endif
