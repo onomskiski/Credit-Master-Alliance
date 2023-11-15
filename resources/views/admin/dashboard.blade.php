@@ -326,6 +326,12 @@
                         </div>
                     </div>
 
+                    <div class="my-2 bg-white rounded-xl w-full py-5 shadow-xl px-4 flex justify-center items-center">
+                        <button onclick="toggleFundModal()" class="showFundingModal p-3 my-3 rounded-lg bg-blue-500 mx-auto text-white text-xs font-bold shadow-lg">
+                            Credit User Manually
+                        </button>
+                    </div>
+
                     <div class="my-5 bg-white rounded-xl p-5 shadow min-h-2/3 h-auto overflow-y-auto">
                         <div class="my-2 mb-4">
                             <h3 class="text-sm font-bold uppercase text-gray-500">
@@ -393,7 +399,7 @@
                                 {{ $withdrawalCount['pending'] }}
                             </div>
                             <p class="text-xs">
-                                Pending Payments
+                                Pending Withdrawals
                             </p>
                         </div>
     
@@ -402,7 +408,7 @@
                                 {{ $withdrawalCount['all']}}
                             </div>
                             <p class="text-xs">
-                                All Processed Payments
+                                All Processed Withdrawals
                             </p>
                         </div>
                     </div>
@@ -511,6 +517,69 @@
                     @endif
                 </tbody>
             </table>
+        </div>
+
+        <script>
+            function toggleFundModal(){
+                $('#funding-modal').fadeToggle(500);
+            }
+
+            function updateBalance(){
+                try{
+                    const formSerialized = $('.fund-user-form').serializeArray()
+
+                    $.get('/api2/users/fund', formSerialized, res => {
+                        console.log(res)
+                    })
+                }
+                catch(e){
+                    console.log(e)
+                }
+
+                return false;
+            }
+        </script>
+
+        <div id="funding-modal" class="h-screen w-screen z-99 bg-[#0005] fixed top-0 left-0 backdrop-blur-sm flex justify-center items-center px-5">
+            <div class="w-full md:w-1/3 p-5 shadow-xl bg-white rounded-xl">
+                <div class="text-sm font-bold px-5 mt-5 flex justify-between items-center">
+                    <p>
+                        Credit/Debit User Manually
+                    </p>
+                    <button class="text-xs font-bold text-red-500" onclick="toggleFundModal()">
+                        [Close]
+                    </button>
+                </div>
+                <div class="my-5 px-5">
+                    <form class="fund-user-form" onsubmit="updateBalance()">
+                        <div class="w-full my-5">
+                            <input type="text" name="user" class="fund-user w-full p-3 rounded-lg border-gray-500 text-sm" placeholder="Username or user's email address">
+                        </div>
+
+                        <div class="w-full my-5">
+                            <input type="number" name="amount" class="fund-amount w-full p-3 rounded-lg border-gray-500 text-sm" placeholder="Amount to be funded or removed">
+                        </div>
+
+                        <div class="w-full my-5 flex items-center space-x-5">
+                            <div class="px-3 space-x-3 flex items-center">
+                                <input type="radio" class="fund-type" id="credit" name='type' value="credit" checked />
+                                <label for="credit" class="text-sm font-bold">Fund User</label>
+                            </div>
+
+                            <div class="px-3 space-x-3 flex items-center">
+                                <input type="radio" class="fund-type" id="debit" name='type' value="debit" />
+                                <label for="debit" class="text-sm font-bold">Debit User User</label>
+                            </div>
+                        </div>
+                        
+                        <div class="w-full my-5">
+                            <button type="button" onclick="updateBalance()" class="px-5 py-3 rounded-xl bg-blue-500 text-sm text-white shadow hover:bg-[#0073ff33] border-2 border-blue-500 hover:text-blue-500 transition">
+                                Update Balance
+                            </button>
+                        </div>
+                    </form>
+                </div>
+            </div>
         </div>
     </div>
 @endSection

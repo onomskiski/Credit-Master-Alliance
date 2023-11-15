@@ -93,7 +93,7 @@
                             </div>
 
                             <div class="w-full my-5 px-3">
-                                <button type="submit" class="bg-blue-500 hover:bg-blue-400 transition-colors text-white  shadow-md rounded-lg px-4 py-3 text-md border-2 border-gray-100">
+                                <button type="submit" class="bg-btn-100 hover:bg-btn-300 transition-colors text-btntext-100 hover:text-btntext-300 shadow-md rounded-lg px-4 py-3 text-md border-2 border-btn-100 font-bold">
                                     Proceed to Payment
                                 </button>
                             </div>

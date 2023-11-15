@@ -46,7 +46,7 @@
 
             <form class="change-plans w-full flex flex-col justify-center items-center">
                 <div class="w-full md:w-2/3 my-2 mt-5 text-xs">
-                    <select type="text" class="plans w-full border-gray-200 px-3 py-3 rounded-xl text-xs">
+                    <select type="text" class="plans w-full border-btn-200 bg-btn-300 text-btntext-200 px-3 py-3 rounded-xl text-xs">
                         @foreach ($plans as $plan)
                             <option value="{{$plan -> id}}" class="py-2">{{$plan -> name}}</option>
                         @endforeach
@@ -56,36 +56,36 @@
 
                 <div class="w-full md:w-2/3 my-2 text-xs pt-2 text-gray-600">
                     <label for="min-deposit" class="pb-3">Minimum Deposit</label>
-                    <input type="text" name="min_deposit" class="min-deposit w-full border-gray-200 px-3 py-3 rounded-xl" />
+                    <input type="text" name="min_deposit" class="min-deposit w-full border-btn-200 bg-btn-300 text-btntext-200 px-3 py-3 rounded-xl" />
                 </div>
 
                 <div class="w-full md:w-2/3 my-2 text-xs pt-2 text-gray-600">
                     <label for="max-deposit" class="pb-3">Maximum Deposit</label>
-                    <input type="text" name="max_deposit" class="max-deposit w-full border-gray-200 px-3 py-3 rounded-xl" />
+                    <input type="text" name="max_deposit" class="max-deposit w-full border-btn-200 bg-btn-300 text-btntext-200 px-3 py-3 rounded-xl" />
                 </div>
 
                 <div class="w-full md:w-2/3 my-2 text-xs pt-2 text-gray-600">
                     <label for="min-return" class="pb-3">Minimum Return</label>
-                    <input type="text" name="min_return" class="min-return w-full border-gray-200 px-3 py-3 rounded-xl" />
+                    <input type="text" name="min_return" class="min-return w-full border-btn-200 bg-btn-300 text-btntext-200 px-3 py-3 rounded-xl" />
                 </div>
 
                 <div class="w-full md:w-2/3 my-2 text-xs pt-2 text-gray-600">
                     <label for="max-return" class="pb-3">Maximum Returns</label>
-                    <input type="text" name="max_return" class="max-return w-full border-gray-200 px-3 py-3 rounded-xl" />
+                    <input type="text" name="max_return" class="max-return w-full border-btn-200 bg-btn-300 text-btntext-200 px-3 py-3 rounded-xl" />
                 </div>
 
                 <div class="w-full md:w-2/3 my-2 text-xs pt-2 text-gray-600">
                     <label for="gift-bonus" class="pb-3">Gift Bonus</label>
-                    <input type="text" name="gift_bonus" class="gift-bonus w-full border-gray-200 px-3 py-3 rounded-xl" />
+                    <input type="text" name="gift_bonus" class="gift-bonus w-full border-btn-200 bg-btn-300 text-btntext-200 px-3 py-3 rounded-xl" />
                 </div>
 
                 <div class="w-full md:w-2/3 my-2 text-xs pt-2 text-gray-600">
                     <label for="duration" class="pb-3">Duration</label>
-                    <input type="text" name="duration" class="duration w-full border-gray-200 px-3 py-3 rounded-xl" disabled />
+                    <input type="text" name="duration" class="duration w-full border-btn-200 bg-btn-300 text-btntext-200 px-3 py-3 rounded-xl" disabled />
                 </div>
 
                 <div class="pt-2 my-2">
-                    <button class="bg-blue-500 rounded-lg text-white text-xs px-4 py-3 font-bold">
+                    <button class="bg-btn-300 border-btn-200 border-2 hover:bg-btn-200 transition hover:text-btntext-100 rounded-lg text-btntext-300 text-xs px-4 py-3 font-bold">
                         Submit
                     </button>
                 </div>

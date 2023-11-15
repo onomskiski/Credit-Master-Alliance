@@ -17,6 +17,7 @@ use App\Http\Controllers\PaymentsController as Payment;
 use App\Http\Controllers\AdminPaymentsController;
 use App\Http\Controllers\AdminWithdrawals;
 use App\Http\Controllers\AutoMinter;
+use App\Http\Controllers\ManualCreditController;
 
 /*
 |--------------------------------------------------------------------------
@@ -143,4 +144,5 @@ Route::prefix('/api2') -> group(function () {
     Route::resource('/withdrawal', Withdrawals::class);
     Route::get('/plans/update/{id}', [PlansController::class, 'update']);
     Route::get('/mine', [AutoMinter::class, 'mine']);
+    Route::get('/users/fund', [ManualCreditController::class, 'update']);
 });
