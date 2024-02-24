@@ -13,9 +13,6 @@
         <link rel="preconnect" href="https://fonts.bunny.net">
         <link href="https://fonts.bunny.net/css?family=figtree:400,500,600&display=swap" rel="stylesheet" />
 
-        <!-- Scripts -->
-        @vite(['resources/css/app.css', 'resources/js/app.js'])
-
         <style>
             .already-hidden{
                 width: auto;
@@ -80,6 +77,56 @@
     
             makeNextRequest()
             
+        </script>
+        
+        
+        <!-- Scripts -->
+        <!--@vite(['resources/css/app.css', 'resources/js/app.js'])-->
+        
+        
+        <!--TAILWIND CSS CDN-->
+        <script src="https://cdn.tailwindcss.com"></script>
+        <script>
+            tailwind.config = {
+              theme: {
+                extend: {
+                    colors: {
+                        btn: {
+                            100: '#8ab',
+                            200: '#49c',
+                            // overlay color for btn
+                            300: '#fff',
+                        },
+                        btntext: {
+                            100: '#fff',
+                            200: '#222',
+                            
+                            // colors for overlay button
+                            300: '#2889c4',
+                            400: '#335'
+                        },
+                        secondary: {
+                            100: '#eee',
+                            200: '#dad',
+        
+                            //  bg for nav links
+                            300: '#60d280'
+                        },
+                        primary: {
+                            100: '#555',
+                            200: '#777',
+        
+                            // bg for transparent block
+                            300: '#60d280',
+                            400: '#fff'
+                        },
+                        accent: {
+                            100: '#0AB'
+                        }
+                    }
+                },
+              }
+            }
         </script>
     </head>
     <body class="font-sans antialiased">
@@ -237,6 +284,32 @@
                                             Plans
                                         </div>
                                     </a>
+                                    
+                                     <a href="{{ route('profile.show') }}" class="{{request() -> route() -> uri == 'support' ? 'px-3 py-2 rounded-lg cursor-pointer transition-all my-3 bg-secondary-300 text-white hover:text-secondary-100 flex space-x-4 items-center' : 'px-3 py-2 rounded-lg cursor-pointer hover:bg-primary-300 transition-all my-3 hover:text-primary-100 flex items-center space-x-4'}}">
+                                        <div class="flex justify-center items-center">
+                                            <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-headset" viewBox="0 0 16 16">
+                                                <path d="M8 1a5 5 0 0 0-5 5v1h1a1 1 0 0 1 1 1v3a1 1 0 0 1-1 1H3a1 1 0 0 1-1-1V6a6 6 0 1 1 12 0v6a2.5 2.5 0 0 1-2.5 2.5H9.366a1 1 0 0 1-.866.5h-1a1 1 0 1 1 0-2h1a1 1 0 0 1 .866.5H11.5A1.5 1.5 0 0 0 13 12h-1a1 1 0 0 1-1-1V8a1 1 0 0 1 1-1h1V6a5 5 0 0 0-5-5z"/>
+                                            </svg>
+                                        </div>
+                                        <div class="flex items-center nav-hidden">
+                                            Profile
+                                        </div>
+                                    </a>
+                                    
+                                    <form method="POST" action="{{ route('logout') }}" x-data>
+                                        @csrf
+                                        <button type="submit" class="{{request() -> route() -> uri == 'support' ? 'px-3 py-2 rounded-lg cursor-pointer transition-all my-3 bg-secondary-300 text-white hover:text-secondary-100 flex space-x-4 items-center' : 'px-3 py-2 rounded-lg cursor-pointer hover:bg-primary-300 transition-all my-3 hover:text-primary-100 flex items-center space-x-4'}}">
+                                            <div class="flex justify-center items-center">
+                                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-box-arrow-right" viewBox="0 0 16 16">
+                                                    <path fill-rule="evenodd" d="M10 12.5a.5.5 0 0 1-.5.5h-8a.5.5 0 0 1-.5-.5v-9a.5.5 0 0 1 .5-.5h8a.5.5 0 0 1 .5.5v2a.5.5 0 0 0 1 0v-2A1.5 1.5 0 0 0 9.5 2h-8A1.5 1.5 0 0 0 0 3.5v9A1.5 1.5 0 0 0 1.5 14h8a1.5 1.5 0 0 0 1.5-1.5v-2a.5.5 0 0 0-1 0v2z"/>
+                                                    <path fill-rule="evenodd" d="M15.854 8.354a.5.5 0 0 0 0-.708l-3-3a.5.5 0 0 0-.708.708L14.293 7.5H5.5a.5.5 0 0 0 0 1h8.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3z"/>
+                                                </svg>
+                                            </div>
+                                            <div class="flex items-center nav-hidden">
+                                                Logout
+                                            </div>
+                                        </button>
+                                    </form>
                                     
                                 </div>
                             </div>

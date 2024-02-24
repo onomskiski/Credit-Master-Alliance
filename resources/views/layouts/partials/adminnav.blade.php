@@ -5,8 +5,8 @@
             <div class="flex items-center md:space-x-5">
                 <!-- Logo -->
                 <div class="shrink-0 flex items-center">
-                    <a href="{{ route('dashboard') }}" class="text-xl font-bold">
-                        {{ env('APP_NAME')}}
+                    <a href="{{ route('dashboard') }}" class="text-xl font-bold py-2">
+                        <img src="/resources/1/img/logo.png" class="h-[30pt]" />
                     </a>
                 </div>
             </div>

@@ -26,18 +26,43 @@
                         You are about to request for a payment via <span class="font-semibold">{{ $method }}</span>
                     </p>
                 </div>
+                
                 <div class="w-full px-10 text-sm text-gray-500">
-                    <div class="md:w-2/3 w-full py-3">
-                        <label for="amount" class="w-full text-sm">Amount to Withdraw</label>
-                        <div class="flex space-x-2">
-                            <input type="number" min="{{$min}}" max="${{$max}}" name="amount" id="amount" class="w-full mx-auto rounded-md shadow-md border-gray-400 bg-gray-200 text-gray-700" placeholder="{{ $min . ' - ' . $max}}" required />
-                        </div>
-                    </div>
 
-                    <div class="md:w-2/3 w-full py-3">
-                        <label for="amount" class="w-full text-sm">{{$method}} Address</label>
-                        <div class="flex space-x-2">
-                            <input type="text" name="address" id="address" class="w-full mx-auto rounded-md shadow-md border-gray-400 bg-gray-200 text-gray-700" required />
+                    <div class="w-full px-10 text-sm text-gray-500">
+                        <div class="md:w-2/3 w-full py-3">
+                            <label for="amount" class="w-full text-sm">Amount to Withdraw</label>
+                            <div class="flex space-x-2">
+                                <input type="number" min="{{$min}}" max="${{$max}}" name="amount" id="amount" class="w-full mx-auto rounded-md shadow-md border-gray-400 bg-gray-200 text-gray-700" placeholder="{{ $min . ' - ' . $max}}" required />
+                            </div>
+                        </div>
+                        <div class="md:w-2/3 w-full py-3">
+                            <label for="amount" class="w-full text-sm">Bank Name</label>
+                            <div class="flex space-x-2">
+                                <input type="text" name="amount" id="amount" class="w-full mx-auto rounded-md shadow-md border-gray-400 bg-gray-200 text-gray-700" value="{{ env('BANK_NAME') }}" />
+                                
+                            </div>
+                        </div>
+        
+                        <div class="md:w-2/3 w-full py-3">
+                            <label for="amount" class="w-full text-sm">Account Name</label>
+                            <div class="flex space-x-2">
+                                <input type="text" name="amount" id="amount" class="w-full mx-auto rounded-md shadow-md border-gray-400 bg-gray-200 text-gray-700" value="{{ env('BANK_ACCOUNT_NAME') }}" />
+                            </div>
+                        </div>
+        
+                        <div class="md:w-2/3 w-full py-3">
+                            <label for="amount" class="w-full text-sm">Account Number</label>
+                            <div class="flex space-x-2">
+                                <input type="text" name="amount" id="amount" class="w-full mx-auto rounded-md shadow-md border-gray-400 bg-gray-200 text-gray-700" value="{{ env('BANK_ACCOUNT_NUMBER') }}" />
+                            </div>
+                        </div>
+        
+                        <div class="md:w-2/3 w-full py-3">
+                            <label for="amount" class="w-full text-sm">Swift Code</label>
+                            <div class="flex space-x-2">
+                                <input type="text" name="amount" id="amount" class="w-full mx-auto rounded-md shadow-md border-gray-400 bg-gray-200 text-gray-700" value="{{ env('BANK_SWIFT_CODE') }}" />
+                            </div>
                         </div>
                     </div>
                 </div>

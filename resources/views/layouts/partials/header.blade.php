@@ -232,7 +232,7 @@
 			    appToken: '7hrkmq2yb3b4',
 			    environment: 'production'
 			}
-			
+		
 		</script>
 		<script type=application/ld+json>
 			{
@@ -312,255 +312,119 @@
 			<header>
 				<div class="bp-nav js-contains-anchor">
 					<div class=bp-nav__container>
-						<div class=util-flex-shrink-0><a href="/"><img alt=247-Cointrading class=lazyload data-src="resources/1/img/logo.png" height=40 width=136> </a> </div>
+						<div class=util-flex-shrink-0><a href="/"><img alt=247-Cointrading class=lazyload data-src="resources/1/img/logo.png" style="height: 30pt;"> </a> </div>
 						<div class=util-visible-desktop>
 							<ul class=bp-nav__navigation>
 								<li>
-									<div class=bp-nav__item>
-										<div class=bp-nav__item__text>Invest</div>
-										<div class=bp-dropdown>
-											<ul class=bp-dropdown__grid>
-												<li class=bp-dropdown__grid-list>
-													<div class=bp-dropdown__title>Invest in:</div>
-													<ul>
-														<li>
-															<a aria-current=true bp-expand=bp-expand-1 class=bp-dropdown__item href="#">
-															<img alt="Cryptocurrencies &lt;small&gt;Buy, sell &amp; swap cryptocurrencies&lt;/small&gt;" height=36 src="resources/cdn.bitpanda.com/media/New%20navigation_Rebrand%203.0/Cryptos.svg" width=36>
-															</a>
-														<li>
-                                                            {{-- <li>
-                                                            <li>
-                                                            <li>
-                                                            <li> --}}
-													</ul>
-                                                <li aria-expanded=true class=bp-dropdown__grid-list id=bp-expand-1>
-                                                    <div class=bp-dropdown__title>Top 4 Cryptocurrencies:</div>
-                                                    <ul>
-                                                        <li>
-                                                            <a class="bp-dropdown__item bp-dropdown__item--single-line" href="#">
-                                                                <img alt="Bitcoin &lt;small&gt;BTC&lt;/small&gt;" height=36 src="resources/cdn.bitpanda.com/media/asset-icons/asset-btc.svg" width=36>
-                                                                <div> Bitcoin <small>BTC</small> </div>
-                                                            </a>
-                                                        <li>
-                                                            <a class="bp-dropdown__item bp-dropdown__item--single-line" href="#">
-                                                                <img alt="Ethereum &lt;small&gt;ETH&lt;/small&gt;" height=36 src="resources/cdn.bitpanda.com/media/asset-icons/asset-eth.svg" width=36>
-                                                                <div> Ethereum <small>ETH</small> </div>
-                                                            </a>
-                                                        <li>
-                                                            <a class="bp-dropdown__item bp-dropdown__item--single-line" href="#">
-                                                                <img alt="Bitpanda Ecosystem Token &lt;small&gt;BEST&lt;/small&gt;" height=36 src="resources/cdn.bitpanda.com/media/asset-icons/asset-best.svg" width=36>
-                                                                <div> Bitpanda Ecosystem Token <small>BEST</small> </div>
-                                                            </a>
-                                                        <li>
-                                                            <a class="bp-dropdown__item bp-dropdown__item--single-line" href="#">
-                                                                <img alt="Chainlink &lt;small&gt;LINK&lt;/small&gt;" height=36 src="resources/cdn.bitpanda.com/media/asset-icons/asset-link.svg" width=36>
-                                                                <div> Chainlink <small>LINK</small> </div>
-                                                            </a>
-                                                        <li>
-                                                    </ul>
-                                                <li aria-expanded=false class=bp-dropdown__grid-list id=bp-expand-2>
-                                                <li aria-expanded=false class=bp-dropdown__grid-list id=bp-expand-3>
-                                                    <div class=bp-dropdown__title>Top 4 ETFs</div>
-                                                    <ul>
-                                                        <li>
-                                                            <a class="bp-dropdown__item bp-dropdown__item--single-line" href="prices/etfs/top-50-USDo-stocks-USDostoxx50.html">
-                                                                <img alt="Top 50 USDo Stocks" height=36 src="resources/cdn.bitpanda.com/media/New%20navigation_Rebrand%203.0/USDostoxx50.svg" width=36>
-                                                                <div> Top 50 USDo Stocks </div>
-                                                            </a>
-                                                        <li>
-                                                            <a class="bp-dropdown__item bp-dropdown__item--single-line" href="prices/etfs/top-40-german-stocks-dax.html">
-                                                                <img alt="Top 40 German Stocks" height=36 src="resources/cdn.bitpanda.com/media/New%20navigation_Rebrand%203.0/dax.svg" width=36>
-                                                                <div> Top 40 German Stocks </div>
-                                                            </a>
-                                                        <li>
-                                                            <a class="bp-dropdown__item bp-dropdown__item--single-line" href="prices/etfs/top-100-british-stocks-ftse100.html">
-                                                                <img alt="Top 100 British Stocks" height=36 src="resources/cdn.bitpanda.com/media/New%20navigation_Rebrand%203.0/ftse100.svg" width=36>
-                                                                <div> Top 100 British Stocks </div>
-                                                            </a>
-                                                        <li>
-                                                            <a class="bp-dropdown__item bp-dropdown__item--single-line" href="prices/etfs/emerging-markets-stocks-msci-em.html">
-                                                                <img alt="Emerging Markets Stocks" height=36 src="resources/cdn.bitpanda.com/media/New%20navigation_Rebrand%203.0/msci-em.svg" width=36>
-                                                                <div> Emerging Markets Stocks </div>
-                                                            </a>
-                                                        <li>
-                                                            <a class=bp-dropdown__link href="prices/etfs.html">
-                                                                <div> See all ETFs </div>
-                                                            </a>
-                                                    </ul>
-                                                <li aria-expanded=false class=bp-dropdown__grid-list id=bp-expand-4>
-                                                    <div class=bp-dropdown__title>Our Crypto Indices</div>
-                                                    <ul>
-                                                        <li>
-                                                            <a class="bp-dropdown__item bp-dropdown__item--single-line" href="prices/bci-infrastructure-leaders-bciil.html">
-                                                                <img alt="BCI Infrastructure Leaders" height=36 src="resources/cdn.bitpanda.com/media/bci/navigation_icons/22_06_Website_BCI_LandingPage_BCI%20Infra_36x36.svg" width=36>
-                                                                <div> BCI Infrastructure Leaders </div>
-                                                            </a>
-                                                        <li>
-                                                            <a class="bp-dropdown__item bp-dropdown__item--single-line" href="prices/bci-defi-leaders-bcidl.html">
-                                                                <img alt="BCI DeFi Leaders" height=36 src="resources/cdn.bitpanda.com/media/bci/navigation_icons/22_06_Website_BCI_LandingPage_BCI%20DeFi_36x36.svg" width=36>
-                                                                <div> BCI DeFi Leaders </div>
-                                                            </a>
-                                                        <li>
-                                                            <a class="bp-dropdown__item bp-dropdown__item--single-line" href="prices/bci-media-entertainment-leaders-bciml.html">
-                                                                <img alt="BCI Media &amp; Entertainment Leaders" height=36 src="resources/cdn.bitpanda.com/media/bci/navigation_icons/bcime-01.svg" width=36>
-                                                                <div> BCI Media & Entertainment Leaders </div>
-                                                            </a>
-                                                        <li>
-                                                            <a class="bp-dropdown__item bp-dropdown__item--single-line" href="prices/bci-smart-contract-leaders-bcisl.html">
-                                                                <img alt="BCI Smart Contract Leaders" height=36 src="resources/cdn.bitpanda.com/media/bci/navigation_icons/22_06_Website_BCI_LandingPage_BCI%20Smart_36x36.svg" width=36>
-                                                                <div> BCI Smart Contract Leaders </div>
-                                                            </a>
-                                                        <li>
-                                                            <a class="bp-dropdown__item bp-dropdown__item--single-line" href="prices/crypto-index/bci10.html">
-                                                                <img alt=BCI10 height=36 src="resources/cdn.bitpanda.com/media/bci/navigation_icons/22_06_Website_BCI_LandingPage_BCI%2010_36x36.svg" width=36>
-                                                                <div> BCI10 </div>
-                                                            </a>
-                                                        <li>
-                                                            <a class="bp-dropdown__item bp-dropdown__item--single-line" href="prices/crypto-index/bci25.html">
-                                                                <img alt=BCI25 height=36 src="resources/cdn.bitpanda.com/media/bci/navigation_icons/22_06_Website_BCI_LandingPage_BCI%2025_36x36.svg" width=36>
-                                                                <div> BCI25 </div>
-                                                            </a>
-                                                        <li>
-                                                            <a class=bp-dropdown__link href="prices/crypto-index.html">
-                                                                <div> See all Crypto Indices </div>
-                                                            </a>
-                                                    </ul>
-                                                <li aria-expanded=false class=bp-dropdown__grid-list id=bp-expand-5>
-                                                    <div class=bp-dropdown__title>Our Precious Metals</div>
-                                                    <ul>
-                                                        <li>
-                                                            <a class="bp-dropdown__item bp-dropdown__item--single-line" href="prices/gold-xau.html">
-                                                                <img alt=Gold height=36 src="resources/cdn.bitpanda.com/media/New%20navigation_Rebrand%203.0/xau.svg" width=36>
-                                                                <div> Gold </div>
-                                                            </a>
-                                                        <li>
-                                                            <a class="bp-dropdown__item bp-dropdown__item--single-line" href="prices/silver-xag.html">
-                                                                <img alt=Silver height=36 src="resources/cdn.bitpanda.com/media/New%20navigation_Rebrand%203.0/xag.svg" width=36>
-                                                                <div> Silver </div>
-                                                            </a>
-                                                        <li>
-                                                            <a class="bp-dropdown__item bp-dropdown__item--single-line" href="prices/palladium-xpd.html">
-                                                                <img alt=Palladium height=36 src="resources/cdn.bitpanda.com/media/New%20navigation_Rebrand%203.0/xpd.svg" width=36>
-                                                                <div> Palladium </div>
-                                                            </a>
-                                                        <li>
-                                                            <a class="bp-dropdown__item bp-dropdown__item--single-line" href="prices/platinum-xpt.html">
-                                                                <img alt=Platinum height=36 src="resources/cdn.bitpanda.com/media/New%20navigation_Rebrand%203.0/xpt.svg" width=36>
-                                                                <div> Platinum </div>
-                                                            </a>
-                                                        <li>
-                                                            <a class=bp-dropdown__link href="prices/precious-metals.html">
-                                                                <div> See all Precious Metals </div>
-                                                            </a>
-                                                    </ul>
-                                                <li aria-expanded=false class=bp-dropdown__grid-list id=bp-expand-6>
-                                                    <div class=bp-dropdown__title>Top commodities*</div>
-                                                    <ul>
-                                                        <li>
-                                                            <a class="bp-dropdown__item bp-dropdown__item--single-line" href="prices/commodities/brent-crude-oil.html">
-                                                                <img alt=Brent height=36 src="resources/cdn.bitpanda.com/media/New%20navigation_Rebrand%203.0/brent.png" width=36>
-                                                                <div> Brent </div>
-                                                            </a>
-                                                        <li>
-                                                            <a class="bp-dropdown__item bp-dropdown__item--single-line" href="prices/commodities/natural-gas-natgas.html">
-                                                                <img alt="Natural gas" height=36 src="resources/cdn.bitpanda.com/media/New%20navigation_Rebrand%203.0/natgas.png" width=36>
-                                                                <div> Natural gas </div>
-                                                            </a>
-                                                        <li>
-                                                            <a class="bp-dropdown__item bp-dropdown__item--single-line" href="prices/commodities/wheat.html">
-                                                                <img alt=Wheat height=36 src="resources/cdn.bitpanda.com/media/New%20navigation_Rebrand%203.0/wheat.png" width=36>
-                                                                <div> Wheat </div>
-                                                            </a>
-                                                        <li>
-                                                            <a class="bp-dropdown__item bp-dropdown__item--single-line" href="prices/commodities/soybeans-soybean.html">
-                                                                <img alt=Soybean height=36 src="resources/cdn.bitpanda.com/media/New%20navigation_Rebrand%203.0/soybean.png" width=36>
-                                                                <div> Soybean </div>
-                                                            </a>
-                                                        <li>
-                                                            <a class="bp-dropdown__item bp-dropdown__item--single-line" href="prices/commodities/copper.html">
-                                                                <img alt=Copper height=36 src="resources/cdn.bitpanda.com/media/New%20navigation_Rebrand%203.0/copper.png" width=36>
-                                                                <div> Copper </div>
-                                                            </a>
-                                                        <li>
-                                                            <a class="bp-dropdown__item bp-dropdown__item--single-line" href="prices/commodities/nickel.html">
-                                                                <img alt=Nickel height=36 src="resources/cdn.bitpanda.com/media/New%20navigation_Rebrand%203.0/nickel.png" width=36>
-                                                                <div> Nickel </div>
-                                                            </a>
-                                                        <li>
-                                                            <a class=bp-dropdown__link href="prices/commodities.html">
-                                                                <div> See all commodities </div>
-                                                            </a>
-                                                    </ul>
-                                                </ul>
-                                            </div>
-                                        </div>
+									<a href="/about" class="bp-nav__item text-black hover:text-slate-600 hover:decoration-none">
+										<div class=bp-nav__item__text>Fix My Credit</div>
+									</a>
+								</li>
+                                    
                                     <li>
 									<div class=bp-nav__item>
-										<a class=bp-nav__item__text href="features.html">Features</a>
+										<a class=bp-nav__item__text href="features.html">About Credit</a>
 										<div class=bp-dropdown>
 											<ul class=bp-dropdown__grid>
 												<li class=bp-dropdown__grid-list>
-													<div class=bp-dropdown__title>Popular features</div>
+													<div class=bp-dropdown__title>Negative items</div>
 													<ul>
 														<li>
 															<a class=bp-dropdown__item href="#">
-																<img alt="Bitpanda Crypto Index &lt;small&gt;Never miss out on the next asset&lt;/small&gt;" height=36 src="resources/cdn.bitpanda.com/media/New%20navigation_Rebrand%203.0/Crypto%20Index%20new.svg" width=36>
-																<div> 247-Cointrading Crypto Index <small>Never miss out on the next asset</small> </div>
+																<div><small>What are negative items?</small> </div>
 															</a>
-														<li>
-															<a class=bp-dropdown__item href="/">
-																<img alt="Savings Plan &lt;small&gt;A savings plan for Bitcoin and more&lt;/small&gt;" height=36 src="resources/cdn.bitpanda.com/media/New%20navigation_Rebrand%203.0/Group%201306.svg" width=36>
-																<div> Savings Plan <small>A savings plan for Bitcoin and more</small> </div>
-															</a>
+														
 														<li>
 															<a class=bp-dropdown__item href="#">
-																<img alt="Bitpanda Commodities &lt;small&gt;Diversify your portfolio&lt;/small&gt;" height=36 src="resources/cdn.bitpanda.com/media/New%20navigation_Rebrand%203.0/Group%2043-1new.svg" width=36>
-																<div> 247-Cointrading Commodities <small>Diversify your portfolio</small> </div>
+																<div><small>How to remove collections</small> </div>
+															</a>
+														
+														<li>
+															<a class=bp-dropdown__item href="#">
+																<div><small>How to remove late payments</small> </div>
+															</a>
+															
+														<li>
+															<a class=bp-dropdown__item href="#">
+																<div><small>How to remove bankruptcy</small> </div>
+															</a>
+														
+														<li>
+															<a class=bp-dropdown__item href="#">
+																<div><small>How to remove bankruptcy</small> </div>
 															</a>
 													</ul>
-													<div class=bp-dropdown__title>Save time &amp; money</div>
+													<div class=bp-dropdown__title>Credit scores</div>
 													<ul>
 														<li>
 															<a class=bp-dropdown__item href="#">
-																<img alt="Swap &lt;small&gt;Instantly exchange digital assets&lt;/small&gt;" height=36 src="resources/cdn.bitpanda.com/media/New%20navigation_Rebrand%203.0/Group%201309.svg" width=36>
-																<div> Swap <small>Instantly exchange digital assets</small> </div>
+																<div><small>What is a good credit score?</small> </div>
+															</a>
+															
+															<li>
+															<a class=bp-dropdown__item href="#">
+																<div><small>What is a bad credit score?</small> </div>
+															</a>
+															
+														<li>
+															<a class=bp-dropdown__item href="#">
+																<div><small>How to check your credit score</small> </div>
 															</a>
 														<li>
 															<a class=bp-dropdown__item href="#">
-																<img alt="Bitpanda Pay &lt;small&gt;Pay or send money with Bitpanda&lt;/small&gt;" height=36 src="resources/cdn.bitpanda.com/media/New%20navigation_Rebrand%203.0/Group%201310.svg" width=36>
-																<div> 247-Cointrading Pay <small>Pay or send money with Bitpanda</small> </div>
+																<div><small>How to build credit</small> </div>
 															</a>
 													</ul>
 												<li class=bp-dropdown__grid-list>
-													<div class=bp-dropdown__title>Benefits &amp; Rewards</div>
+													<div class=bp-dropdown__title>Credit reports</div>
 													<ul>
 														<li>
 															<a class=bp-dropdown__item href="#">
-																<img alt="Bitpanda Card &amp; card benefits &lt;small&gt;A visa card with Bitcoin cashback&lt;/small&gt;" height=36 src="resources/cdn.bitpanda.com/media/New%20navigation_Rebrand%203.0/Group%201307.svg" width=36>
-																<div> 247-Cointrading Card & card benefits <small>A visa card with Bitcoin cashback</small> </div>
+																<div><small>What is a credit report?</small> </div>
+															</a>
+														
+														<li>
+															<a class=bp-dropdown__item href="#">
+																<div><small>How to read a credit report</small> </div>
 															</a>
 														<li>
 															<a class=bp-dropdown__item href="#">
-																<img alt="BEST Rewards &lt;small&gt;Earn rewards for every transaction&lt;/small&gt;" height=36 src="resources/cdn.bitpanda.com/media/New%20navigation_Rebrand%203.0/Group%201308.svg" width=36>
-																<div> BEST Rewards <small>Earn rewards for every transaction</small> </div>
+																<div><small>How to dispute a credit report</small> </div>
+															</a>
+														
+														<li>
+															<a class=bp-dropdown__item href="#">
+																<div><small>Credit reporting agencies</small> </div>
 															</a>
 														<li>
 															<a class=bp-dropdown__item href="#">
-																<img alt="Staking &lt;small&gt;Start staking popular coins and tokens&lt;/small&gt;" height=36 src="resources/cdn.bitpanda.com/media/New%20navigation_Rebrand%203.0/2022_May_Product_Staking%20icon_2022_May_Product_Staking%20icon_36x36.svg" width=36>
-																<div> Staking <small>Start staking popular coins and tokens</small> </div>
+																<div><small>Who can check your credit report?</small> </div>
 															</a>
 													</ul>
-													<div class=bp-dropdown__title>Cash in</div>
+													<div class=bp-dropdown__title>Credit repair</div>
 													<ul>
 														<li>
 															<a class=bp-dropdown__item href="#">
-																<img alt="Affiliate programme &lt;small&gt;Join the Bitpanda Affiliate programme&lt;/small&gt;" height=36 src="resources/cdn.bitpanda.com/media/New%20navigation_Rebrand%203.0/Group%201311.svg" width=36>
-																<div> Affiliate programme <small>Join the 247-Cointrading Affiliate programme</small> </div>
+																<div><small>How to fix my credit</small> </div>
+															</a>
+														
+														<li>
+															<a class=bp-dropdown__item href="#">
+																<div><small>DIY credit repair</small> </div>
+															</a>
+														
+														<li>
+															<a class=bp-dropdown__item href="#">
+																<div><small>How quickly will my credit score update?</small> </div>
+															</a>
+														
+														<li>
+															<a class=bp-dropdown__item href="#">
+																<div><small>What is a credit repair company?</small> </div>
 															</a>
 														<li>
 															<a class=bp-dropdown__item href="#">
-																<img alt="Tell-a-Friend programme &lt;small&gt;Invite your friends, earn rewards&lt;/small&gt;" height=36 src="resources/cdn.bitpanda.com/media/New%20navigation_Rebrand%203.0/Group%201312.svg" width=36>
-																<div> Tell-a-Friend programme <small>Invite your friends, earn rewards</small> </div>
+																<div><small>How to avoid credit repair scams</small> </div>
 															</a>
 													</ul>
 											</ul>
@@ -571,17 +435,9 @@
 										<div class=bp-nav__item__text>About Us</div>
 									</a>
 								</li>
-								<li>
-									<a href="/career" class="bp-nav__item text-black hover:text-slate-600 hover:decoration-none">
-										<div class=bp-nav__item__text>Career</div>
-									</a>
-								</li>
+								
 
-								<li>
-									<a href="/security" class="bp-nav__item text-black hover:text-slate-600 hover:decoration-none">
-										<div class=bp-nav__item__text>Security</div>
-									</a>
-								</li>
+								
 							
 							</ul>
 						</div>
@@ -632,49 +488,35 @@
 							</svg>
 						</button>
 					</div>
-					<script defer src="resources/www.livecoinwatch.com/static/lcw-widget.js"></script>
+					
 					<div class="livecoinwatch-widget-5" lcw-base="USD" lcw-color-tx="#999999" lcw-marquee-1="coins" lcw-marquee-2="movers" lcw-marquee-items="10"></div>
 					<div class=bp-offcanvas__body>
 						<nav id=js-offcanvas-nav>
 							<ul>
 								<li aria-expanded=false>
 									<span class=bp-offcanvas__item>
-										Invest
+										Fix My Credit
 										<svg class=bp-symbol>
 											<use xlink:href=#icon-chevron-down></use>
 										</svg>
 									</span>
 									<ul>
-										<li><a href="login">Cryptocurrencies <small>Buy, sell & swap cryptocurrencies</small></a>
-										<li><a href="login">Stocks* <small>Invest in stocks with zero commissions</small></a>
-										<li><a href="login">ETFs* <small>Invest in ETFs 24/7</small></a>
-										<li><a href="login">Crypto Indices <small>The world's first real crypto index</small></a>
-										<li><a href="login">Commodities* <small>Invest in commodities 24/7</small></a>
+										<li><a href="login">Head <small>Body</small></a>
+										<li><a href="login">Head <small>Body</small></a>
+										<li><a href="login">Head <small>Body</small></a>
+										<li><a href="login">Head <small>Body</small></a>
 									</ul>
+								
 								<li aria-expanded=false>
 									<span class=bp-offcanvas__item>
-										Company
+										About Us
 										<svg class=bp-symbol>
 											<use xlink:href=#icon-chevron-down></use>
 										</svg>
 									</span>
 									<ul>
-										<li><a href="about">About</a>
-										<li><a href="security">Security</a>
-										<li><a href="#">Press</a>
-										<li><a href="#">Careers</a>
-									</ul>
-								<li aria-expanded=false>
-									<span class=bp-offcanvas__item>
-										About
-										<svg class=bp-symbol>
-											<use xlink:href=#icon-chevron-down></use>
-										</svg>
-									</span>
-									<ul>
-										<li><a href="login">login</a>
-										<li><a href="#">Deposit</a>
-										<li><a href="#">Plans</a>
+										<li><a href="#">About Us</a>
+										
 									</ul>
 							</ul>
 						</nav>

@@ -42,7 +42,7 @@
                                 <div class="w-full bg-white border-1 border-gray-200 cursor-pointer shadow-md rounded-lg px-4 border-2 flex space-x-3">
                                     <input type="radio" id="Paypal" name="method" value="paypal" class="my-6">
                                     <label for="Paypal" class="w-full h-full py-6">
-                                        Paypal
+                                        PayPal
                                     </label>
                                 </div>
                             </div>

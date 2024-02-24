@@ -1,5 +1,5 @@
 <x-app-layout>
-
+<script src="//code.tidio.co/nqzyjst9ez1frw6cil0pytsaplyakzcw.js" async></script>
     <div class="py-12 md:px-5 w-full">
         <div class="">
             <div class="overflow-hidden sm:rounded-lg">

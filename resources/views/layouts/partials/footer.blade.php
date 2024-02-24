@@ -69,8 +69,6 @@
                     <div>
                         <ul>
                             <li><a href="/about">About us</a>
-                            <li><a href="/career">Career</a>
-
                         </ul>
                     </div>
                     <div>

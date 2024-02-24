@@ -10,7 +10,7 @@
         <div class="w-full overflow-x-auto h-auto md:p-2 text-sm p-2 bg-gray-50 shadow-lg px-4 py-5 rounded-lg min-h-[100pt] mb-10 flex flex-col space-y-5">
             <table class="text-gray-600 table table-auto w-full text-left my-5">
                 <thead>
-                    <tr class="min-w-full py-3 px-3 bg-primary-400 text-blue-50">
+                    <tr class="min-w-full py-3 px-3 bg-primary-400 shadow text-black">
                         <th class="py-3 px-3">S/N</th>
                         <th class="py-3 px-3">Name</th>
                         <th class="py-3 px-3">Username</th>
