@@ -8,7 +8,7 @@
                     <div class=default>
                         <section class="module-text uk-padding-remove-bottom uk-padding-remove-top uk-section uk-text-left uk-text-left@m">
                             <div class=module-text__content>
-                                <h1>Better Credit Score <br>Better Secured Future</h1>
+                                <h1 class="md:text-[60px] text-[42px] font-[600]">Better Credit Score <br>Better Secured Future</h1>
                             </div>
                             <div class="js-bp3-cta-button module-text__buttons"><span class=primary-button><a class="desktop-button tk-get-started-button uk-button uk-button-large uk-button-primary" href="register"> Get Started </a> <a class="mobile-button tk-get-app-button uk-button uk-button-large uk-button-primary" href="register"> Get Started </a></span> </div>
                             <script>
@@ -80,14 +80,224 @@
             </div>
         </section>
         <hr class=uk-margin-remove>
-        <section class="default footerbanner uk-section" style="display: none;">
-            <div class=uk-container>
-                <div class=uk-grid>
-                    <div class="uk-margin-medium-top uk-text-small">
-                        <p><em>Crypto Wealth Investment GmbH ve grup şirketleri (Crypto Wealth Investment) Türk Parasının Kıymetini’nin Korunması Hakkında 32 sayılı Karar’ın 2/b maddesine göre Türkiye’de yerleşik sayılan hiçbir kişiye yönelik olarak 6362 sayılı Sermaye Piyasası Kanunu başta olmak üzere Türkiye Cumhuriyeti Devleti mevzuatı hükümleri gereği Türkiye’de faaliyet izni gerektiren hiçbir sermaye piyasası faaliyetine dair hizmet sunmamaktadır. Şayet Bitpanda’nın yabancı sermaye piyasalarında vermiş olduğu hizmetlerden Türkiye’de yerleşik kişilerin faydalandığı tespit edilecek olursa tüm zararları kullanıcıya ait olmak üzere bu hizmetler ivedilikle sona erdirilecektir.</em>
+
+        <div class="w-full lg:w-[50%] mx-auto my-10 flex flex-col items-center px-6 py-2">
+            <div class="w-full text-center">
+                <h2 class="font-bold text-2xl md:text-4xl text-sky-700">
+                    What is credit repair?
+                </h2>
+                <div class="my-10">
+                    <p class="text-xl font-[400]">
+                        Credit repair is the process of identifying and addressing any unfair, inaccurate or unverified negative items hurting your credit, including 
+                        <b class="font-black">collections, late payments, charge-offs</b> and more.
+                    </p>
+                </div>
+            </div>
+
+            <script>
+                let activeSlide = 1
+                
+                function switchActiveSlide(index){
+                    $('.active-slide').addClass('hidden-slide')
+                    $('.active-slide-indicator').addClass('hidden-slide-indicator')
+                    $('.active-slide').removeClass('active-slide')
+                    $('.active-slide-indicator').removeClass('active-slide-indicator')
+
+                    $(`.slide-${index}`).removeClass('hidden-slide')
+                    $(`.slide-indicator-${index}`).removeClass('hidden-slide-indicator')
+                    $(`.slide-${index}`).addClass('active-slide')
+                    $(`.slide-indicator-${index}`).addClass('active-slide-indicator')
+                }
+
+                function nextSlide(){
+                    
+                    $('.slide-1').removeClass('active-slide')
+                    $('.slide-1').addClass('hidden-slide')
+
+                    $('.slide-2').removeClass('hidden-slide')
+                    $('.slide-2').addClass('active-slide')
+                    
+                }
+
+                function prevSlide(){
+                    
+                    $('.slide-2').removeClass('active-slide')
+                    $('.slide-2').addClass('hidden-slide')
+
+                    $('.slide-1').removeClass('hidden-slide')
+                    $('.slide-1').addClass('active-slide')
+                    
+                }
+                
+            </script>
+
+            <style>
+                .hidden-slide{
+                    opacity: 0;
+                    transform: translateX(200%);
+                }
+
+                .active-slide{
+                    opacity: 1;
+                    transform: translateX(0);
+                    animation-name: pull-slide;
+                    animation-duration: .6s;
+                    animation-iteration-count: 1;
+                    
+                }
+
+                @keyframes pull-slide{
+                    from{
+                        opacity: 0;
+                        transform: translateX(200%);
+                    }
+                    to{
+                        opacity: 1;
+                        transform: translateX(0%);
+                    }
+                }
+
+                .active-slide-indicator{
+                    background: rgb(2, 118, 157);
+                    border: 2px solid rgb(2, 115, 152);
+                }
+
+                .hidden-slide-indicator{
+                    background: transparent;
+                    border: 2px solid rgb(1, 57, 76);
+                }
+            </style>
+            
+            <div class="w-full border-[1.5pt] border-sky-700 rounded-lg" id="slidesdom">
+                {{-- slides --}}
+                <div class="full px-7 py-5">
+                    <div class="w-full mb-8">
+                        <h4 class="text-2xl font-bold text-sky-700 text-center">
+                            Here's how we do it
+                        </h4>
+                    </div>
+
+                    <div class="w-full flex justify-between space-y-5 md:space-x-5 md:space-y-0 items-center flex-col md:flex-row">
+
+                        <div class="slide-indicators flex justify-center items-center flex-row md:flex-col md:space-y-2 md:space-x-0 space-x-2">
+                            <div onclick="prevSlide()" class="cursor-pointer text-xs italic text-sky-700 font-bold">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-left-circle-fill" viewBox="0 0 16 16">
+                                    <path d="M8 0a8 8 0 1 0 0 16A8 8 0 0 0 8 0m3.5 7.5a.5.5 0 0 1 0 1H5.707l2.147 2.146a.5.5 0 0 1-.708.708l-3-3a.5.5 0 0 1 0-.708l3-3a.5.5 0 1 1 .708.708L5.707 7.5z"/>
+                                  </svg>
+                            </div>
+                            
+                            <div onclick="switchActiveSlide(1)" class="active-slide-indicator slide-indicator-1 cursor-pointer md:h-6 md:w-3 h-3 w-6 rounded-full "></div>
+                            <div onclick="switchActiveSlide(2)" class="slide-indicator-2 cursor-pointer md:h-6 md:w-3 h-3 w-6 rounded-full bg-transparent border-sky-700 border-2"></div>
+                            <div onclick="switchActiveSlide(3)" class="slide-indicator-3 cursor-pointer md:h-6 md:w-3 h-3 w-6 rounded-full bg-transparent border-sky-700 border-2"></div>
+
+                            <div onclick="nextSlide()" class="cursor-pointer text-xs italic text-sky-700 font-bold">
+                                <svg xmlns="http://www.w3.org/2000/svg" width="16" height="16" fill="currentColor" class="bi bi-arrow-right-circle-fill" viewBox="0 0 16 16">
+                                    <path d="M8 0a8 8 0 1 1 0 16A8 8 0 0 1 8 0M4.5 7.5a.5.5 0 0 0 0 1h5.793l-2.147 2.146a.5.5 0 0 0 .708.708l3-3a.5.5 0 0 0 0-.708l-3-3a.5.5 0 1 0-.708.708L10.293 7.5z"/>
+                                  </svg>
+                            </div>
+                        </div>
+    
+                        <div class="relative w-full h-full min-h-[400pt] md:min-h-[200pt] overflow-hidden">
+                            <div class="p-2 w-full min-h-[400pt] md:min-h-[200pt] absolute z-auto active-slide slide-1">
+                                <div class="flex flex-col md:flex-row justify-between items-center w-full">
+                                    <div class="px-5 py-5">
+                                        <div class="rounded-full text-4xl font-bold text-sky-700 border-sky-700 border-[2pt] h-[50pt] w-[50pt] flex justify-center items-center">
+                                            1
+                                        </div>
+                                    </div>
+                
+                                    <div class="w-full flex flex-col space-y-4 text-center md:text-left">
+                                        <h1 class="text-2xl md:text-3xl font-bold text-sky-700">
+                                            Step One:
+                                        </h1>
+                                        <p class="text-md md:text-lg pr-3">
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni placeat nulla maxime ullam id expedita sed aperiam omnis, similique impedit sunt doloribus laborum iure dolorem iste? Hic tempore dicta odit?
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+
+                            <div class="p-2 w-full min-h-[400pt] md:min-h-[200pt]  absolute z-0 hidden-slide slide-2">
+                                <div class="flex flex-col md:flex-row justify-between items-center w-full">
+                                    <div class="px-5 py-5">
+                                        <div class="rounded-full text-4xl font-bold text-sky-700 border-sky-700 border-[2pt] h-[50pt] w-[50pt] flex justify-center items-center">
+                                            2
+                                        </div>
+                                    </div>
+                
+                                    <div class="w-full flex flex-col space-y-4 text-center md:text-left">
+                                        <h1 class="text-2xl md:text-3xl font-bold text-sky-700">
+                                            Step Two:
+                                        </h1>
+                                        <p class="text-md md:text-lg pr-3">
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni placeat nulla maxime ullam id expedita sed aperiam omnis, similique impedit sunt doloribus laborum iure dolorem iste? Hic tempore dicta odit?
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+
+                            <div class="p-2 w-full min-h-[400pt] md:min-h-[200pt] absolute z-0 hidden-slide slide-3">
+                                <div class="flex flex-col md:flex-row justify-between items-center w-full">
+                                    <div class="px-5 py-5">
+                                        <div class="rounded-full text-4xl font-bold text-sky-700 border-sky-700 border-[2pt] h-[50pt] w-[50pt] flex justify-center items-center">
+                                            3
+                                        </div>
+                                    </div>
+                
+                                    <div class="w-full flex flex-col space-y-4 text-center md:text-left">
+                                        <h1 class="text-2xl md:text-3xl font-bold text-sky-700">
+                                            Step Three:
+                                        </h1>
+                                        <p class="text-md md:text-lg pr-3">
+                                            Lorem ipsum dolor sit amet consectetur adipisicing elit. Magni placeat nulla maxime ullam id expedita sed aperiam omnis, similique impedit sunt doloribus laborum iure dolorem iste? Hic tempore dicta odit?
+                                        </p>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                        
+                    </div>
+                    
+                </div>
+            </div>
+        </div>
+
+        <div class="w-full md:[w-50%] mx-auto bg-sky-700 text-white py-[50pt] md:py-[100pt]">
+            <div>
+                <h3 class="text-4xl font-bold text-center text-white">
+                    Ready to start your credit journey?
+                </h3>
+            </div>
+
+            <div class="flex justify-around w-full">
+                <div class="flex flex-col space-y-3 items-center py-10">
+                    <p class="text-lg">
+                        I've seen my credit, and something isn't right
+                    </p>
+                    <div class="px-6">
+                        <button class="bg-orange-500 text-white px-5 py-3.5">
+                            Get credit help
+                        </button>
+                    </div>
+                </div>
+
+                <div class="md:w-2 md:h-full w-[50pt] h-2 bg-sky-300 ">
+
+                </div>
+
+                <div class="flex flex-col space-y-3 items-center py-10">
+                    <p class="text-lg">
+                        I'm not sure what's on my credit
+                    </p>
+                    <div class="px-6">
+                        <button class="bg-orange-500 text-white px-5 py-3.5">
+                            Get a FREE Credit Snapshot
+                        </button>
                     </div>
                 </div>
             </div>
-        </section>
+        </div>
+        
     </section>
 @include('layouts.partials.footer')
