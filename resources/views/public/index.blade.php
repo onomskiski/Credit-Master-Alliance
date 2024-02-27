@@ -263,7 +263,7 @@
             </div>
         </div>
 
-        <div class="w-full bg-sky-700 text-white py-[50pt]">
+        <div class="w-full bg-sky-700 text-white py-[50pt] px-5">
             <div class="md:w-[70%] mx-auto md:py-[100pt]">
                 <div>
                     <h3 class="text-4xl font-bold text-center text-white">
@@ -277,18 +277,18 @@
                             I've seen my credit, and something isn't right
                         </p>
                         <div class="px-6">
-                            <button class="bg-orange-500 text-white px-8 py-3.5 text-sm font-[450]">
+                            <button class="bg-orange-500 text-white px-4 md:px-8 py-3.5 text-sm font-[450]">
                                 Get credit help
                             </button>
                         </div>
                     </div>
     
-                    <div class="flex flex-col space-y-3 items-center py-10 border-t-2 border-t-sky-300 md:border-l-2 md:border-l-sky-300 w-full">
+                    <div class="flex flex-col space-y-3 items-center py-10 border-t-2 border-t-sky-300 md:border-t-0 md:border-l-2 md:border-l-sky-300 w-full">
                         <p class="text-lg">
                             I'm not sure what's on my credit
                         </p>
                         <div class="px-6">
-                            <button class="bg-orange-500 text-white px-8 py-3.5 text-sm font-[450]">
+                            <button class="bg-orange-500 text-white px-4 md:px-8 py-3.5 text-sm font-[450]">
                                 Get a FREE Credit Snapshot
                             </button>
                         </div>
