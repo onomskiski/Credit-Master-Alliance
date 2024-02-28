@@ -46,6 +46,10 @@ Route::get('/security', function () {
     return view('public.security');
 });
 
+Route::get('/education/counseling/derogatory-marks', function (){
+    return view('public.education.counseling.derogatory-marks');
+});
+
 Route::middleware([
     'auth:sanctum',
     config('jetstream.auth_session'),
