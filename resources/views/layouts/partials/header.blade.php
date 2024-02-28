@@ -557,64 +557,7 @@
 					    document.location = e.value;
 					}
 					
-				</script>
-			</header>
-			<div id=mobile-nav uk-offcanvas="overlay: true;">
-				<div class=uk-offcanvas-bar>
-					<div class=offcanvas-logo-wrapper><a class=navbar-logo href="/"><img alt="Bitpanda Logo" class=lazyload data-src="./resources/1/img/logo.png "> </a> <a class=uk-offcanvas-close type=button><span class="bp-icon bp-icon--close"></span> </a></div>
-					<ul class="uk-nav uk-nav-default" uk-nav="">
-						<li class=uk-parent>
-							<a href="/index#">Invest</a>
-							<ul class=uk-nav-sub>
-								<li><a href="/"> Invest in: </a></li>
-							</ul>
-                        </li>
-						<li class=uk-parent>
-							<a href="/index#">Prices</a>
-							<ul class=uk-nav-sub>
-								<li><a href="#"> Cryptocurrency prices </a></li>
-								<li><a href="#"> Crypto Index prices </a></li>
-								<li><a href="#"> Stock* prices </a></li>
-								<li><a href="#"> ETF* prices </a></li>
-								<li><a href="#"> Metals prices </a></li>
-							</ul>
-                        </li>
-						<li class=uk-parent>
-							<a href="/index#">Features</a>
-							<ul class=uk-nav-sub>
-								<li><a href="#"> Popular features </a></li>
-								<li><a href="#"> Save time &amp; money </a></li>
-								<li><a href="#"> Benefits &amp; Rewards </a></li>
-								<li><a href="#"> Cash in </a></li>
-							</ul>
-                        </li>
-						<li class=uk-parent>
-							<a href="#">Company</a>
-							<ul class=uk-nav-sub>
-								<li><a href="about"> About </a></li>
-								<li><a href="security"> Security </a></li>
-								<li><a href="career"> Careers </a></li>
-							</ul>
-                        </li>
-						<li class=uk-parent>
-							<a href="#">Help</a>
-							<ul class=uk-nav-sub>
-								<li><a href="register"> Get started </a>
-								<li><a href="#"> Payment methods and limits </a>
-								<li><a href="#"> Privacy policy </a>
-								<li><a href="#"> Helpdesk </a>
-							</ul>
-                        </li>
-					</ul>
-					<ul class="bp-offcanvas-buttons uk-nav uk-nav-default" uk-nav="">
-						<div>
-							<li><a class="uk-button uk-button-primary uk-width-1-1" href="register">Sign-up</a></li>
-							<li class=uk-margin-small-top><a class="uk-button uk-button-secondary uk-width-1-1" href="login">Log in</a></li>
-						</div>
-					</ul>
-				</div>
-			</div>
-			<script>
+				
 				const ENTER_KEY_CODE = 13;
 				$(document).ready(function() {
 				    $('#search-input-modal').keydown(function(event) {
