@@ -7,18 +7,18 @@
 		<meta content="width=device-width, initial-scale=1.0" name=viewport>
 		<meta content="{{ env('APP_URL') }}" property=og:url>
 		<meta content=origin name=referrer>
-		<link href="resources/cdn.bitpanda.com/media/redesign/favicon/favicon-32x32.png" rel=icon sizes=32x32 type=image/png>
-		<link href="resources/cdn.bitpanda.com/media/redesign/favicon/favicon-16x16.png" rel=icon sizes=16x16 type=image/png>
+		<link href="/resources/cdn.bitpanda.com/media/redesign/favicon/favicon-32x32.png" rel=icon sizes=32x32 type=image/png>
+		<link href="/resources/cdn.bitpanda.com/media/redesign/favicon/favicon-16x16.png" rel=icon sizes=16x16 type=image/png>
 		<meta content="IE=EmulateIE11" http-equiv=X-UA-Compatible>
-		<link href="resources/cdn.bitpanda.com/index.html" rel=preconnect>
-		<link href="resources/code.highcharts.com/index.html" rel=preconnect>
-		<link href="resources/cdn.segment.com/index.html" rel=preconnect>
-		<link as=font crossorigin=anonymous href="resources/cdn.bitpanda.com/media/fonts/bp-assets/bp-assets.woff2" rel=preload type=font/woff2>
-		<link as=font crossorigin=anonymous href="resources/cdn.bitpanda.com/media/fonts/EuclidSquare/EuclidSquare-Regular.woff2" rel=preload type=font/woff2>
-		<link as=font crossorigin=anonymous href="resources/cdn.bitpanda.com/media/fonts/EuclidSquare/EuclidSquare-Medium.woff2" rel=preload type=font/woff2>
-		<link as=font crossorigin=anonymous href="resources/cdn.bitpanda.com/media/fonts/EuclidSquare/EuclidSquare-Semibold.woff2" rel=preload type=font/woff2>
+		<link href="/resources/cdn.bitpanda.com/index.html" rel=preconnect>
+		<link href="/resources/code.highcharts.com/index.html" rel=preconnect>
+		<link href="/resources/cdn.segment.com/index.html" rel=preconnect>
+		<link as=font crossorigin=anonymous href="/resources/cdn.bitpanda.com/media/fonts/bp-assets/bp-assets.woff2" rel=preload type=font/woff2>
+		<link as=font crossorigin=anonymous href="/resources/cdn.bitpanda.com/media/fonts/EuclidSquare/EuclidSquare-Regular.woff2" rel=preload type=font/woff2>
+		<link as=font crossorigin=anonymous href="/resources/cdn.bitpanda.com/media/fonts/EuclidSquare/EuclidSquare-Medium.woff2" rel=preload type=font/woff2>
+		<link as=font crossorigin=anonymous href="/resources/cdn.bitpanda.com/media/fonts/EuclidSquare/EuclidSquare-Semibold.woff2" rel=preload type=font/woff2>
 
-		@vite(['resources/css/app.css', 'resources/js/app.js'])
+		@vite(['/resources/css/app.css', '/resources/js/app.js'])
 
 		<script src="https://cdn.tailwindcss.com"></script>
 		
@@ -28,7 +28,7 @@
 			@font-face {
 			font-family: 'bp-assets';
 			src:
-			url("resources/cdn.bitpanda.com/media/fonts/bp-assets/bp-assets.woff2") format("woff2");
+			url("/resources/cdn.bitpanda.com/media/fonts/bp-assets/bp-assets.woff2") format("woff2");
 			font-weight: normal;
 			font-style: normal;
 			font-display: swap;
@@ -38,7 +38,7 @@
 			@font-face {
 			font-family: EuclidSquare;
 				src:
-					url("resources/cdn.bitpanda.com/media/fonts/EuclidSquare/EuclidSquare-Regular.woff2") format("woff2"),
+					url("/resources/cdn.bitpanda.com/media/fonts/EuclidSquare/EuclidSquare-Regular.woff2") format("woff2"),
 					url("https://cdn.bitpanda.com/media/fonts/EuclidSquare/EuclidSquare-Regular.woff") format("woff");
 				font-weight: normal;
 				font-style: normal;
@@ -47,7 +47,7 @@
 			@font-face {
 				font-family: EuclidSquare;
 				src:
-					url("resources/cdn.bitpanda.com/media/fonts/EuclidSquare/EuclidSquare-Medium.woff2") format("woff2"),
+					url("/resources/cdn.bitpanda.com/media/fonts/EuclidSquare/EuclidSquare-Medium.woff2") format("woff2"),
 					url("https://cdn.bitpanda.com/media/fonts/EuclidSquare/EuclidSquare-Medium.woff") format("woff");
 				font-weight: 500;
 				font-style: normal;
@@ -56,7 +56,7 @@
 			@font-face {
 			font-family: EuclidSquare;
 				src:
-					url("resources/cdn.bitpanda.com/media/fonts/EuclidSquare/EuclidSquare-Semibold.woff2") format("woff2");
+					url("/resources/cdn.bitpanda.com/media/fonts/EuclidSquare/EuclidSquare-Semibold.woff2") format("woff2");
 					url("https://cdn.bitpanda.com/media/fonts/EuclidSquare/EuclidSquare-Semibold.woff") format("woff");
 				font-weight: 600;
 				font-style: normal;
@@ -82,8 +82,8 @@
 		<meta content="Trade in minutes from only 1$.
 			Your N. 1 America Broker for stocks, crypto, indices, ETFs and precious metals. Trade 24/7." property=og:description>
 		<meta content=# property=og:image>
-		<link href="resources/cdn.bitpanda.com/app/v2/css/all.minb4e4.css?id=21c769637faa4e5e25cf" rel=stylesheet>
-		<script src="resources/cdn.bitpanda.com/app/v2/js/head.min085f.js?id=e37b5634f1d9be3b8e80"></script>
+		<link href="/resources/cdn.bitpanda.com/app/v2/css/all.minb4e4.css?id=21c769637faa4e5e25cf" rel=stylesheet>
+		<script src="/resources/cdn.bitpanda.com/app/v2/js/head.min085f.js?id=e37b5634f1d9be3b8e80"></script>
 		<script>
 			function getUrlVars() {
 			    var vars = {};
@@ -193,12 +193,12 @@
 			        g = d.createElement('script'),
 			        s = d.getElementsByTagName('script')[0];
 			    g.async = true;
-			    g.src = 'resources/cdn.matomo.cloud/bitpanda.matomo.cloud/matomo.js';
+			    g.src = '/resources/cdn.matomo.cloud/bitpanda.matomo.cloud/matomo.js';
 			    s.parentNode.insertBefore(g, s);
 			})();
 			
 		</script>
-		<script async src="resources/widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js"></script>
+		<script async src="/resources/widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js"></script>
 		{{-- 
 		<meta content=Bitpanda name=smartbanner:title>
 		<meta content=Bitpanda name=smartbanner:author>
@@ -233,7 +233,7 @@
 			}
 			
 		</script>
-		<script src="resources/geoip-js.com/js/apis/geoip2/v2.1/geoip2.js"></script>
+		<script src="/resources/geoip-js.com/js/apis/geoip2/v2.1/geoip2.js"></script>
 		<script>
 			window.adjustSettings = {
 			    appToken: '7hrkmq2yb3b4',
@@ -319,7 +319,7 @@
 			<header>
 				<div class="bp-nav js-contains-anchor">
 					<div class=bp-nav__container>
-						<div class=util-flex-shrink-0><a href="/"><img alt=247-Cointrading class=lazyload data-src="resources/1/img/logo.png" style="height: 30pt;"> </a> </div>
+						<div class=util-flex-shrink-0><a href="/"><img alt=247-Cointrading class=lazyload data-src="/resources/1/img/logo.png" style="height: 30pt;"> </a> </div>
 						<div class=util-visible-desktop>
 							<ul class=bp-nav__navigation>
 								<li>
@@ -488,7 +488,7 @@
 				</script>
 				<div aria-expanded=false class=bp-offcanvas>
 					<div class=bp-offcanvas__header>
-						<a href="/"><img alt=Bitpanda class=lazyload data-src="resources/1/img/logo.png " height=40 width=136> </a>
+						<a href="/"><img alt=Bitpanda class=lazyload data-src="/resources/1/img/logo.png " height=40 width=136> </a>
 						<button class="bp-button bp-button--transparent" onclick=toggleOffcanvas();>
 							<svg class=bp-symbol>
 								<use xlink:href=#icon-close></use>
@@ -564,7 +564,7 @@
 			</header>
 			<div id=mobile-nav uk-offcanvas="overlay: true;">
 				<div class=uk-offcanvas-bar>
-					<div class=offcanvas-logo-wrapper><a class=navbar-logo href="/"><img alt="Bitpanda Logo" class=lazyload data-src="resources/1/img/logo.png "> </a> <a class=uk-offcanvas-close type=button><span class="bp-icon bp-icon--close"></span> </a></div>
+					<div class=offcanvas-logo-wrapper><a class=navbar-logo href="/"><img alt="Bitpanda Logo" class=lazyload data-src="/resources/1/img/logo.png "> </a> <a class=uk-offcanvas-close type=button><span class="bp-icon bp-icon--close"></span> </a></div>
 					<ul class="uk-nav uk-nav-default" uk-nav="">
 						<li class=uk-parent>
 							<a href="/index#">Invest</a>
@@ -640,7 +640,7 @@
                 <section class=footer__main>
                     <div class=uk-container>
                         <div uk-grid="">
-                            <div class="uk-flex uk-width-auto@s uk-width1-1"><a href="https_/247cointrading.com/index.html"><img alt="{{ env('APP_NAME') }}" class=lazyload data-src="resources/1/img/logo.png" height=40 width=136> </a> </div>
+                            <div class="uk-flex uk-width-auto@s uk-width1-1"><a href="https_/247cointrading.com/index.html"><img alt="{{ env('APP_NAME') }}" class=lazyload data-src="/resources/1/img/logo.png" height=40 width=136> </a> </div>
                         </div>
                         <div uk-grid="">
                             <div class=uk-width-1-1>
@@ -790,8 +790,8 @@
                 </div>
             </div>
         </div>
-        <script async src="resources/cdn.bitpanda.com/app/v2/js/all.min3b73.js?id=67e4d4319fbaeabb283e"></script>
-        <script async src="resources/cdn.bitpanda.com/app/v2/js/stock.min3cea.js?id=72bce0a791e192ad0fb0"></script>
+        <script async src="/resources/cdn.bitpanda.com/app/v2/js/all.min3b73.js?id=67e4d4319fbaeabb283e"></script>
+        <script async src="/resources/cdn.bitpanda.com/app/v2/js/stock.min3cea.js?id=72bce0a791e192ad0fb0"></script>
         <script>
             var refAtt = getUrlParam('ref') || getCookie('ref');
             var tagAtt = getUrlParam('tag') || getCookie('tag');
@@ -809,8 +809,8 @@
             }
         
         </script>
-        <script async src="resources/cdn.bitpanda.com/app/v2/js/dotcom-components/dotcom-components.esmcb35.js?id=418046627d829dcf7600" type=module></script>
-        <script async nomodule="" src="resources/cdn.bitpanda.com/app/v2/js/dotcom-components/dotcom-components165a.js?id=0b52396aaf0e4308e3af"></script>
+        <script async src="/resources/cdn.bitpanda.com/app/v2/js/dotcom-components/dotcom-components.esmcb35.js?id=418046627d829dcf7600" type=module></script>
+        <script async nomodule="" src="/resources/cdn.bitpanda.com/app/v2/js/dotcom-components/dotcom-components165a.js?id=0b52396aaf0e4308e3af"></script>
         <div class=fa_OyCkAkzwJOc8Gw2AUwuC>
             <script>
                 //<! [CDATA[
