@@ -327,7 +327,7 @@
                                     
                                     <li>
 									<div class=bp-nav__item>
-										<a class=bp-nav__item__text href="features.html">About Credit</a>
+										<a class=bp-nav__item__text href="#">About Credit</a>
 										<div class=bp-dropdown>
 											<ul class=bp-dropdown__grid>
 												<li class=bp-dropdown__grid-list>
