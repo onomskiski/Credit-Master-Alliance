@@ -6,7 +6,7 @@
 		<meta content=247-Cointrading name=author>
 		<meta content="width=device-width, initial-scale=1.0" name=viewport>
 		<meta content="{{ env('APP_URL') }}" property=og:url>
-		<meta content=origin name=referrer>
+		<meta 	content=origin name=referrer>
 		<link href="/resources/cdn.bitpanda.com/media/redesign/favicon/favicon-32x32.png" rel=icon sizes=32x32 type=image/png>
 		<link href="/resources/cdn.bitpanda.com/media/redesign/favicon/favicon-16x16.png" rel=icon sizes=16x16 type=image/png>
 		<meta content="IE=EmulateIE11" http-equiv=X-UA-Compatible>
@@ -632,7 +632,7 @@
 				
 			</script>
 		</header>
-        <div class="font-sans text-gray-900 antialiased">
+        <div class="font-sans text-gray-700 antialiased mt-[100pt] text-[10pt] md:text-[12pt] lg:text-[15pt]">
             {{ $slot }}
         </div>
         <footer id=layout-footer>
