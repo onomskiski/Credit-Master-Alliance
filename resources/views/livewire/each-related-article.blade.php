@@ -1,7 +1,7 @@
-<div class="flex flex-col space-y-3 border-b-2 border-b-gray-400">
+<div class="flex flex-col space-y-3 my-3">
     <img class="w-full h-auto" src="{$image}" alt="{$image}">
 
     <cite class="text-sm font-[450]">
-        {$title}
+        <?php echo $title; ?>
     </cite>
 </div>

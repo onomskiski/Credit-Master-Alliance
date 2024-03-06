@@ -309,13 +309,41 @@
             </h2>
             <div class="text-left px-2 md:px-[30pt] text-2xl flex flex-col space-y-3 md:w-[70%] mx-auto my-4">
                 <div>
-                    <b class="font-[450]">FREE</b> credit score
+                    <div class="flex items-center">
+                        <div class="text-[30pt] text-green-500">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
+                                <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425z"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <b class="font-[450]">FREE</b> credit score
+                        </div>
+                    </div>
                 </div>
                 <div>
-                    <b class="font-[450]">FREE</b> negative Item Summary
+                    <div class="flex items-center">
+                        <div class="text-[30pt] text-green-500">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
+                                <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425z"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <b class="font-[450]">FREE</b> negative Item Summary
+                        </div>
+                    </div>
                 </div>
+
                 <div>
-                    <b class="font-[450]">FREE</b> recommended Credit Solution
+                    <div class="flex items-center">
+                        <div class="text-[30pt] text-green-500">
+                            <svg xmlns="http://www.w3.org/2000/svg" width="50" height="50" fill="currentColor" class="bi bi-check" viewBox="0 0 16 16">
+                                <path d="M10.97 4.97a.75.75 0 0 1 1.07 1.05l-3.99 4.99a.75.75 0 0 1-1.08.02L4.324 8.384a.75.75 0 1 1 1.06-1.06l2.094 2.093 3.473-4.425z"/>
+                            </svg>
+                        </div>
+                        <div>
+                            <b class="font-[450]">FREE</b> recommended Credit Solution
+                        </div>
+                    </div>
                 </div>
             </div>
         </div>
@@ -386,15 +414,15 @@
         <div class="w-full md:w-1/2 min-h-full">
           <img src="https://www.creditrepair.com/content/dam/credit-repair/common/assets/imgs/Mask-Group-63.jpg" alt="mm" class="h-[100%] min-h-[400pt] w-full bg-gray-300">
         </div>
-        <div class=" w-full md:w-1/2 flex justify-center items-center px-3 py-5 md:py-[100pt]">
+        <div class=" w-full md:w-1/2 flex justify-center items-center px-3 py-5 md:py-[50pt]">
           {{-- text-block --}}
 
             <div class="flex space-y-4 flex-col text-center md:text-left items-center justify-center md:items-start md:justify-start">
-                <div class="flex flex-col md:space-y-2">
-                    <div class="text-xl md:text-3xl font-bold">
+                <div class="">
+                    <div class="text-xl md:text-3xl font-bold md:-mb-2">
                         CreditMastersAlly.com
                     </div>
-                    <div class="text-xl md:text-3xl font-bold">
+                    <div class="text-xl md:text-3xl font-bold md:-mb-2">
                         has worked with over
                     </div>
                 </div>
