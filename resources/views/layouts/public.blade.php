@@ -18,9 +18,9 @@
 		<link as=font crossorigin=anonymous href="/resources/cdn.bitpanda.com/media/fonts/EuclidSquare/EuclidSquare-Medium.woff2" rel=preload type=font/woff2>
 		<link as=font crossorigin=anonymous href="/resources/cdn.bitpanda.com/media/fonts/EuclidSquare/EuclidSquare-Semibold.woff2" rel=preload type=font/woff2>
 
-		@vite(['/resources/css/app.css', '/resources/js/app.js'])
+		@vite(['./resources/css/app.css', './resources/js/app.js'])
 
-		<script src="https://cdn.tailwindcss.com"></script>
+		{{-- <script src="https://cdn.tailwindcss.com"></script> --}}
 		
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
 		
