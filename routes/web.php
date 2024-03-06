@@ -47,7 +47,7 @@ Route::get('/security', function () {
 });
 
 Route::get('/education/counseling/derogatory-marks', function (){
-    return view('public.index');
+    return view('public.education.counseling.derogatory-marks');
 });
 
 Route::middleware([

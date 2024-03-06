@@ -24,7 +24,7 @@
                                     });
                                 };
 
-                                window.initScriptLater("resources/cdn.bitpanda.com/app/v2/js/cta-button.minb126.js?id=d34a8a89944479eef669", () =>
+                                window.initScriptLater("/resources/cdn.bitpanda.com/app/v2/js/cta-button.minb126.js?id=d34a8a89944479eef669", () =>
                                     window.initCtaButton()
                                 );
 
@@ -32,7 +32,7 @@
                         </section>
                     </div>
                     <div class=default>
-                        <div class=bp3-hero-ticker__image-container><img alt="Hero ticker" src="resources/1/img/Hero.png"> </div>
+                        <div class=bp3-hero-ticker__image-container><img alt="Hero ticker" src="/resources/1/img/Hero.png"> </div>
                             </div>
                         </div>
                         <script>
@@ -48,7 +48,7 @@
                                 });
                             };
 
-                            window.initScriptLater("resources/cdn.bitpanda.com/app/v2/js/hero-ticker.minda91.js?id=08a6562cc452f266d797", () =>
+                            window.initScriptLater("/resources/cdn.bitpanda.com/app/v2/js/hero-ticker.minda91.js?id=08a6562cc452f266d797", () =>
                                 window.initHeroTicker("1,85,28", ".js-bp3-hero-ticker-1685902989")
                             );
 
@@ -69,7 +69,7 @@
                                     });
                                 };
 
-                                window.initScriptLater("resources/cdn.bitpanda.com/app/v2/js/cta-button.minb126.js?id=d34a8a89944479eef669", () =>
+                                window.initScriptLater("/resources/cdn.bitpanda.com/app/v2/js/cta-button.minb126.js?id=d34a8a89944479eef669", () =>
                                     window.initCtaButton()
                                 );
 
