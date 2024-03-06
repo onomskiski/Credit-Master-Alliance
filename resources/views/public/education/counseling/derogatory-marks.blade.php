@@ -1,11 +1,11 @@
 <x-public-layout>
 
 	<div class="w-full">
-		<div class="w-full px-4 lg:w-[80%] mx-auto">
+		<div class="w-full px-4 lg:w-[65%] mx-auto">
 			<div class="w-full lg:w-[2/3] mx-auto flex flex-col lg:flex-row flex-wrap">
 				<div class="w-full lg:w-3/4 py-3 md:px-5 px-3">
 					<div>
-						<h1>
+						<h1 class="font-[450] text-2xl lg:text-3xl text-gray-700">
 							Derogatory marks: what are they and how to remove them
 						</h1>
 						<address class="not-italic text-sm">
@@ -20,7 +20,7 @@
 						</cite>
 					</div>
 	
-					<div>
+					<div class="flex flex-col space-y-5 mt-5 text-justify">
 						<p>
 							Derogatory marks, also known as derogatory credit items, represent negative and sometimes serious aspects of your credit report, including late payments and delinquencies. These marks, coupled with a low credit rating, can make it difficult to get approved for credit or get decent credit terms.
 						</p>
@@ -59,7 +59,7 @@
 	
 				<div class="w-full lg:w-1/4">
 					<div class="w-full">
-						<h3 class="uppercase">Related Articles</h3>
+						<h3 class="uppercase text-xl lg:text-2xl font-[450] text-gray-700">Related Articles</h3>
 						<?php
 							$eachArticles = [
 								[
@@ -81,13 +81,13 @@
 						@endforeach
 
 						<div class="w-full px-4">
-							<div class="bg-sky-700 w-full flex flex-col space-y-4 py-5">
+							<div class="bg-sky-700 w-full flex flex-col space-y-4 py-5 px-4">
 								<p class="text-xl font-bold">
 									Let us help you check on your credit score, today.
 								</p>
 
 								<div class="w-full">
-									<button class="font-bold text-sm bg-orange-500 mx-auto">
+									<button class="font-bold text-sm bg-orange-500 mx-auto px-5 py-3 rounded-sm">
 										Learn More
 									</button>
 								</div>
@@ -106,6 +106,11 @@
 						<address class="uppercase font-[450] text-sm">
 							Credit Consultant at Credit Masters Alliance
 						</address>
+
+						<p class="text-sm pr-4">
+							in member services assisting members with general credit questions,  quickly moved to a position helping members with overdue balances. For the past year Melissa has been a part of the CXRF Team resolving escalated situations and creating a better member experience....
+							<a href="#" class="text-sm mt-4">Read More...</a>
+						</p>
 					</div>
 				</div>
 			</div>
