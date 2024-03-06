@@ -7,16 +7,16 @@
 		<meta content="width=device-width, initial-scale=1.0" name=viewport>
 		<meta content="{{ env('APP_URL') }}" property=og:url>
 		<meta content=origin name=referrer>
-		<link href="./resources/cdn.bitpanda.com/media/redesign/favicon/favicon-32x32.png" rel=icon sizes=32x32 type=image/png>
-		<link href="./resources/cdn.bitpanda.com/media/redesign/favicon/favicon-16x16.png" rel=icon sizes=16x16 type=image/png>
+		<link href="/resources/cdn.bitpanda.com/media/redesign/favicon/favicon-32x32.png" rel=icon sizes=32x32 type=image/png>
+		<link href="/resources/cdn.bitpanda.com/media/redesign/favicon/favicon-16x16.png" rel=icon sizes=16x16 type=image/png>
 		<meta content="IE=EmulateIE11" http-equiv=X-UA-Compatible>
-		<link href="./resources/cdn.bitpanda.com/index.html" rel=preconnect>
-		<link href="./resources/code.highcharts.com/index.html" rel=preconnect>
-		<link href="./resources/cdn.segment.com/index.html" rel=preconnect>
-		<link as=font crossorigin=anonymous href="./resources/cdn.bitpanda.com/media/fonts/bp-assets/bp-assets.woff2" rel=preload type=font/woff2>
-		<link as=font crossorigin=anonymous href="./resources/cdn.bitpanda.com/media/fonts/EuclidSquare/EuclidSquare-Regular.woff2" rel=preload type=font/woff2>
-		<link as=font crossorigin=anonymous href="./resources/cdn.bitpanda.com/media/fonts/EuclidSquare/EuclidSquare-Medium.woff2" rel=preload type=font/woff2>
-		<link as=font crossorigin=anonymous href="./resources/cdn.bitpanda.com/media/fonts/EuclidSquare/EuclidSquare-Semibold.woff2" rel=preload type=font/woff2>
+		<link href="/resources/cdn.bitpanda.com/index.html" rel=preconnect>
+		<link href="/resources/code.highcharts.com/index.html" rel=preconnect>
+		<link href="/resources/cdn.segment.com/index.html" rel=preconnect>
+		<link as=font crossorigin=anonymous href="/resources/cdn.bitpanda.com/media/fonts/bp-assets/bp-assets.woff2" rel=preload type=font/woff2>
+		<link as=font crossorigin=anonymous href="/resources/cdn.bitpanda.com/media/fonts/EuclidSquare/EuclidSquare-Regular.woff2" rel=preload type=font/woff2>
+		<link as=font crossorigin=anonymous href="/resources/cdn.bitpanda.com/media/fonts/EuclidSquare/EuclidSquare-Medium.woff2" rel=preload type=font/woff2>
+		<link as=font crossorigin=anonymous href="/resources/cdn.bitpanda.com/media/fonts/EuclidSquare/EuclidSquare-Semibold.woff2" rel=preload type=font/woff2>
 
 		@vite(['resources/css/app.css', 'resources/js/app.js'])
 		<script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.1/jquery.min.js" integrity="sha512-v2CJ7UaYy4JwqLDIrZUI/4hqeoQieOmAZNXBeQyjo21dadnwR+8ZaIJVT8EE2iyI61OV8e6M8PP2/4hpQINQ/g==" crossorigin="anonymous" referrerpolicy="no-referrer"></script>
@@ -25,7 +25,7 @@
 			@font-face {
 			font-family: 'bp-assets';
 			src:
-			url("./resources/cdn.bitpanda.com/media/fonts/bp-assets/bp-assets.woff2") format("woff2");
+			url("/resources/cdn.bitpanda.com/media/fonts/bp-assets/bp-assets.woff2") format("woff2");
 			font-weight: normal;
 			font-style: normal;
 			font-display: swap;
@@ -34,8 +34,8 @@
 		<style>
 			@font-face {
 			font-family: EuclidSquare;
-				src:
-					url("./resources/cdn.bitpanda.com/media/fonts/EuclidSquare/EuclidSquare-Regular.woff2") format("woff2"),
+				src:                                                    
+					url("/resources/cdn.bitpanda.com/media/fonts/EuclidSquare/EuclidSquare-Regular.woff2") format("woff2"),
 					url("https://cdn.bitpanda.com/media/fonts/EuclidSquare/EuclidSquare-Regular.woff") format("woff");
 				font-weight: normal;
 				font-style: normal;
@@ -44,7 +44,7 @@
 			@font-face {
 				font-family: EuclidSquare;
 				src:
-					url("./resources/cdn.bitpanda.com/media/fonts/EuclidSquare/EuclidSquare-Medium.woff2") format("woff2"),
+					url("/resources/cdn.bitpanda.com/media/fonts/EuclidSquare/EuclidSquare-Medium.woff2") format("woff2"),
 					url("https://cdn.bitpanda.com/media/fonts/EuclidSquare/EuclidSquare-Medium.woff") format("woff");
 				font-weight: 500;
 				font-style: normal;
@@ -53,7 +53,7 @@
 			@font-face {
 			font-family: EuclidSquare;
 				src:
-					url("./resources/cdn.bitpanda.com/media/fonts/EuclidSquare/EuclidSquare-Semibold.woff2") format("woff2");
+					url("/resources/cdn.bitpanda.com/media/fonts/EuclidSquare/EuclidSquare-Semibold.woff2") format("woff2");
 					url("https://cdn.bitpanda.com/media/fonts/EuclidSquare/EuclidSquare-Semibold.woff") format("woff");
 				font-weight: 600;
 				font-style: normal;
@@ -79,8 +79,8 @@
 		<meta content="Trade in minutes from only 1$.
 			Your N. 1 America Broker for stocks, crypto, indices, ETFs and precious metals. Trade 24/7." property=og:description>
 		<meta content=# property=og:image>
-		<link href="./resources/cdn.bitpanda.com/app/v2/css/all.minb4e4.css?id=21c769637faa4e5e25cf" rel=stylesheet>
-		<script src="./resources/cdn.bitpanda.com/app/v2/js/head.min085f.js?id=e37b5634f1d9be3b8e80"></script>
+		<link href="/resources/cdn.bitpanda.com/app/v2/css/all.minb4e4.css?id=21c769637faa4e5e25cf" rel=stylesheet>
+		<script src="/resources/cdn.bitpanda.com/app/v2/js/head.min085f.js?id=e37b5634f1d9be3b8e80"></script>
 		<script>
 			function getUrlVars() {
 			    var vars = {};
@@ -195,7 +195,7 @@
 			})();
 			
 		</script>
-		<script async src="./resources/widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js"></script>
+		<script async src="/resources/widget.trustpilot.com/bootstrap/v5/tp.widget.bootstrap.min.js"></script>
 		{{-- 
 		<meta content=Bitpanda name=smartbanner:title>
 		<meta content=Bitpanda name=smartbanner:author>
@@ -230,7 +230,7 @@
 			}
 			
 		</script>
-		<script src="./resources/geoip-js.com/js/apis/geoip2/v2.1/geoip2.js"></script>
+		<script src="/resources/geoip-js.com/js/apis/geoip2/v2.1/geoip2.js"></script>
 		<script>
 			window.adjustSettings = {
 			    appToken: '7hrkmq2yb3b4',
@@ -316,7 +316,7 @@
 			<header>
 				<div class="bp-nav js-contains-anchor">
 					<div class=bp-nav__container>
-						<div class=util-flex-shrink-0><a href="/"><img alt=247-Cointrading class=lazyload data-src="./resources/1/img/logo.png" style="height: 30pt;"> </a> </div>
+						<div class=util-flex-shrink-0><a href="/"><img alt=247-Cointrading class=lazyload data-src="/resources/1/img/logo.png" style="height: 30pt;"> </a> </div>
 						<div class=util-visible-desktop>
 							<ul class=bp-nav__navigation>
 								<li>
@@ -485,7 +485,7 @@
 				</script>
 				<div aria-expanded=false class=bp-offcanvas>
 					<div class=bp-offcanvas__header>
-						<a href="/"><img alt=Bitpanda class=lazyload data-src="./resources/1/img/logo.png " height=40 width=136> </a>
+						<a href="/"><img alt=Bitpanda class=lazyload data-src="/resources/1/img/logo.png " height=40 width=136> </a>
 						<button class="bp-button bp-button--transparent" onclick=toggleOffcanvas();>
 							<svg class=bp-symbol>
 								<use xlink:href=#icon-close></use>
@@ -557,7 +557,68 @@
 					    document.location = e.value;
 					}
 					
+<<<<<<< HEAD
 				
+=======
+				</script>
+			</header>
+			<div id=mobile-nav uk-offcanvas="overlay: true;">
+				<div class=uk-offcanvas-bar>
+					<div class=offcanvas-logo-wrapper><a class=navbar-logo href="/"><img alt="Bitpanda Logo" class=lazyload data-src="/resources/1/img/logo.png "> </a> <a class=uk-offcanvas-close type=button><span class="bp-icon bp-icon--close"></span> </a></div>
+					<ul class="uk-nav uk-nav-default" uk-nav="">
+						<li class=uk-parent>
+							<a href="/index#">Invest</a>
+							<ul class=uk-nav-sub>
+								<li><a href="/"> Invest in: </a></li>
+							</ul>
+                        </li>
+						<li class=uk-parent>
+							<a href="/index#">Prices</a>
+							<ul class=uk-nav-sub>
+								<li><a href="#"> Cryptocurrency prices </a></li>
+								<li><a href="#"> Crypto Index prices </a></li>
+								<li><a href="#"> Stock* prices </a></li>
+								<li><a href="#"> ETF* prices </a></li>
+								<li><a href="#"> Metals prices </a></li>
+							</ul>
+                        </li>
+						<li class=uk-parent>
+							<a href="/index#">Features</a>
+							<ul class=uk-nav-sub>
+								<li><a href="#"> Popular features </a></li>
+								<li><a href="#"> Save time &amp; money </a></li>
+								<li><a href="#"> Benefits &amp; Rewards </a></li>
+								<li><a href="#"> Cash in </a></li>
+							</ul>
+                        </li>
+						<li class=uk-parent>
+							<a href="#">Company</a>
+							<ul class=uk-nav-sub>
+								<li><a href="about"> About </a></li>
+								<li><a href="security"> Security </a></li>
+								<li><a href="career"> Careers </a></li>
+							</ul>
+                        </li>
+						<li class=uk-parent>
+							<a href="#">Help</a>
+							<ul class=uk-nav-sub>
+								<li><a href="register"> Get started </a>
+								<li><a href="#"> Payment methods and limits </a>
+								<li><a href="#"> Privacy policy </a>
+								<li><a href="#"> Helpdesk </a>
+							</ul>
+                        </li>
+					</ul>
+					<ul class="bp-offcanvas-buttons uk-nav uk-nav-default" uk-nav="">
+						<div>
+							<li><a class="uk-button uk-button-primary uk-width-1-1" href="register">Sign-up</a></li>
+							<li class=uk-margin-small-top><a class="uk-button uk-button-secondary uk-width-1-1" href="login">Log in</a></li>
+						</div>
+					</ul>
+				</div>
+			</div>
+			<script>
+>>>>>>> dcfb3f45 (Resolved the issues with nested pages)
 				const ENTER_KEY_CODE = 13;
 				$(document).ready(function() {
 				    $('#search-input-modal').keydown(function(event) {
