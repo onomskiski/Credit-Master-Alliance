@@ -99,7 +99,9 @@
 
 			<div class="mt-5 border-t-2 border-t-400 py-5 px-3">
 				<div class="flex justify-around">
-					<img src="https://thispersondoesnotexist.com/" alt="" class="rounded-full mx-2 ">
+					<div class="">
+						<img src="https://thispersondoesnotexist.com/" alt="" class="rounded-full mx-2 ">
+					</div>
 
 					<div class="px-5 py-2">
 						<p class="text-sky-600 font-bold text-sm">Founder's Name</p>

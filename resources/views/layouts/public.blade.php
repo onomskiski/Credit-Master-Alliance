@@ -18,7 +18,7 @@
 		<link as=font crossorigin=anonymous href="/resources/cdn.bitpanda.com/media/fonts/EuclidSquare/EuclidSquare-Medium.woff2" rel=preload type=font/woff2>
 		<link as=font crossorigin=anonymous href="/resources/cdn.bitpanda.com/media/fonts/EuclidSquare/EuclidSquare-Semibold.woff2" rel=preload type=font/woff2>
 
-		@vite(['./resources/css/app.css', './resources/js/app.js'])
+		@vite(['resources/css/app.css', 'resources/js/app.js'])
 
 		{{-- <script src="https://cdn.tailwindcss.com"></script> --}}
 		
@@ -330,7 +330,7 @@
                                     
                                     <li>
 									<div class=bp-nav__item>
-										<a class=bp-nav__item__text href="features.html">About Credit</a>
+										<a class=bp-nav__item__text href="#">About Credit</a>
 										<div class=bp-dropdown>
 											<ul class=bp-dropdown__grid>
 												<li class=bp-dropdown__grid-list>
