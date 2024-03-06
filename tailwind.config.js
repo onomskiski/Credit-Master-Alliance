@@ -18,7 +18,9 @@ export default {
                 worksans: ['Work Sans', 'sans-serif'],  
             },
             colors: {
-                core: '#3b82f680'
+                core: '#0456f7',
+                greenish: '#35e6ff',
+                blueish: '#2ea6ff'
             }
         },
     },

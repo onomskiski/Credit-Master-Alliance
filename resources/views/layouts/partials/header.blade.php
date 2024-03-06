@@ -447,10 +447,10 @@
 						</div>
 						<div class=util-visible-desktop>
 							<div><a class=bp-button href="login" title="Log in">Log in</a></div>
-							<div><a class="bp-button bg-core" href/="register" target=_blank title=Sign-up>Sign-up</a></div>
+							<div><a class="bp-button bg-core text-white text-sm" href="/register" target=_blank title=Sign-up>Sign-up</a></div>
 						</div>
 						<div class=util-visible-mobile>
-							<div><a class="bp-button bg-core" href/="register" target=_blank title=Sign-up>Sign-up</a></div>
+							<div><a class="bp-button bg-core text-white text-sm" href="/register" target=_blank title=Sign-up>Sign-up</a></div>
 							<div>
 								<button class="bp-button bp-button--transparent" onclick=toggleOffcanvas();>
 									<svg class=bp-symbol style="--bp-symbol-size: 20px;">
@@ -525,7 +525,7 @@
 							</ul>
 						</nav>
 					</div>
-					<div class=bp-offcanvas__footer><a class="bp-button bp-button--large" href="login" title="Log in">Log in</a> <a class="bp-button bp-button--large bg-core" href/="register" target=_blank title=Sign-up>Sign-up</a></div>
+					<div class=bp-offcanvas__footer><a class="bp-button bp-button--large" href="login" title="Log in">Log in</a> <a class="bp-button bp-button--large bg-core text-white" href="/register" target=_blank title=Sign-up>Sign-up</a></div>
 				</div>
 				<script>
 					function minimiseAll() {
@@ -611,7 +611,7 @@
 					</ul>
 					<ul class="bp-offcanvas-buttons uk-nav uk-nav-default" uk-nav="">
 						<div>
-							<li><a class="uk-button uk-button-primary uk-width-1-1" href="/register">Sign-up</a></li>
+							<li><a class="uk-button uk-button-primary uk-width-1-1 text-white" href="/register">Sign-up</a></li>
 							<li class=uk-margin-small-top><a class="uk-button uk-button-secondary uk-width-1-1" href="login">Log in</a></li>
 						</div>
 					</ul>

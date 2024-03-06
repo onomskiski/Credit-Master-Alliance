@@ -117,14 +117,14 @@
 							</a>
 						@endforeach
 
-						<div class="w-full px-4 py-3">
-							<div class="bg-core w-full flex flex-col space-y-4 py-5 px-4">
-								<p class="text-sm font-bold text-center text-gray-50">
+						<div class="w-full py-3">
+							<div class="bg-core w-full flex flex-col space-y-8 py-8 px-4 pb-10">
+								<p class="text-sm font-[450] text-center text-gray-50">
 									Let us help you check on your credit score, today.
 								</p>
 
 								<div class="w-full flex justify-center items-center">
-									<button class="font-bold text-[10pt] bg-orange-500 px-5 py-3 rounded-sm mx-auto text-gray-50">
+									<button class="font-bold text-[10pt] px-5 py-3 mx-auto text-gray-50 bg-gradient-to-tr from-greenish to-blueish/40 bg-left-top rounded-lg">
 										Learn More
 									</button>
 								</div>
