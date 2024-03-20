@@ -38,16 +38,16 @@ Route::get('/about', function () {
     return view('public.about');
 });
 
-Route::get('/career', function () {
-    return view('public.career');
+Route::get('/about-credit/negative-items/what-are-negative-items', function (){
+    return view('public.about-credit.negative-items.what-are-negative-items');
 });
 
-Route::get('/security', function () {
-    return view('public.security');
+Route::get('/about-credit/negative-items/how-to-remove-collections', function (){
+    return view('public.about-credit.negative-items.how-to-remove-collections');
 });
 
-Route::get('/education/counseling/derogatory-marks', function (){
-    return view('public.education.counseling.derogatory-marks');
+Route::get('/about-credit/negative-items/how-to-remove-late-payments', function (){
+    return view('public.about-credit.negative-items.how-to-remove-late-payments');
 });
 
 Route::middleware([

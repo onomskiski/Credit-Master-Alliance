@@ -11,19 +11,19 @@
             </section>
             <section class="default uk-padding-remove-bottom uk-section">
                 <div class=default>
-                    <section class="bp-teaser bp-teaser--reverse">
+                    <!-- <section class="bp-teaser bp-teaser--reverse">
                         <picture>
                             <source data-srcset=https://cdn.bitpanda.com/media/Bitpanda%20FOUNDERS_ChristianTrummer_PaulKlanschek_EricDemuth.jpg type=image/webp>
                             <source data-srcset=https://cdn.bitpanda.com/media/Bitpanda%20FOUNDERS_ChristianTrummer_PaulKlanschek_EricDemuth.jpg type=image/png>
                             <img class="bp-teaser__image lazyload" data-src=https://cdn.bitpanda.com/media/Bitpanda%20FOUNDERS_ChristianTrummer_PaulKlanschek_EricDemuth.jpg height=720 width=1280>
                         </picture>
-                        <div uk-lightbox="autoplay: true; video-autoplay: true;"><a class=bp-teaser__video-play-button href="https://youtu.be/qd9Fp64ppzU"></a> </div>
+                        <div uk-lightbox="autoplay: true; video-autoplay: true;"><a class=bp-teaser__video-play-button href="https://youtu.be/qd9Fp64ppzU"></a> </div> -->
                         <div class=bp-teaser__content>
                             <div>
                                 <p class=bp-preheader>About us
-                                <h1>Investing. <br>Now available to everyone.</h1>
-                                <p dir=ltr>At Crypto Wealth Investment, we see investing differently. Today’s financial system is complex, exclusive and expensive - making it hard for the typical person to start investing.&nbsp;
-                                <p dir=ltr>So, we’re building a platform without digital walls and complex barriers. A platform that empowers you to see new possibilities for your money - and helps make them a reality.
+                                <h1>We are creditmasteralliance.com. <br>And yes—we are really good at what we do.</h1>
+                                <p dir=ltr>Welcome to the Credit Master Alliance, where we specialize in empowering entrepreneurs to achieve their financial goals by accelerating the growth of both personal and business credit. Our dedicated team provides comprehensive guidance and support tailored to your unique needs, covering a wide range of essential financial areas. From strategies to boost personal credit scores and secure favorable auto financing to unlocking the potential of corporate credit cards and beyond, we offer invaluable insights and resources to help you navigate the complexities of the credit landscape with confidence.&nbsp;
+                                <p dir=ltr>By joining our alliance, you'll gain access to expert advice and proven strategies that will propel you toward financial success. Whether you're looking to qualify for funding for your small business or expand your financial portfolio with a line of credit, our comprehensive approach ensures that you're well-prepared for every step of your journey. We invite you to share this opportunity with other entrepreneurs, real estate investors, side hustlers, gig workers, and business owners, allowing them to benefit from our wealth of knowledge and expertise. Don't miss out on our FREE blueprints for mastering credit building – join us today and take control of your financial future!
                             </div>
                             <div class="js-bp3-cta-button module-text__buttons"></div>
                             <script>
@@ -56,7 +56,7 @@
                             <div class="uk-child-width-1-3@m uk-flex-center uk-grid" uk-grid="">
                                 <div>
                                     <div class="uk-flex uk-flex-column uk-flex-middle uk-tile">
-                                        <div class="uk-border-circle uk-overflow-hidden" style="box-shadow: .3px .3px 10px #0005">
+                                        <div class="uk-border-circle uk-overflow-hidden" style=" .3px .3px 10px #0005">
                                             <img alt="" class=lazyload data-src="/resources/2/founder.jpeg"> 
                                         </div>
                                         <h2 class="uk-h4 uk-margin-remove-bottom uk-margin-small-top uk-text-bold">Mac Deuth</h2>
@@ -65,7 +65,7 @@
                                 </div>
                                 <div>
                                     <div class="uk-flex uk-flex-column uk-flex-middle uk-tile">
-                                        <div class="uk-border-circle uk-overflow-hidden" style="box-shadow: .3px .3px 10px #0005">
+                                        <div class="uk-border-circle uk-overflow-hidden" style=" .3px .3px 10px #0005">
                                             <img alt="" class=lazyload data-src="/resources/2/founder 3.jpeg"> 
                                         </div>
                                         <h2 class="uk-h4 uk-margin-remove-bottom uk-margin-small-top uk-text-bold">Lusi Alex</h2>
@@ -74,7 +74,7 @@
                                 </div>
                                 <div>
                                     <div class="uk-flex uk-flex-column uk-flex-middle uk-tile">
-                                        <div class="uk-border-circle uk-overflow-hidden" style="box-shadow: .3px .3px 10px #0005">
+                                        <div class="uk-border-circle uk-overflow-hidden" style=" .3px .3px 10px #0005">
                                             <img alt="" class=lazyload data-src="/resources/2/founder 1.jpeg"> 
                                         </div>
                                         <h2 class="uk-h4 uk-margin-remove-bottom uk-margin-small-top uk-text-bold">Christian Tummy</h2>
@@ -91,9 +91,9 @@
                 <div class="default uk-container">
                     <div class="uk-text-left uk-text-left@m">
                         <h2 dir=ltr>Who we are</h2>
-                        <p dir=ltr>Established in 2014 in Vienna, Austria, Crypto Wealth Investment was established with the primary objective of broadening access to investing for a diverse demographic. The company has remained committed from the outset to revolutionizing the concept of investment, achieving this by developing straightforward and easily navigable financial products tailored to a wide-ranging audience.
-                        <p dir=ltr>Now, 9 years later, and with more than 750 team members and 4 million users, we're one of the fastest growing fintechs in Us. With a PSD2 payment service provider licence and E-Money licence, state-of-the-art security and streamlined user experience, we make it possible for both first-time investors and seasoned experts to invest in what they believe in.&nbsp;
-                        <p dir=ltr>Our user-friendly, trade-everything platform empowers you to invest in the stocks, cryptocurrencies and metals you want with any amount of money.
+                        <p dir=ltr>We are Credit Master Alliance, where diversity fuels innovation and empowerment. With over 100 dedicated team members representing more than 20 nationalities, our collective expertise spans the globe, allowing us to offer unparalleled guidance and support in the realm of personal and business credit.
+                        <p dir=ltr>At Credit Master Alliance, our community of over 600 users benefits from a wealth of knowledge and resources tailored to their unique financial goals. Whether you're an aspiring entrepreneur, a seasoned business owner, or a savvy investor, our comprehensive approach to credit building ensures that you're equipped with the tools and strategies needed to thrive in today's dynamic financial landscape.&nbsp;
+                        <p dir=ltr>Join us at Credit Master Alliance and discover a supportive environment where diversity, expertise, and innovation converge to pave the way for your financial success.
                     </div>
                 </div>
             </section>
@@ -102,19 +102,19 @@
                     <div class="uk-child-width-1-2@s uk-child-width-1-3@m uk-flex-center uk-flex-middle uk-grid uk-grid-match" uk-grid="">
                         <div class="uk-flex uk-flex-center">
                             <div class="text-muted uk-text-center@m">
-                                <h3><strong>750+</strong></h3>
+                                <h3><strong>100+</strong></h3>
                                 <p>Team members
                             </div>
                         </div>
                         <div class="uk-flex uk-flex-center">
                             <div class="text-muted uk-text-center@m">
-                                <h3><strong>50+</strong></h3>
+                                <h3><strong>20+</strong></h3>
                                 <p>Nationalities in the team
                             </div>
                         </div>
                         <div class="uk-flex uk-flex-center">
                             <div class="text-muted uk-text-center@m">
-                                <h3><strong>1,970,000+</strong></h3>
+                                <h3><strong>6,000+</strong></h3>
                                 <p>Users
                             </div>
                         </div>
@@ -126,8 +126,8 @@
                 <div class="uk-container uk-flex uk-flex-center">
                     <section class="module-text uk-section uk-text-center@m uk-text-left">
                         <div class=module-text__content>
-                            <h2>We’re changing the way the world views investing</h2>
-                            <p>Crypto Wealth Investment is backed by a team of world-class experts and the best technology talent. To stay at the forefront of innovation.
+                            <h2>At Credit Master Alliance, we're revolutionizing credits for everyone.</h2>
+                            <p>Credit Master Alliance is supported by top-tier experts and premier technology talent, ensuring we remain at the forefront of innovation.
                         </div>
                         <div class="js-bp3-cta-button module-text__buttons"><span class=primary-button><a class="desktop-button tk-get-started-button uk-button uk-button-large uk-button-primary" href="../app/login.html"> Join us </a> <a class="mobile-button uk-button uk-button-large uk-button-primary" href="../app/login.html"> Join us </a></span> </div>
                         <script>
@@ -156,7 +156,7 @@
                 <div class="default uk-container">
                     <div class="uk-text-left uk-text-left@m">
                         <h2><strong>What we do</strong></h2>
-                        <p>Our user-friendly, trade-everything platform empowers you to invest in the stocks, <br>cryptocurrencies and metals you want, with any amount of money.
+                        <p>Our intuitive platform simplifies credit management, helping you monitor your credit and maintain a consistently healthy credit score effortlessly.
                     </div>
                 </div>
             </section>
@@ -196,7 +196,7 @@
                             </div>
                             <section class="module-text uk-padding-small-bottom uk-padding-small-top uk-section uk-text-center uk-text-left@m">
                                 <div class=module-text__content></div>
-                                <div class="js-bp3-cta-button module-text__buttons"><span class=primary-button><a class="desktop-button tk-get-started-button uk-button uk-button-large uk-button-primary" href="../app/login.html"> Start investing today </a> <a class="mobile-button uk-button uk-button-large uk-button-primary" href="../app/login.html"> Start investing today </a></span> </div>
+                                <div class="js-bp3-cta-button module-text__buttons"><span class=primary-button><a class="desktop-button tk-get-started-button uk-button uk-button-large uk-button-primary" href="../app/login.html"> Start managing today </a> <a class="mobile-button uk-button uk-button-large uk-button-primary" href="../app/login.html"> Start investing today </a></span> </div>
                                 <script>
                                     window.initScriptLater = function(scriptUrl, fallback) {
                                         const script = document.createElement("script");

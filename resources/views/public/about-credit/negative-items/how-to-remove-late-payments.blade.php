@@ -1,4 +1,5 @@
-<x-public-layout>
+@extends('layouts.en')
+	@section('content')	
 
 	<div class="w-full">
 		<div class="w-full px-4 lg:w-[60%] mx-auto">
@@ -7,10 +8,10 @@
 					<div class="py-3 md:px-5 px-3">
 						<div>
 							<h1 class="font-[450] text-2xl lg:text-3xl text-gray-700">
-								Derogatory marks: what are they and how to remove them
+								How to remove late payments from my credit report.
 							</h1>
 							<address class="not-italic text-sm">
-								MARCH 16, 2022 | BY <span class="text-sky-600 hover:underline transition">MELISSA COLLINS</span>
+								MARCH 16, 2022 
 							</address>
 						</div>
 		
@@ -21,7 +22,7 @@
 							</cite>
 						</div>
 		
-						<div class="flex flex-col space-y-5 mt-5 text-justify">
+						<div class="flex flex-col space-y-5 mt-5 text-left">
 							<p>
 								Derogatory marks, also known as derogatory credit items, represent negative and sometimes serious aspects of your credit report, including late payments and delinquencies. These marks, coupled with a low credit rating, can make it difficult to get approved for credit or get decent credit terms.
 							</p>
@@ -60,12 +61,12 @@
 
 					<div class="mt-5 border-t-2 border-t-gray-300 py-5 px-3">
 						<div class="flex flex-col md:flex-row justify-center">
-							<div class="w-full mx-auto justify-end flex">
-								<img src="https://thispersondoesnotexist.com/" alt="" class="rounded-full mx-2 h-[80pt] md:h-[80pt] w-[80pt] md:w-[80pt]">
+							<div class="w-full mx-auto lg:justify-end justify-center flex">
+								<img src="/resources/about-us/images/10-money-tips-using-credit-cards-wisely-featured.webp" alt="" class="rounded-full lg:mx-2 mx-auto h-[80pt] md:h-[80pt] w-[80pt] md:w-[80pt]">
 							</div>
 		
 							<div class="px-5 py-2 flex flex-col space-y-0 text-[10pt]">
-								<p class="text-sky-600">Founder's Name</p>
+								<p class="text-sky-600">Lynn Corey</p>
 								<address class="uppercase">
 									Credit Consultant at Credit Masters Alliance
 								</address>
@@ -73,9 +74,7 @@
 								<p class="pr-4 pt-2 leading-loose">
 									in member services assisting members with general credit questions,  quickly moved to a position helping members with overdue balances. For the past year Melissa has been a part of the CXRF Team resolving escalated situations and creating a better member experience....
 								</p>
-								<div class="pt-3 text-[10pt]">
-									<a href="#" class="mt-4 text-sky-500 underline">Read More</a>
-								</div>
+								
 							</div>
 						</div>
 					</div>
@@ -118,15 +117,17 @@
 						@endforeach
 
 						<div class="w-full py-3">
-							<div class="bg-core w-full flex flex-col space-y-8 py-8 px-4 pb-10">
+							<div class="bg-green-600 w-full flex flex-col space-y-8 py-8 px-4 pb-10">
 								<p class="text-sm font-[450] text-center text-gray-50">
 									Let us help you check on your credit score, today.
 								</p>
 
 								<div class="w-full flex justify-center items-center">
-									<button class="font-bold text-[10pt] px-5 py-3 mx-auto text-gray-50 bg-gradient-to-tr from-greenish to-blueish/40 bg-left-top rounded-lg">
-										Learn More
-									</button>
+								<button class="font-bold text-[10pt] px-5 py-3 mx-auto text-gray-50 bg-red-500">
+    								Get Started
+								</button>
+
+
 								</div>
 							</div>
 						</div>
@@ -135,5 +136,6 @@
 			</div>
 		</div>
 	</div>
+	</section>
+@endsection	
 
-</x-public-layout>

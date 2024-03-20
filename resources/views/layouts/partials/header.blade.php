@@ -327,32 +327,27 @@
                                     
                                     <li>
 									<div class=bp-nav__item>
-										<a class=bp-nav__item__text href="#">About Credit</a>
+										<a class=bp-nav__item__text>About Credit</a>
 										<div class=bp-dropdown>
 											<ul class=bp-dropdown__grid>
 												<li class=bp-dropdown__grid-list>
 													<div class=bp-dropdown__title>Negative items</div>
 													<ul>
 														<li>
-															<a class=bp-dropdown__item href="/education/counseling/derogatory-marks">
+															<a class=bp-dropdown__item href="/about-credit/negative-items/what-are-negative-items">
 																<div><small>What are negative items?</small> </div>
 															</a>
 														
 														<li>
-															<a class=bp-dropdown__item href="#">
+															<a class=bp-dropdown__item href="/about-credit/negative-items/how-to-remove-collections">
 																<div><small>How to remove collections</small> </div>
 															</a>
 														
 														<li>
-															<a class=bp-dropdown__item href="#">
+															<a class=bp-dropdown__item href="/about-credit/negative-items/how-to-remove-late-payments">
 																<div><small>How to remove late payments</small> </div>
 															</a>
 															
-														<li>
-															<a class=bp-dropdown__item href="#">
-																<div><small>How to remove bankruptcy</small> </div>
-															</a>
-														
 														<li>
 															<a class=bp-dropdown__item href="#">
 																<div><small>How to remove bankruptcy</small> </div>
